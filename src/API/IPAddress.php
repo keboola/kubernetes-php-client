@@ -3,10 +3,12 @@
 namespace Kubernetes\API;
 
 use \KubernetesRuntime\AbstractAPI;
-use \Kubernetes\Model\Io\K8s\Api\Networking\V1alpha1\IPAddressList as IPAddressList;
-use \Kubernetes\Model\Io\K8s\Api\Networking\V1alpha1\IPAddress as TheIPAddress;
+use \Kubernetes\Model\Io\K8s\Api\Networking\V1\IPAddressList as IPAddressList;
+use \Kubernetes\Model\Io\K8s\Api\Networking\V1\IPAddress as TheIPAddress;
 use \Kubernetes\Model\Io\K8s\Apimachinery\Pkg\Apis\Meta\V1\Status as Status;
 use \Kubernetes\Model\Io\K8s\Apimachinery\Pkg\Apis\Meta\V1\WatchEvent as WatchEvent;
+use \Kubernetes\Model\Io\K8s\Api\Networking\V1beta1\IPAddressList as IPAddressListV1beta1;
+use \Kubernetes\Model\Io\K8s\Api\Networking\V1beta1\IPAddress as TheIPAddressV1beta1;
 
 class IPAddress extends AbstractAPI
 {
@@ -19,11 +21,11 @@ class IPAddress extends AbstractAPI
     {
         return $this->parseResponse(
         	$this->client->request('get',
-        		"/apis/networking.k8s.io/v1alpha1/ipaddresses",
+        		"/apis/networking.k8s.io/v1/ipaddresses",
         		[
         		]
         	),
-        	'listNetworkingV1alpha1IPAddress'
+        	'listNetworkingV1IPAddress'
         );
     }
 
@@ -54,17 +56,17 @@ class IPAddress extends AbstractAPI
      *
      * @return TheIPAddress|mixed
      */
-    public function create(\Kubernetes\Model\Io\K8s\Api\Networking\V1alpha1\IPAddress $Model, array $queries = [])
+    public function create(\Kubernetes\Model\Io\K8s\Api\Networking\V1\IPAddress $Model, array $queries = [])
     {
         return $this->parseResponse(
         	$this->client->request('post',
-        		"/apis/networking.k8s.io/v1alpha1/ipaddresses",
+        		"/apis/networking.k8s.io/v1/ipaddresses",
         		[
         			'json' => $Model->getArrayCopy(),
         			'query' => $queries,
         		]
         	),
-        	'createNetworkingV1alpha1IPAddress'
+        	'createNetworkingV1IPAddress'
         );
     }
 
@@ -84,12 +86,12 @@ class IPAddress extends AbstractAPI
     {
         return $this->parseResponse(
         	$this->client->request('delete',
-        		"/apis/networking.k8s.io/v1alpha1/ipaddresses",
+        		"/apis/networking.k8s.io/v1/ipaddresses",
         		[
         			'query' => $queries,
         		]
         	),
-        	'deleteNetworkingV1alpha1CollectionIPAddress'
+        	'deleteNetworkingV1CollectionIPAddress'
         );
     }
 
@@ -103,11 +105,11 @@ class IPAddress extends AbstractAPI
     {
         return $this->parseResponse(
         	$this->client->request('get',
-        		"/apis/networking.k8s.io/v1alpha1/ipaddresses/{$name}",
+        		"/apis/networking.k8s.io/v1/ipaddresses/{$name}",
         		[
         		]
         	),
-        	'readNetworkingV1alpha1IPAddress'
+        	'readNetworkingV1IPAddress'
         );
     }
 
@@ -139,17 +141,17 @@ class IPAddress extends AbstractAPI
      *
      * @return TheIPAddress|mixed
      */
-    public function replace(string $name, \Kubernetes\Model\Io\K8s\Api\Networking\V1alpha1\IPAddress $Model, array $queries = [])
+    public function replace(string $name, \Kubernetes\Model\Io\K8s\Api\Networking\V1\IPAddress $Model, array $queries = [])
     {
         return $this->parseResponse(
         	$this->client->request('put',
-        		"/apis/networking.k8s.io/v1alpha1/ipaddresses/{$name}",
+        		"/apis/networking.k8s.io/v1/ipaddresses/{$name}",
         		[
         			'json' => $Model->getArrayCopy(),
         			'query' => $queries,
         		]
         	),
-        	'replaceNetworkingV1alpha1IPAddress'
+        	'replaceNetworkingV1IPAddress'
         );
     }
 
@@ -170,12 +172,12 @@ class IPAddress extends AbstractAPI
     {
         return $this->parseResponse(
         	$this->client->request('delete',
-        		"/apis/networking.k8s.io/v1alpha1/ipaddresses/{$name}",
+        		"/apis/networking.k8s.io/v1/ipaddresses/{$name}",
         		[
         			'query' => $queries,
         		]
         	),
-        	'deleteNetworkingV1alpha1IPAddress'
+        	'deleteNetworkingV1IPAddress'
         );
     }
 
@@ -210,12 +212,12 @@ class IPAddress extends AbstractAPI
     {
         return $this->parseResponse(
         	$this->client->request('patch',
-        		"/apis/networking.k8s.io/v1alpha1/ipaddresses/{$name}",
+        		"/apis/networking.k8s.io/v1/ipaddresses/{$name}",
         		[
         			'query' => $queries,
         		]
         	),
-        	'patchNetworkingV1alpha1IPAddress'
+        	'patchNetworkingV1IPAddress'
         );
     }
 
@@ -229,11 +231,11 @@ class IPAddress extends AbstractAPI
     {
         return $this->parseResponse(
         	$this->client->request('get',
-        		"/apis/networking.k8s.io/v1alpha1/watch/ipaddresses",
+        		"/apis/networking.k8s.io/v1/watch/ipaddresses",
         		[
         		]
         	),
-        	'watchNetworkingV1alpha1IPAddressList'
+        	'watchNetworkingV1IPAddressList'
         );
     }
 
@@ -249,11 +251,258 @@ class IPAddress extends AbstractAPI
     {
         return $this->parseResponse(
         	$this->client->request('get',
-        		"/apis/networking.k8s.io/v1alpha1/watch/ipaddresses/{$name}",
+        		"/apis/networking.k8s.io/v1/watch/ipaddresses/{$name}",
         		[
         		]
         	),
-        	'watchNetworkingV1alpha1IPAddress'
+        	'watchNetworkingV1IPAddress'
+        );
+    }
+
+    /**
+     * list or watch objects of kind IPAddress
+     *
+     * @return IPAddressListV1beta1|mixed
+     */
+    public function listNetworkingV1beta1()
+    {
+        return $this->parseResponse(
+        	$this->client->request('get',
+        		"/apis/networking.k8s.io/v1beta1/ipaddresses",
+        		[
+        		]
+        	),
+        	'listNetworkingV1beta1IPAddress'
+        );
+    }
+
+    /**
+     * create an IPAddress
+     *
+     * @param TheIPAddressV1beta1 $Model
+     * @param array $queries options:
+     * 'dryRun'	string
+     * When present, indicates that modifications should not be persisted. An invalid
+     * or unrecognized dryRun directive will result in an error response and no further
+     * processing of the request. Valid values are: - All: all dry run stages will be
+     * processed
+     * 'fieldValidation'	string
+     * fieldValidation instructs the server on how to handle objects in the request
+     * (POST/PUT/PATCH) containing unknown or duplicate fields. Valid values are: -
+     * Ignore: This will ignore any unknown fields that are silently dropped from the
+     * object, and will ignore all but the last duplicate field that the decoder
+     * encounters. This is the default behavior prior to v1.23. - Warn: This will send
+     * a warning via the standard warning response header for each unknown field that
+     * is dropped from the object, and for each duplicate field that is encountered.
+     * The request will still succeed if there are no other errors, and will only
+     * persist the last of any duplicate fields. This is the default in v1.23+ -
+     * Strict: This will fail the request with a BadRequest error if any unknown fields
+     * would be dropped from the object, or if any duplicate fields are present. The
+     * error returned from the server will contain all unknown and duplicate fields
+     * encountered.
+     *
+     * @return TheIPAddressV1beta1|mixed
+     */
+    public function createNetworkingV1beta1(\Kubernetes\Model\Io\K8s\Api\Networking\V1beta1\IPAddress $Model, array $queries = [])
+    {
+        return $this->parseResponse(
+        	$this->client->request('post',
+        		"/apis/networking.k8s.io/v1beta1/ipaddresses",
+        		[
+        			'json' => $Model->getArrayCopy(),
+        			'query' => $queries,
+        		]
+        	),
+        	'createNetworkingV1beta1IPAddress'
+        );
+    }
+
+    /**
+     * delete collection of IPAddress
+     *
+     * @param array $queries options:
+     * 'dryRun'	string
+     * When present, indicates that modifications should not be persisted. An invalid
+     * or unrecognized dryRun directive will result in an error response and no further
+     * processing of the request. Valid values are: - All: all dry run stages will be
+     * processed
+     *
+     * @return Status|mixed
+     */
+    public function deleteCollectionNetworkingV1beta1(array $queries = [])
+    {
+        return $this->parseResponse(
+        	$this->client->request('delete',
+        		"/apis/networking.k8s.io/v1beta1/ipaddresses",
+        		[
+        			'query' => $queries,
+        		]
+        	),
+        	'deleteNetworkingV1beta1CollectionIPAddress'
+        );
+    }
+
+    /**
+     * read the specified IPAddress
+     *
+     * @param string $name name of the IPAddress
+     * @return TheIPAddressV1beta1|mixed
+     */
+    public function readNetworkingV1beta1(string $name)
+    {
+        return $this->parseResponse(
+        	$this->client->request('get',
+        		"/apis/networking.k8s.io/v1beta1/ipaddresses/{$name}",
+        		[
+        		]
+        	),
+        	'readNetworkingV1beta1IPAddress'
+        );
+    }
+
+    /**
+     * replace the specified IPAddress
+     *
+     * @param string $name name of the IPAddress
+     * @param TheIPAddressV1beta1 $Model
+     * @param array $queries options:
+     * 'dryRun'	string
+     * When present, indicates that modifications should not be persisted. An invalid
+     * or unrecognized dryRun directive will result in an error response and no further
+     * processing of the request. Valid values are: - All: all dry run stages will be
+     * processed
+     * 'fieldValidation'	string
+     * fieldValidation instructs the server on how to handle objects in the request
+     * (POST/PUT/PATCH) containing unknown or duplicate fields. Valid values are: -
+     * Ignore: This will ignore any unknown fields that are silently dropped from the
+     * object, and will ignore all but the last duplicate field that the decoder
+     * encounters. This is the default behavior prior to v1.23. - Warn: This will send
+     * a warning via the standard warning response header for each unknown field that
+     * is dropped from the object, and for each duplicate field that is encountered.
+     * The request will still succeed if there are no other errors, and will only
+     * persist the last of any duplicate fields. This is the default in v1.23+ -
+     * Strict: This will fail the request with a BadRequest error if any unknown fields
+     * would be dropped from the object, or if any duplicate fields are present. The
+     * error returned from the server will contain all unknown and duplicate fields
+     * encountered.
+     *
+     * @return TheIPAddressV1beta1|mixed
+     */
+    public function replaceNetworkingV1beta1(string $name, \Kubernetes\Model\Io\K8s\Api\Networking\V1beta1\IPAddress $Model, array $queries = [])
+    {
+        return $this->parseResponse(
+        	$this->client->request('put',
+        		"/apis/networking.k8s.io/v1beta1/ipaddresses/{$name}",
+        		[
+        			'json' => $Model->getArrayCopy(),
+        			'query' => $queries,
+        		]
+        	),
+        	'replaceNetworkingV1beta1IPAddress'
+        );
+    }
+
+    /**
+     * delete an IPAddress
+     *
+     * @param string $name name of the IPAddress
+     * @param array $queries options:
+     * 'dryRun'	string
+     * When present, indicates that modifications should not be persisted. An invalid
+     * or unrecognized dryRun directive will result in an error response and no further
+     * processing of the request. Valid values are: - All: all dry run stages will be
+     * processed
+     *
+     * @return Status|mixed
+     */
+    public function deleteNetworkingV1beta1(string $name, array $queries = [])
+    {
+        return $this->parseResponse(
+        	$this->client->request('delete',
+        		"/apis/networking.k8s.io/v1beta1/ipaddresses/{$name}",
+        		[
+        			'query' => $queries,
+        		]
+        	),
+        	'deleteNetworkingV1beta1IPAddress'
+        );
+    }
+
+    /**
+     * partially update the specified IPAddress
+     *
+     * @param string $name name of the IPAddress
+     * @param array $queries options:
+     * 'dryRun'	string
+     * When present, indicates that modifications should not be persisted. An invalid
+     * or unrecognized dryRun directive will result in an error response and no further
+     * processing of the request. Valid values are: - All: all dry run stages will be
+     * processed
+     * 'fieldValidation'	string
+     * fieldValidation instructs the server on how to handle objects in the request
+     * (POST/PUT/PATCH) containing unknown or duplicate fields. Valid values are: -
+     * Ignore: This will ignore any unknown fields that are silently dropped from the
+     * object, and will ignore all but the last duplicate field that the decoder
+     * encounters. This is the default behavior prior to v1.23. - Warn: This will send
+     * a warning via the standard warning response header for each unknown field that
+     * is dropped from the object, and for each duplicate field that is encountered.
+     * The request will still succeed if there are no other errors, and will only
+     * persist the last of any duplicate fields. This is the default in v1.23+ -
+     * Strict: This will fail the request with a BadRequest error if any unknown fields
+     * would be dropped from the object, or if any duplicate fields are present. The
+     * error returned from the server will contain all unknown and duplicate fields
+     * encountered.
+     *
+     * @return TheIPAddressV1beta1|mixed
+     */
+    public function patchNetworkingV1beta1(string $name, array $queries = [])
+    {
+        return $this->parseResponse(
+        	$this->client->request('patch',
+        		"/apis/networking.k8s.io/v1beta1/ipaddresses/{$name}",
+        		[
+        			'query' => $queries,
+        		]
+        	),
+        	'patchNetworkingV1beta1IPAddress'
+        );
+    }
+
+    /**
+     * watch individual changes to a list of IPAddress. deprecated: use the 'watch'
+     * parameter with a list operation instead.
+     *
+     * @return WatchEvent|mixed
+     */
+    public function watchListNetworkingV1beta1()
+    {
+        return $this->parseResponse(
+        	$this->client->request('get',
+        		"/apis/networking.k8s.io/v1beta1/watch/ipaddresses",
+        		[
+        		]
+        	),
+        	'watchNetworkingV1beta1IPAddressList'
+        );
+    }
+
+    /**
+     * watch changes to an object of kind IPAddress. deprecated: use the 'watch'
+     * parameter with a list operation instead, filtered to a single item with the
+     * 'fieldSelector' parameter.
+     *
+     * @param string $name name of the IPAddress
+     * @return WatchEvent|mixed
+     */
+    public function watchNetworkingV1beta1(string $name)
+    {
+        return $this->parseResponse(
+        	$this->client->request('get',
+        		"/apis/networking.k8s.io/v1beta1/watch/ipaddresses/{$name}",
+        		[
+        		]
+        	),
+        	'watchNetworkingV1beta1IPAddress'
         );
     }
 }

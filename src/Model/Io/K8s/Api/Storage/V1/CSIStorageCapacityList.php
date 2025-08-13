@@ -20,7 +20,7 @@ class CSIStorageCapacityList extends AbstractModel
     public $apiVersion = 'storage.k8s.io/v1';
 
     /**
-     * Items is the list of CSIStorageCapacity objects.
+     * items is the list of CSIStorageCapacity objects.
      *
      * @var CSIStorageCapacity[]
      */

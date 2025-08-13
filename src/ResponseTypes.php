@@ -230,6 +230,17 @@ class ResponseTypes
             '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Policy\\V1\\Eviction',
             '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Policy\\V1\\Eviction',
         ],
+        'readCoreV1NamespacedPodResize' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Core\\V1\\Pod',
+        ],
+        'replaceCoreV1NamespacedPodResize' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Core\\V1\\Pod',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Core\\V1\\Pod',
+        ],
+        'patchCoreV1NamespacedPodResize' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Core\\V1\\Pod',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Core\\V1\\Pod',
+        ],
         'readCoreV1NamespacedPodStatus' => [
             '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Core\\V1\\Pod',
         ],
@@ -735,6 +746,69 @@ class ResponseTypes
             '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1\\MutatingWebhookConfiguration',
             '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1\\MutatingWebhookConfiguration',
         ],
+        'listAdmissionregistrationV1ValidatingAdmissionPolicy' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1\\ValidatingAdmissionPolicyList',
+        ],
+        'createAdmissionregistrationV1ValidatingAdmissionPolicy' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1\\ValidatingAdmissionPolicy',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1\\ValidatingAdmissionPolicy',
+            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1\\ValidatingAdmissionPolicy',
+        ],
+        'deleteAdmissionregistrationV1CollectionValidatingAdmissionPolicy' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
+        ],
+        'readAdmissionregistrationV1ValidatingAdmissionPolicy' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1\\ValidatingAdmissionPolicy',
+        ],
+        'replaceAdmissionregistrationV1ValidatingAdmissionPolicy' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1\\ValidatingAdmissionPolicy',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1\\ValidatingAdmissionPolicy',
+        ],
+        'deleteAdmissionregistrationV1ValidatingAdmissionPolicy' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
+            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
+        ],
+        'patchAdmissionregistrationV1ValidatingAdmissionPolicy' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1\\ValidatingAdmissionPolicy',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1\\ValidatingAdmissionPolicy',
+        ],
+        'readAdmissionregistrationV1ValidatingAdmissionPolicyStatus' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1\\ValidatingAdmissionPolicy',
+        ],
+        'replaceAdmissionregistrationV1ValidatingAdmissionPolicyStatus' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1\\ValidatingAdmissionPolicy',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1\\ValidatingAdmissionPolicy',
+        ],
+        'patchAdmissionregistrationV1ValidatingAdmissionPolicyStatus' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1\\ValidatingAdmissionPolicy',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1\\ValidatingAdmissionPolicy',
+        ],
+        'listAdmissionregistrationV1ValidatingAdmissionPolicyBinding' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1\\ValidatingAdmissionPolicyBindingList',
+        ],
+        'createAdmissionregistrationV1ValidatingAdmissionPolicyBinding' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1\\ValidatingAdmissionPolicyBinding',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1\\ValidatingAdmissionPolicyBinding',
+            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1\\ValidatingAdmissionPolicyBinding',
+        ],
+        'deleteAdmissionregistrationV1CollectionValidatingAdmissionPolicyBinding' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
+        ],
+        'readAdmissionregistrationV1ValidatingAdmissionPolicyBinding' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1\\ValidatingAdmissionPolicyBinding',
+        ],
+        'replaceAdmissionregistrationV1ValidatingAdmissionPolicyBinding' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1\\ValidatingAdmissionPolicyBinding',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1\\ValidatingAdmissionPolicyBinding',
+        ],
+        'deleteAdmissionregistrationV1ValidatingAdmissionPolicyBinding' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
+            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
+        ],
+        'patchAdmissionregistrationV1ValidatingAdmissionPolicyBinding' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1\\ValidatingAdmissionPolicyBinding',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1\\ValidatingAdmissionPolicyBinding',
+        ],
         'listAdmissionregistrationV1ValidatingWebhookConfiguration' => [
             '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1\\ValidatingWebhookConfigurationList',
         ],
@@ -767,6 +841,18 @@ class ResponseTypes
         'watchAdmissionregistrationV1MutatingWebhookConfiguration' => [
             '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
         ],
+        'watchAdmissionregistrationV1ValidatingAdmissionPolicyList' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
+        ],
+        'watchAdmissionregistrationV1ValidatingAdmissionPolicy' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
+        ],
+        'watchAdmissionregistrationV1ValidatingAdmissionPolicyBindingList' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
+        ],
+        'watchAdmissionregistrationV1ValidatingAdmissionPolicyBinding' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
+        ],
         'watchAdmissionregistrationV1ValidatingWebhookConfigurationList' => [
             '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
         ],
@@ -776,68 +862,146 @@ class ResponseTypes
         'getAdmissionregistrationV1alpha1APIResources' => [
             '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\APIResourceList',
         ],
-        'listAdmissionregistrationV1alpha1ValidatingAdmissionPolicy' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1alpha1\\ValidatingAdmissionPolicyList',
+        'listAdmissionregistrationV1alpha1MutatingAdmissionPolicy' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1alpha1\\MutatingAdmissionPolicyList',
         ],
-        'createAdmissionregistrationV1alpha1ValidatingAdmissionPolicy' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1alpha1\\ValidatingAdmissionPolicy',
-            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1alpha1\\ValidatingAdmissionPolicy',
-            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1alpha1\\ValidatingAdmissionPolicy',
+        'createAdmissionregistrationV1alpha1MutatingAdmissionPolicy' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1alpha1\\MutatingAdmissionPolicy',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1alpha1\\MutatingAdmissionPolicy',
+            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1alpha1\\MutatingAdmissionPolicy',
         ],
-        'deleteAdmissionregistrationV1alpha1CollectionValidatingAdmissionPolicy' => [
+        'deleteAdmissionregistrationV1alpha1CollectionMutatingAdmissionPolicy' => [
             '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
         ],
-        'readAdmissionregistrationV1alpha1ValidatingAdmissionPolicy' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1alpha1\\ValidatingAdmissionPolicy',
+        'readAdmissionregistrationV1alpha1MutatingAdmissionPolicy' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1alpha1\\MutatingAdmissionPolicy',
         ],
-        'replaceAdmissionregistrationV1alpha1ValidatingAdmissionPolicy' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1alpha1\\ValidatingAdmissionPolicy',
-            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1alpha1\\ValidatingAdmissionPolicy',
+        'replaceAdmissionregistrationV1alpha1MutatingAdmissionPolicy' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1alpha1\\MutatingAdmissionPolicy',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1alpha1\\MutatingAdmissionPolicy',
         ],
-        'deleteAdmissionregistrationV1alpha1ValidatingAdmissionPolicy' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
-            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
-        ],
-        'patchAdmissionregistrationV1alpha1ValidatingAdmissionPolicy' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1alpha1\\ValidatingAdmissionPolicy',
-            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1alpha1\\ValidatingAdmissionPolicy',
-        ],
-        'listAdmissionregistrationV1alpha1ValidatingAdmissionPolicyBinding' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1alpha1\\ValidatingAdmissionPolicyBindingList',
-        ],
-        'createAdmissionregistrationV1alpha1ValidatingAdmissionPolicyBinding' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1alpha1\\ValidatingAdmissionPolicyBinding',
-            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1alpha1\\ValidatingAdmissionPolicyBinding',
-            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1alpha1\\ValidatingAdmissionPolicyBinding',
-        ],
-        'deleteAdmissionregistrationV1alpha1CollectionValidatingAdmissionPolicyBinding' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
-        ],
-        'readAdmissionregistrationV1alpha1ValidatingAdmissionPolicyBinding' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1alpha1\\ValidatingAdmissionPolicyBinding',
-        ],
-        'replaceAdmissionregistrationV1alpha1ValidatingAdmissionPolicyBinding' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1alpha1\\ValidatingAdmissionPolicyBinding',
-            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1alpha1\\ValidatingAdmissionPolicyBinding',
-        ],
-        'deleteAdmissionregistrationV1alpha1ValidatingAdmissionPolicyBinding' => [
+        'deleteAdmissionregistrationV1alpha1MutatingAdmissionPolicy' => [
             '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
             '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
         ],
-        'patchAdmissionregistrationV1alpha1ValidatingAdmissionPolicyBinding' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1alpha1\\ValidatingAdmissionPolicyBinding',
-            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1alpha1\\ValidatingAdmissionPolicyBinding',
+        'patchAdmissionregistrationV1alpha1MutatingAdmissionPolicy' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1alpha1\\MutatingAdmissionPolicy',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1alpha1\\MutatingAdmissionPolicy',
         ],
-        'watchAdmissionregistrationV1alpha1ValidatingAdmissionPolicyList' => [
+        'listAdmissionregistrationV1alpha1MutatingAdmissionPolicyBinding' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1alpha1\\MutatingAdmissionPolicyBindingList',
+        ],
+        'createAdmissionregistrationV1alpha1MutatingAdmissionPolicyBinding' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1alpha1\\MutatingAdmissionPolicyBinding',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1alpha1\\MutatingAdmissionPolicyBinding',
+            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1alpha1\\MutatingAdmissionPolicyBinding',
+        ],
+        'deleteAdmissionregistrationV1alpha1CollectionMutatingAdmissionPolicyBinding' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
+        ],
+        'readAdmissionregistrationV1alpha1MutatingAdmissionPolicyBinding' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1alpha1\\MutatingAdmissionPolicyBinding',
+        ],
+        'replaceAdmissionregistrationV1alpha1MutatingAdmissionPolicyBinding' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1alpha1\\MutatingAdmissionPolicyBinding',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1alpha1\\MutatingAdmissionPolicyBinding',
+        ],
+        'deleteAdmissionregistrationV1alpha1MutatingAdmissionPolicyBinding' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
+            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
+        ],
+        'patchAdmissionregistrationV1alpha1MutatingAdmissionPolicyBinding' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1alpha1\\MutatingAdmissionPolicyBinding',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1alpha1\\MutatingAdmissionPolicyBinding',
+        ],
+        'watchAdmissionregistrationV1alpha1MutatingAdmissionPolicyList' => [
             '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
         ],
-        'watchAdmissionregistrationV1alpha1ValidatingAdmissionPolicy' => [
+        'watchAdmissionregistrationV1alpha1MutatingAdmissionPolicy' => [
             '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
         ],
-        'watchAdmissionregistrationV1alpha1ValidatingAdmissionPolicyBindingList' => [
+        'watchAdmissionregistrationV1alpha1MutatingAdmissionPolicyBindingList' => [
             '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
         ],
-        'watchAdmissionregistrationV1alpha1ValidatingAdmissionPolicyBinding' => [
+        'watchAdmissionregistrationV1alpha1MutatingAdmissionPolicyBinding' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
+        ],
+        'getAdmissionregistrationV1beta1APIResources' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\APIResourceList',
+        ],
+        'listAdmissionregistrationV1beta1ValidatingAdmissionPolicy' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1beta1\\ValidatingAdmissionPolicyList',
+        ],
+        'createAdmissionregistrationV1beta1ValidatingAdmissionPolicy' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1beta1\\ValidatingAdmissionPolicy',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1beta1\\ValidatingAdmissionPolicy',
+            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1beta1\\ValidatingAdmissionPolicy',
+        ],
+        'deleteAdmissionregistrationV1beta1CollectionValidatingAdmissionPolicy' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
+        ],
+        'readAdmissionregistrationV1beta1ValidatingAdmissionPolicy' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1beta1\\ValidatingAdmissionPolicy',
+        ],
+        'replaceAdmissionregistrationV1beta1ValidatingAdmissionPolicy' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1beta1\\ValidatingAdmissionPolicy',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1beta1\\ValidatingAdmissionPolicy',
+        ],
+        'deleteAdmissionregistrationV1beta1ValidatingAdmissionPolicy' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
+            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
+        ],
+        'patchAdmissionregistrationV1beta1ValidatingAdmissionPolicy' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1beta1\\ValidatingAdmissionPolicy',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1beta1\\ValidatingAdmissionPolicy',
+        ],
+        'readAdmissionregistrationV1beta1ValidatingAdmissionPolicyStatus' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1beta1\\ValidatingAdmissionPolicy',
+        ],
+        'replaceAdmissionregistrationV1beta1ValidatingAdmissionPolicyStatus' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1beta1\\ValidatingAdmissionPolicy',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1beta1\\ValidatingAdmissionPolicy',
+        ],
+        'patchAdmissionregistrationV1beta1ValidatingAdmissionPolicyStatus' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1beta1\\ValidatingAdmissionPolicy',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1beta1\\ValidatingAdmissionPolicy',
+        ],
+        'listAdmissionregistrationV1beta1ValidatingAdmissionPolicyBinding' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1beta1\\ValidatingAdmissionPolicyBindingList',
+        ],
+        'createAdmissionregistrationV1beta1ValidatingAdmissionPolicyBinding' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1beta1\\ValidatingAdmissionPolicyBinding',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1beta1\\ValidatingAdmissionPolicyBinding',
+            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1beta1\\ValidatingAdmissionPolicyBinding',
+        ],
+        'deleteAdmissionregistrationV1beta1CollectionValidatingAdmissionPolicyBinding' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
+        ],
+        'readAdmissionregistrationV1beta1ValidatingAdmissionPolicyBinding' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1beta1\\ValidatingAdmissionPolicyBinding',
+        ],
+        'replaceAdmissionregistrationV1beta1ValidatingAdmissionPolicyBinding' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1beta1\\ValidatingAdmissionPolicyBinding',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1beta1\\ValidatingAdmissionPolicyBinding',
+        ],
+        'deleteAdmissionregistrationV1beta1ValidatingAdmissionPolicyBinding' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
+            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
+        ],
+        'patchAdmissionregistrationV1beta1ValidatingAdmissionPolicyBinding' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1beta1\\ValidatingAdmissionPolicyBinding',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Admissionregistration\\V1beta1\\ValidatingAdmissionPolicyBinding',
+        ],
+        'watchAdmissionregistrationV1beta1ValidatingAdmissionPolicyList' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
+        ],
+        'watchAdmissionregistrationV1beta1ValidatingAdmissionPolicy' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
+        ],
+        'watchAdmissionregistrationV1beta1ValidatingAdmissionPolicyBindingList' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
+        ],
+        'watchAdmissionregistrationV1beta1ValidatingAdmissionPolicyBinding' => [
             '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
         ],
         'getApiextensionsAPIGroup' => [
@@ -1217,18 +1381,15 @@ class ResponseTypes
         'getAuthenticationV1APIResources' => [
             '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\APIResourceList',
         ],
+        'createAuthenticationV1SelfSubjectReview' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Authentication\\V1\\SelfSubjectReview',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Authentication\\V1\\SelfSubjectReview',
+            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Authentication\\V1\\SelfSubjectReview',
+        ],
         'createAuthenticationV1TokenReview' => [
             '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Authentication\\V1\\TokenReview',
             '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Authentication\\V1\\TokenReview',
             '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Authentication\\V1\\TokenReview',
-        ],
-        'getAuthenticationV1alpha1APIResources' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\APIResourceList',
-        ],
-        'createAuthenticationV1alpha1SelfSubjectReview' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Authentication\\V1alpha1\\SelfSubjectReview',
-            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Authentication\\V1alpha1\\SelfSubjectReview',
-            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Authentication\\V1alpha1\\SelfSubjectReview',
         ],
         'getAuthorizationAPIGroup' => [
             '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\APIGroup',
@@ -1527,6 +1688,76 @@ class ResponseTypes
         'watchCertificatesV1CertificateSigningRequest' => [
             '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
         ],
+        'getCertificatesV1alpha1APIResources' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\APIResourceList',
+        ],
+        'listCertificatesV1alpha1ClusterTrustBundle' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Certificates\\V1alpha1\\ClusterTrustBundleList',
+        ],
+        'createCertificatesV1alpha1ClusterTrustBundle' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Certificates\\V1alpha1\\ClusterTrustBundle',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Certificates\\V1alpha1\\ClusterTrustBundle',
+            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Certificates\\V1alpha1\\ClusterTrustBundle',
+        ],
+        'deleteCertificatesV1alpha1CollectionClusterTrustBundle' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
+        ],
+        'readCertificatesV1alpha1ClusterTrustBundle' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Certificates\\V1alpha1\\ClusterTrustBundle',
+        ],
+        'replaceCertificatesV1alpha1ClusterTrustBundle' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Certificates\\V1alpha1\\ClusterTrustBundle',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Certificates\\V1alpha1\\ClusterTrustBundle',
+        ],
+        'deleteCertificatesV1alpha1ClusterTrustBundle' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
+            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
+        ],
+        'patchCertificatesV1alpha1ClusterTrustBundle' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Certificates\\V1alpha1\\ClusterTrustBundle',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Certificates\\V1alpha1\\ClusterTrustBundle',
+        ],
+        'watchCertificatesV1alpha1ClusterTrustBundleList' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
+        ],
+        'watchCertificatesV1alpha1ClusterTrustBundle' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
+        ],
+        'getCertificatesV1beta1APIResources' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\APIResourceList',
+        ],
+        'listCertificatesV1beta1ClusterTrustBundle' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Certificates\\V1beta1\\ClusterTrustBundleList',
+        ],
+        'createCertificatesV1beta1ClusterTrustBundle' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Certificates\\V1beta1\\ClusterTrustBundle',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Certificates\\V1beta1\\ClusterTrustBundle',
+            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Certificates\\V1beta1\\ClusterTrustBundle',
+        ],
+        'deleteCertificatesV1beta1CollectionClusterTrustBundle' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
+        ],
+        'readCertificatesV1beta1ClusterTrustBundle' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Certificates\\V1beta1\\ClusterTrustBundle',
+        ],
+        'replaceCertificatesV1beta1ClusterTrustBundle' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Certificates\\V1beta1\\ClusterTrustBundle',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Certificates\\V1beta1\\ClusterTrustBundle',
+        ],
+        'deleteCertificatesV1beta1ClusterTrustBundle' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
+            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
+        ],
+        'patchCertificatesV1beta1ClusterTrustBundle' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Certificates\\V1beta1\\ClusterTrustBundle',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Certificates\\V1beta1\\ClusterTrustBundle',
+        ],
+        'watchCertificatesV1beta1ClusterTrustBundleList' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
+        ],
+        'watchCertificatesV1beta1ClusterTrustBundle' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
+        ],
         'getCoordinationAPIGroup' => [
             '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\APIGroup',
         ],
@@ -1569,6 +1800,88 @@ class ResponseTypes
             '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
         ],
         'watchCoordinationV1NamespacedLease' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
+        ],
+        'getCoordinationV1alpha2APIResources' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\APIResourceList',
+        ],
+        'listCoordinationV1alpha2LeaseCandidateForAllNamespaces' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Coordination\\V1alpha2\\LeaseCandidateList',
+        ],
+        'listCoordinationV1alpha2NamespacedLeaseCandidate' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Coordination\\V1alpha2\\LeaseCandidateList',
+        ],
+        'createCoordinationV1alpha2NamespacedLeaseCandidate' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Coordination\\V1alpha2\\LeaseCandidate',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Coordination\\V1alpha2\\LeaseCandidate',
+            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Coordination\\V1alpha2\\LeaseCandidate',
+        ],
+        'deleteCoordinationV1alpha2CollectionNamespacedLeaseCandidate' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
+        ],
+        'readCoordinationV1alpha2NamespacedLeaseCandidate' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Coordination\\V1alpha2\\LeaseCandidate',
+        ],
+        'replaceCoordinationV1alpha2NamespacedLeaseCandidate' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Coordination\\V1alpha2\\LeaseCandidate',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Coordination\\V1alpha2\\LeaseCandidate',
+        ],
+        'deleteCoordinationV1alpha2NamespacedLeaseCandidate' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
+            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
+        ],
+        'patchCoordinationV1alpha2NamespacedLeaseCandidate' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Coordination\\V1alpha2\\LeaseCandidate',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Coordination\\V1alpha2\\LeaseCandidate',
+        ],
+        'watchCoordinationV1alpha2LeaseCandidateListForAllNamespaces' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
+        ],
+        'watchCoordinationV1alpha2NamespacedLeaseCandidateList' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
+        ],
+        'watchCoordinationV1alpha2NamespacedLeaseCandidate' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
+        ],
+        'getCoordinationV1beta1APIResources' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\APIResourceList',
+        ],
+        'listCoordinationV1beta1LeaseCandidateForAllNamespaces' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Coordination\\V1beta1\\LeaseCandidateList',
+        ],
+        'listCoordinationV1beta1NamespacedLeaseCandidate' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Coordination\\V1beta1\\LeaseCandidateList',
+        ],
+        'createCoordinationV1beta1NamespacedLeaseCandidate' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Coordination\\V1beta1\\LeaseCandidate',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Coordination\\V1beta1\\LeaseCandidate',
+            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Coordination\\V1beta1\\LeaseCandidate',
+        ],
+        'deleteCoordinationV1beta1CollectionNamespacedLeaseCandidate' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
+        ],
+        'readCoordinationV1beta1NamespacedLeaseCandidate' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Coordination\\V1beta1\\LeaseCandidate',
+        ],
+        'replaceCoordinationV1beta1NamespacedLeaseCandidate' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Coordination\\V1beta1\\LeaseCandidate',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Coordination\\V1beta1\\LeaseCandidate',
+        ],
+        'deleteCoordinationV1beta1NamespacedLeaseCandidate' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
+            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
+        ],
+        'patchCoordinationV1beta1NamespacedLeaseCandidate' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Coordination\\V1beta1\\LeaseCandidate',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Coordination\\V1beta1\\LeaseCandidate',
+        ],
+        'watchCoordinationV1beta1LeaseCandidateListForAllNamespaces' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
+        ],
+        'watchCoordinationV1beta1NamespacedLeaseCandidateList' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
+        ],
+        'watchCoordinationV1beta1NamespacedLeaseCandidate' => [
             '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
         ],
         'getDiscoveryAPIGroup' => [
@@ -1662,182 +1975,93 @@ class ResponseTypes
         'getFlowcontrolApiserverAPIGroup' => [
             '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\APIGroup',
         ],
-        'getFlowcontrolApiserverV1beta2APIResources' => [
+        'getFlowcontrolApiserverV1APIResources' => [
             '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\APIResourceList',
         ],
-        'listFlowcontrolApiserverV1beta2FlowSchema' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1beta2\\FlowSchemaList',
+        'listFlowcontrolApiserverV1FlowSchema' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1\\FlowSchemaList',
         ],
-        'createFlowcontrolApiserverV1beta2FlowSchema' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1beta2\\FlowSchema',
-            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1beta2\\FlowSchema',
-            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1beta2\\FlowSchema',
+        'createFlowcontrolApiserverV1FlowSchema' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1\\FlowSchema',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1\\FlowSchema',
+            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1\\FlowSchema',
         ],
-        'deleteFlowcontrolApiserverV1beta2CollectionFlowSchema' => [
+        'deleteFlowcontrolApiserverV1CollectionFlowSchema' => [
             '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
         ],
-        'readFlowcontrolApiserverV1beta2FlowSchema' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1beta2\\FlowSchema',
+        'readFlowcontrolApiserverV1FlowSchema' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1\\FlowSchema',
         ],
-        'replaceFlowcontrolApiserverV1beta2FlowSchema' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1beta2\\FlowSchema',
-            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1beta2\\FlowSchema',
+        'replaceFlowcontrolApiserverV1FlowSchema' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1\\FlowSchema',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1\\FlowSchema',
         ],
-        'deleteFlowcontrolApiserverV1beta2FlowSchema' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
-            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
-        ],
-        'patchFlowcontrolApiserverV1beta2FlowSchema' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1beta2\\FlowSchema',
-            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1beta2\\FlowSchema',
-        ],
-        'readFlowcontrolApiserverV1beta2FlowSchemaStatus' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1beta2\\FlowSchema',
-        ],
-        'replaceFlowcontrolApiserverV1beta2FlowSchemaStatus' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1beta2\\FlowSchema',
-            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1beta2\\FlowSchema',
-        ],
-        'patchFlowcontrolApiserverV1beta2FlowSchemaStatus' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1beta2\\FlowSchema',
-            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1beta2\\FlowSchema',
-        ],
-        'listFlowcontrolApiserverV1beta2PriorityLevelConfiguration' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1beta2\\PriorityLevelConfigurationList',
-        ],
-        'createFlowcontrolApiserverV1beta2PriorityLevelConfiguration' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1beta2\\PriorityLevelConfiguration',
-            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1beta2\\PriorityLevelConfiguration',
-            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1beta2\\PriorityLevelConfiguration',
-        ],
-        'deleteFlowcontrolApiserverV1beta2CollectionPriorityLevelConfiguration' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
-        ],
-        'readFlowcontrolApiserverV1beta2PriorityLevelConfiguration' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1beta2\\PriorityLevelConfiguration',
-        ],
-        'replaceFlowcontrolApiserverV1beta2PriorityLevelConfiguration' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1beta2\\PriorityLevelConfiguration',
-            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1beta2\\PriorityLevelConfiguration',
-        ],
-        'deleteFlowcontrolApiserverV1beta2PriorityLevelConfiguration' => [
+        'deleteFlowcontrolApiserverV1FlowSchema' => [
             '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
             '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
         ],
-        'patchFlowcontrolApiserverV1beta2PriorityLevelConfiguration' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1beta2\\PriorityLevelConfiguration',
-            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1beta2\\PriorityLevelConfiguration',
+        'patchFlowcontrolApiserverV1FlowSchema' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1\\FlowSchema',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1\\FlowSchema',
         ],
-        'readFlowcontrolApiserverV1beta2PriorityLevelConfigurationStatus' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1beta2\\PriorityLevelConfiguration',
+        'readFlowcontrolApiserverV1FlowSchemaStatus' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1\\FlowSchema',
         ],
-        'replaceFlowcontrolApiserverV1beta2PriorityLevelConfigurationStatus' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1beta2\\PriorityLevelConfiguration',
-            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1beta2\\PriorityLevelConfiguration',
+        'replaceFlowcontrolApiserverV1FlowSchemaStatus' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1\\FlowSchema',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1\\FlowSchema',
         ],
-        'patchFlowcontrolApiserverV1beta2PriorityLevelConfigurationStatus' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1beta2\\PriorityLevelConfiguration',
-            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1beta2\\PriorityLevelConfiguration',
+        'patchFlowcontrolApiserverV1FlowSchemaStatus' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1\\FlowSchema',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1\\FlowSchema',
         ],
-        'watchFlowcontrolApiserverV1beta2FlowSchemaList' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
+        'listFlowcontrolApiserverV1PriorityLevelConfiguration' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1\\PriorityLevelConfigurationList',
         ],
-        'watchFlowcontrolApiserverV1beta2FlowSchema' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
+        'createFlowcontrolApiserverV1PriorityLevelConfiguration' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1\\PriorityLevelConfiguration',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1\\PriorityLevelConfiguration',
+            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1\\PriorityLevelConfiguration',
         ],
-        'watchFlowcontrolApiserverV1beta2PriorityLevelConfigurationList' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
-        ],
-        'watchFlowcontrolApiserverV1beta2PriorityLevelConfiguration' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
-        ],
-        'getFlowcontrolApiserverV1beta3APIResources' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\APIResourceList',
-        ],
-        'listFlowcontrolApiserverV1beta3FlowSchema' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1beta3\\FlowSchemaList',
-        ],
-        'createFlowcontrolApiserverV1beta3FlowSchema' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1beta3\\FlowSchema',
-            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1beta3\\FlowSchema',
-            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1beta3\\FlowSchema',
-        ],
-        'deleteFlowcontrolApiserverV1beta3CollectionFlowSchema' => [
+        'deleteFlowcontrolApiserverV1CollectionPriorityLevelConfiguration' => [
             '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
         ],
-        'readFlowcontrolApiserverV1beta3FlowSchema' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1beta3\\FlowSchema',
+        'readFlowcontrolApiserverV1PriorityLevelConfiguration' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1\\PriorityLevelConfiguration',
         ],
-        'replaceFlowcontrolApiserverV1beta3FlowSchema' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1beta3\\FlowSchema',
-            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1beta3\\FlowSchema',
+        'replaceFlowcontrolApiserverV1PriorityLevelConfiguration' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1\\PriorityLevelConfiguration',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1\\PriorityLevelConfiguration',
         ],
-        'deleteFlowcontrolApiserverV1beta3FlowSchema' => [
+        'deleteFlowcontrolApiserverV1PriorityLevelConfiguration' => [
             '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
             '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
         ],
-        'patchFlowcontrolApiserverV1beta3FlowSchema' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1beta3\\FlowSchema',
-            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1beta3\\FlowSchema',
+        'patchFlowcontrolApiserverV1PriorityLevelConfiguration' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1\\PriorityLevelConfiguration',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1\\PriorityLevelConfiguration',
         ],
-        'readFlowcontrolApiserverV1beta3FlowSchemaStatus' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1beta3\\FlowSchema',
+        'readFlowcontrolApiserverV1PriorityLevelConfigurationStatus' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1\\PriorityLevelConfiguration',
         ],
-        'replaceFlowcontrolApiserverV1beta3FlowSchemaStatus' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1beta3\\FlowSchema',
-            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1beta3\\FlowSchema',
+        'replaceFlowcontrolApiserverV1PriorityLevelConfigurationStatus' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1\\PriorityLevelConfiguration',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1\\PriorityLevelConfiguration',
         ],
-        'patchFlowcontrolApiserverV1beta3FlowSchemaStatus' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1beta3\\FlowSchema',
-            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1beta3\\FlowSchema',
+        'patchFlowcontrolApiserverV1PriorityLevelConfigurationStatus' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1\\PriorityLevelConfiguration',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1\\PriorityLevelConfiguration',
         ],
-        'listFlowcontrolApiserverV1beta3PriorityLevelConfiguration' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1beta3\\PriorityLevelConfigurationList',
-        ],
-        'createFlowcontrolApiserverV1beta3PriorityLevelConfiguration' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1beta3\\PriorityLevelConfiguration',
-            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1beta3\\PriorityLevelConfiguration',
-            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1beta3\\PriorityLevelConfiguration',
-        ],
-        'deleteFlowcontrolApiserverV1beta3CollectionPriorityLevelConfiguration' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
-        ],
-        'readFlowcontrolApiserverV1beta3PriorityLevelConfiguration' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1beta3\\PriorityLevelConfiguration',
-        ],
-        'replaceFlowcontrolApiserverV1beta3PriorityLevelConfiguration' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1beta3\\PriorityLevelConfiguration',
-            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1beta3\\PriorityLevelConfiguration',
-        ],
-        'deleteFlowcontrolApiserverV1beta3PriorityLevelConfiguration' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
-            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
-        ],
-        'patchFlowcontrolApiserverV1beta3PriorityLevelConfiguration' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1beta3\\PriorityLevelConfiguration',
-            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1beta3\\PriorityLevelConfiguration',
-        ],
-        'readFlowcontrolApiserverV1beta3PriorityLevelConfigurationStatus' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1beta3\\PriorityLevelConfiguration',
-        ],
-        'replaceFlowcontrolApiserverV1beta3PriorityLevelConfigurationStatus' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1beta3\\PriorityLevelConfiguration',
-            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1beta3\\PriorityLevelConfiguration',
-        ],
-        'patchFlowcontrolApiserverV1beta3PriorityLevelConfigurationStatus' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1beta3\\PriorityLevelConfiguration',
-            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Flowcontrol\\V1beta3\\PriorityLevelConfiguration',
-        ],
-        'watchFlowcontrolApiserverV1beta3FlowSchemaList' => [
+        'watchFlowcontrolApiserverV1FlowSchemaList' => [
             '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
         ],
-        'watchFlowcontrolApiserverV1beta3FlowSchema' => [
+        'watchFlowcontrolApiserverV1FlowSchema' => [
             '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
         ],
-        'watchFlowcontrolApiserverV1beta3PriorityLevelConfigurationList' => [
+        'watchFlowcontrolApiserverV1PriorityLevelConfigurationList' => [
             '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
         ],
-        'watchFlowcontrolApiserverV1beta3PriorityLevelConfiguration' => [
+        'watchFlowcontrolApiserverV1PriorityLevelConfiguration' => [
             '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
         ],
         'getInternalApiserverAPIGroup' => [
@@ -1924,6 +2148,32 @@ class ResponseTypes
         'listNetworkingV1IngressForAllNamespaces' => [
             '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1\\IngressList',
         ],
+        'listNetworkingV1IPAddress' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1\\IPAddressList',
+        ],
+        'createNetworkingV1IPAddress' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1\\IPAddress',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1\\IPAddress',
+            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1\\IPAddress',
+        ],
+        'deleteNetworkingV1CollectionIPAddress' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
+        ],
+        'readNetworkingV1IPAddress' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1\\IPAddress',
+        ],
+        'replaceNetworkingV1IPAddress' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1\\IPAddress',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1\\IPAddress',
+        ],
+        'deleteNetworkingV1IPAddress' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
+            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
+        ],
+        'patchNetworkingV1IPAddress' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1\\IPAddress',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1\\IPAddress',
+        ],
         'listNetworkingV1NamespacedIngress' => [
             '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1\\IngressList',
         ],
@@ -1987,19 +2237,45 @@ class ResponseTypes
             '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1\\NetworkPolicy',
             '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1\\NetworkPolicy',
         ],
-        'readNetworkingV1NamespacedNetworkPolicyStatus' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1\\NetworkPolicy',
-        ],
-        'replaceNetworkingV1NamespacedNetworkPolicyStatus' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1\\NetworkPolicy',
-            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1\\NetworkPolicy',
-        ],
-        'patchNetworkingV1NamespacedNetworkPolicyStatus' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1\\NetworkPolicy',
-            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1\\NetworkPolicy',
-        ],
         'listNetworkingV1NetworkPolicyForAllNamespaces' => [
             '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1\\NetworkPolicyList',
+        ],
+        'listNetworkingV1ServiceCIDR' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1\\ServiceCIDRList',
+        ],
+        'createNetworkingV1ServiceCIDR' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1\\ServiceCIDR',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1\\ServiceCIDR',
+            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1\\ServiceCIDR',
+        ],
+        'deleteNetworkingV1CollectionServiceCIDR' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
+        ],
+        'readNetworkingV1ServiceCIDR' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1\\ServiceCIDR',
+        ],
+        'replaceNetworkingV1ServiceCIDR' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1\\ServiceCIDR',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1\\ServiceCIDR',
+        ],
+        'deleteNetworkingV1ServiceCIDR' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
+            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
+        ],
+        'patchNetworkingV1ServiceCIDR' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1\\ServiceCIDR',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1\\ServiceCIDR',
+        ],
+        'readNetworkingV1ServiceCIDRStatus' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1\\ServiceCIDR',
+        ],
+        'replaceNetworkingV1ServiceCIDRStatus' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1\\ServiceCIDR',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1\\ServiceCIDR',
+        ],
+        'patchNetworkingV1ServiceCIDRStatus' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1\\ServiceCIDR',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1\\ServiceCIDR',
         ],
         'watchNetworkingV1IngressClassList' => [
             '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
@@ -2008,6 +2284,12 @@ class ResponseTypes
             '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
         ],
         'watchNetworkingV1IngressListForAllNamespaces' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
+        ],
+        'watchNetworkingV1IPAddressList' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
+        ],
+        'watchNetworkingV1IPAddress' => [
             '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
         ],
         'watchNetworkingV1NamespacedIngressList' => [
@@ -2025,39 +2307,88 @@ class ResponseTypes
         'watchNetworkingV1NetworkPolicyListForAllNamespaces' => [
             '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
         ],
-        'getNetworkingV1alpha1APIResources' => [
+        'watchNetworkingV1ServiceCIDRList' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
+        ],
+        'watchNetworkingV1ServiceCIDR' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
+        ],
+        'getNetworkingV1beta1APIResources' => [
             '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\APIResourceList',
         ],
-        'listNetworkingV1alpha1ClusterCIDR' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1alpha1\\ClusterCIDRList',
+        'listNetworkingV1beta1IPAddress' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1beta1\\IPAddressList',
         ],
-        'createNetworkingV1alpha1ClusterCIDR' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1alpha1\\ClusterCIDR',
-            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1alpha1\\ClusterCIDR',
-            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1alpha1\\ClusterCIDR',
+        'createNetworkingV1beta1IPAddress' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1beta1\\IPAddress',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1beta1\\IPAddress',
+            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1beta1\\IPAddress',
         ],
-        'deleteNetworkingV1alpha1CollectionClusterCIDR' => [
+        'deleteNetworkingV1beta1CollectionIPAddress' => [
             '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
         ],
-        'readNetworkingV1alpha1ClusterCIDR' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1alpha1\\ClusterCIDR',
+        'readNetworkingV1beta1IPAddress' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1beta1\\IPAddress',
         ],
-        'replaceNetworkingV1alpha1ClusterCIDR' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1alpha1\\ClusterCIDR',
-            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1alpha1\\ClusterCIDR',
+        'replaceNetworkingV1beta1IPAddress' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1beta1\\IPAddress',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1beta1\\IPAddress',
         ],
-        'deleteNetworkingV1alpha1ClusterCIDR' => [
+        'deleteNetworkingV1beta1IPAddress' => [
             '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
             '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
         ],
-        'patchNetworkingV1alpha1ClusterCIDR' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1alpha1\\ClusterCIDR',
-            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1alpha1\\ClusterCIDR',
+        'patchNetworkingV1beta1IPAddress' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1beta1\\IPAddress',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1beta1\\IPAddress',
         ],
-        'watchNetworkingV1alpha1ClusterCIDRList' => [
+        'listNetworkingV1beta1ServiceCIDR' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1beta1\\ServiceCIDRList',
+        ],
+        'createNetworkingV1beta1ServiceCIDR' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1beta1\\ServiceCIDR',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1beta1\\ServiceCIDR',
+            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1beta1\\ServiceCIDR',
+        ],
+        'deleteNetworkingV1beta1CollectionServiceCIDR' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
+        ],
+        'readNetworkingV1beta1ServiceCIDR' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1beta1\\ServiceCIDR',
+        ],
+        'replaceNetworkingV1beta1ServiceCIDR' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1beta1\\ServiceCIDR',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1beta1\\ServiceCIDR',
+        ],
+        'deleteNetworkingV1beta1ServiceCIDR' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
+            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
+        ],
+        'patchNetworkingV1beta1ServiceCIDR' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1beta1\\ServiceCIDR',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1beta1\\ServiceCIDR',
+        ],
+        'readNetworkingV1beta1ServiceCIDRStatus' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1beta1\\ServiceCIDR',
+        ],
+        'replaceNetworkingV1beta1ServiceCIDRStatus' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1beta1\\ServiceCIDR',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1beta1\\ServiceCIDR',
+        ],
+        'patchNetworkingV1beta1ServiceCIDRStatus' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1beta1\\ServiceCIDR',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1beta1\\ServiceCIDR',
+        ],
+        'watchNetworkingV1beta1IPAddressList' => [
             '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
         ],
-        'watchNetworkingV1alpha1ClusterCIDR' => [
+        'watchNetworkingV1beta1IPAddress' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
+        ],
+        'watchNetworkingV1beta1ServiceCIDRList' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
+        ],
+        'watchNetworkingV1beta1ServiceCIDR' => [
             '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
         ],
         'getNodeAPIGroup' => [
@@ -2302,175 +2633,498 @@ class ResponseTypes
         'getResourceAPIGroup' => [
             '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\APIGroup',
         ],
-        'getResourceV1alpha1APIResources' => [
+        'getResourceV1alpha3APIResources' => [
             '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\APIResourceList',
         ],
-        'listResourceV1alpha1NamespacedPodScheduling' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha1\\PodSchedulingList',
+        'listResourceV1alpha3DeviceClass' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha3\\DeviceClassList',
         ],
-        'createResourceV1alpha1NamespacedPodScheduling' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha1\\PodScheduling',
-            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha1\\PodScheduling',
-            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha1\\PodScheduling',
+        'createResourceV1alpha3DeviceClass' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha3\\DeviceClass',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha3\\DeviceClass',
+            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha3\\DeviceClass',
         ],
-        'deleteResourceV1alpha1CollectionNamespacedPodScheduling' => [
+        'deleteResourceV1alpha3CollectionDeviceClass' => [
             '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
         ],
-        'readResourceV1alpha1NamespacedPodScheduling' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha1\\PodScheduling',
+        'readResourceV1alpha3DeviceClass' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha3\\DeviceClass',
         ],
-        'replaceResourceV1alpha1NamespacedPodScheduling' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha1\\PodScheduling',
-            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha1\\PodScheduling',
+        'replaceResourceV1alpha3DeviceClass' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha3\\DeviceClass',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha3\\DeviceClass',
         ],
-        'deleteResourceV1alpha1NamespacedPodScheduling' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha1\\PodScheduling',
-            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha1\\PodScheduling',
+        'deleteResourceV1alpha3DeviceClass' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha3\\DeviceClass',
+            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha3\\DeviceClass',
         ],
-        'patchResourceV1alpha1NamespacedPodScheduling' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha1\\PodScheduling',
-            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha1\\PodScheduling',
+        'patchResourceV1alpha3DeviceClass' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha3\\DeviceClass',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha3\\DeviceClass',
         ],
-        'readResourceV1alpha1NamespacedPodSchedulingStatus' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha1\\PodScheduling',
+        'listResourceV1alpha3DeviceTaintRule' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha3\\DeviceTaintRuleList',
         ],
-        'replaceResourceV1alpha1NamespacedPodSchedulingStatus' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha1\\PodScheduling',
-            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha1\\PodScheduling',
+        'createResourceV1alpha3DeviceTaintRule' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha3\\DeviceTaintRule',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha3\\DeviceTaintRule',
+            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha3\\DeviceTaintRule',
         ],
-        'patchResourceV1alpha1NamespacedPodSchedulingStatus' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha1\\PodScheduling',
-            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha1\\PodScheduling',
-        ],
-        'listResourceV1alpha1NamespacedResourceClaim' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha1\\ResourceClaimList',
-        ],
-        'createResourceV1alpha1NamespacedResourceClaim' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha1\\ResourceClaim',
-            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha1\\ResourceClaim',
-            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha1\\ResourceClaim',
-        ],
-        'deleteResourceV1alpha1CollectionNamespacedResourceClaim' => [
+        'deleteResourceV1alpha3CollectionDeviceTaintRule' => [
             '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
         ],
-        'readResourceV1alpha1NamespacedResourceClaim' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha1\\ResourceClaim',
+        'readResourceV1alpha3DeviceTaintRule' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha3\\DeviceTaintRule',
         ],
-        'replaceResourceV1alpha1NamespacedResourceClaim' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha1\\ResourceClaim',
-            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha1\\ResourceClaim',
+        'replaceResourceV1alpha3DeviceTaintRule' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha3\\DeviceTaintRule',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha3\\DeviceTaintRule',
         ],
-        'deleteResourceV1alpha1NamespacedResourceClaim' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha1\\ResourceClaim',
-            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha1\\ResourceClaim',
+        'deleteResourceV1alpha3DeviceTaintRule' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha3\\DeviceTaintRule',
+            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha3\\DeviceTaintRule',
         ],
-        'patchResourceV1alpha1NamespacedResourceClaim' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha1\\ResourceClaim',
-            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha1\\ResourceClaim',
+        'patchResourceV1alpha3DeviceTaintRule' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha3\\DeviceTaintRule',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha3\\DeviceTaintRule',
         ],
-        'readResourceV1alpha1NamespacedResourceClaimStatus' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha1\\ResourceClaim',
+        'listResourceV1alpha3NamespacedResourceClaim' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha3\\ResourceClaimList',
         ],
-        'replaceResourceV1alpha1NamespacedResourceClaimStatus' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha1\\ResourceClaim',
-            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha1\\ResourceClaim',
+        'createResourceV1alpha3NamespacedResourceClaim' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha3\\ResourceClaim',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha3\\ResourceClaim',
+            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha3\\ResourceClaim',
         ],
-        'patchResourceV1alpha1NamespacedResourceClaimStatus' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha1\\ResourceClaim',
-            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha1\\ResourceClaim',
-        ],
-        'listResourceV1alpha1NamespacedResourceClaimTemplate' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha1\\ResourceClaimTemplateList',
-        ],
-        'createResourceV1alpha1NamespacedResourceClaimTemplate' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha1\\ResourceClaimTemplate',
-            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha1\\ResourceClaimTemplate',
-            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha1\\ResourceClaimTemplate',
-        ],
-        'deleteResourceV1alpha1CollectionNamespacedResourceClaimTemplate' => [
+        'deleteResourceV1alpha3CollectionNamespacedResourceClaim' => [
             '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
         ],
-        'readResourceV1alpha1NamespacedResourceClaimTemplate' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha1\\ResourceClaimTemplate',
+        'readResourceV1alpha3NamespacedResourceClaim' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha3\\ResourceClaim',
         ],
-        'replaceResourceV1alpha1NamespacedResourceClaimTemplate' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha1\\ResourceClaimTemplate',
-            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha1\\ResourceClaimTemplate',
+        'replaceResourceV1alpha3NamespacedResourceClaim' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha3\\ResourceClaim',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha3\\ResourceClaim',
         ],
-        'deleteResourceV1alpha1NamespacedResourceClaimTemplate' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha1\\ResourceClaimTemplate',
-            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha1\\ResourceClaimTemplate',
+        'deleteResourceV1alpha3NamespacedResourceClaim' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha3\\ResourceClaim',
+            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha3\\ResourceClaim',
         ],
-        'patchResourceV1alpha1NamespacedResourceClaimTemplate' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha1\\ResourceClaimTemplate',
-            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha1\\ResourceClaimTemplate',
+        'patchResourceV1alpha3NamespacedResourceClaim' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha3\\ResourceClaim',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha3\\ResourceClaim',
         ],
-        'listResourceV1alpha1PodSchedulingForAllNamespaces' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha1\\PodSchedulingList',
+        'readResourceV1alpha3NamespacedResourceClaimStatus' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha3\\ResourceClaim',
         ],
-        'listResourceV1alpha1ResourceClaimForAllNamespaces' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha1\\ResourceClaimList',
+        'replaceResourceV1alpha3NamespacedResourceClaimStatus' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha3\\ResourceClaim',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha3\\ResourceClaim',
         ],
-        'listResourceV1alpha1ResourceClaimTemplateForAllNamespaces' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha1\\ResourceClaimTemplateList',
+        'patchResourceV1alpha3NamespacedResourceClaimStatus' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha3\\ResourceClaim',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha3\\ResourceClaim',
         ],
-        'listResourceV1alpha1ResourceClass' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha1\\ResourceClassList',
+        'listResourceV1alpha3NamespacedResourceClaimTemplate' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha3\\ResourceClaimTemplateList',
         ],
-        'createResourceV1alpha1ResourceClass' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha1\\ResourceClass',
-            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha1\\ResourceClass',
-            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha1\\ResourceClass',
+        'createResourceV1alpha3NamespacedResourceClaimTemplate' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha3\\ResourceClaimTemplate',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha3\\ResourceClaimTemplate',
+            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha3\\ResourceClaimTemplate',
         ],
-        'deleteResourceV1alpha1CollectionResourceClass' => [
+        'deleteResourceV1alpha3CollectionNamespacedResourceClaimTemplate' => [
             '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
         ],
-        'readResourceV1alpha1ResourceClass' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha1\\ResourceClass',
+        'readResourceV1alpha3NamespacedResourceClaimTemplate' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha3\\ResourceClaimTemplate',
         ],
-        'replaceResourceV1alpha1ResourceClass' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha1\\ResourceClass',
-            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha1\\ResourceClass',
+        'replaceResourceV1alpha3NamespacedResourceClaimTemplate' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha3\\ResourceClaimTemplate',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha3\\ResourceClaimTemplate',
         ],
-        'deleteResourceV1alpha1ResourceClass' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha1\\ResourceClass',
-            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha1\\ResourceClass',
+        'deleteResourceV1alpha3NamespacedResourceClaimTemplate' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha3\\ResourceClaimTemplate',
+            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha3\\ResourceClaimTemplate',
         ],
-        'patchResourceV1alpha1ResourceClass' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha1\\ResourceClass',
-            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha1\\ResourceClass',
+        'patchResourceV1alpha3NamespacedResourceClaimTemplate' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha3\\ResourceClaimTemplate',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha3\\ResourceClaimTemplate',
         ],
-        'watchResourceV1alpha1NamespacedPodSchedulingList' => [
+        'listResourceV1alpha3ResourceClaimForAllNamespaces' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha3\\ResourceClaimList',
+        ],
+        'listResourceV1alpha3ResourceClaimTemplateForAllNamespaces' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha3\\ResourceClaimTemplateList',
+        ],
+        'listResourceV1alpha3ResourceSlice' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha3\\ResourceSliceList',
+        ],
+        'createResourceV1alpha3ResourceSlice' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha3\\ResourceSlice',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha3\\ResourceSlice',
+            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha3\\ResourceSlice',
+        ],
+        'deleteResourceV1alpha3CollectionResourceSlice' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
+        ],
+        'readResourceV1alpha3ResourceSlice' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha3\\ResourceSlice',
+        ],
+        'replaceResourceV1alpha3ResourceSlice' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha3\\ResourceSlice',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha3\\ResourceSlice',
+        ],
+        'deleteResourceV1alpha3ResourceSlice' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha3\\ResourceSlice',
+            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha3\\ResourceSlice',
+        ],
+        'patchResourceV1alpha3ResourceSlice' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha3\\ResourceSlice',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1alpha3\\ResourceSlice',
+        ],
+        'watchResourceV1alpha3DeviceClassList' => [
             '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
         ],
-        'watchResourceV1alpha1NamespacedPodScheduling' => [
+        'watchResourceV1alpha3DeviceClass' => [
             '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
         ],
-        'watchResourceV1alpha1NamespacedResourceClaimList' => [
+        'watchResourceV1alpha3DeviceTaintRuleList' => [
             '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
         ],
-        'watchResourceV1alpha1NamespacedResourceClaim' => [
+        'watchResourceV1alpha3DeviceTaintRule' => [
             '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
         ],
-        'watchResourceV1alpha1NamespacedResourceClaimTemplateList' => [
+        'watchResourceV1alpha3NamespacedResourceClaimList' => [
             '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
         ],
-        'watchResourceV1alpha1NamespacedResourceClaimTemplate' => [
+        'watchResourceV1alpha3NamespacedResourceClaim' => [
             '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
         ],
-        'watchResourceV1alpha1PodSchedulingListForAllNamespaces' => [
+        'watchResourceV1alpha3NamespacedResourceClaimTemplateList' => [
             '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
         ],
-        'watchResourceV1alpha1ResourceClaimListForAllNamespaces' => [
+        'watchResourceV1alpha3NamespacedResourceClaimTemplate' => [
             '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
         ],
-        'watchResourceV1alpha1ResourceClaimTemplateListForAllNamespaces' => [
+        'watchResourceV1alpha3ResourceClaimListForAllNamespaces' => [
             '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
         ],
-        'watchResourceV1alpha1ResourceClassList' => [
+        'watchResourceV1alpha3ResourceClaimTemplateListForAllNamespaces' => [
             '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
         ],
-        'watchResourceV1alpha1ResourceClass' => [
+        'watchResourceV1alpha3ResourceSliceList' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
+        ],
+        'watchResourceV1alpha3ResourceSlice' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
+        ],
+        'getResourceV1beta1APIResources' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\APIResourceList',
+        ],
+        'listResourceV1beta1DeviceClass' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta1\\DeviceClassList',
+        ],
+        'createResourceV1beta1DeviceClass' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta1\\DeviceClass',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta1\\DeviceClass',
+            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta1\\DeviceClass',
+        ],
+        'deleteResourceV1beta1CollectionDeviceClass' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
+        ],
+        'readResourceV1beta1DeviceClass' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta1\\DeviceClass',
+        ],
+        'replaceResourceV1beta1DeviceClass' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta1\\DeviceClass',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta1\\DeviceClass',
+        ],
+        'deleteResourceV1beta1DeviceClass' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta1\\DeviceClass',
+            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta1\\DeviceClass',
+        ],
+        'patchResourceV1beta1DeviceClass' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta1\\DeviceClass',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta1\\DeviceClass',
+        ],
+        'listResourceV1beta1NamespacedResourceClaim' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta1\\ResourceClaimList',
+        ],
+        'createResourceV1beta1NamespacedResourceClaim' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta1\\ResourceClaim',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta1\\ResourceClaim',
+            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta1\\ResourceClaim',
+        ],
+        'deleteResourceV1beta1CollectionNamespacedResourceClaim' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
+        ],
+        'readResourceV1beta1NamespacedResourceClaim' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta1\\ResourceClaim',
+        ],
+        'replaceResourceV1beta1NamespacedResourceClaim' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta1\\ResourceClaim',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta1\\ResourceClaim',
+        ],
+        'deleteResourceV1beta1NamespacedResourceClaim' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta1\\ResourceClaim',
+            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta1\\ResourceClaim',
+        ],
+        'patchResourceV1beta1NamespacedResourceClaim' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta1\\ResourceClaim',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta1\\ResourceClaim',
+        ],
+        'readResourceV1beta1NamespacedResourceClaimStatus' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta1\\ResourceClaim',
+        ],
+        'replaceResourceV1beta1NamespacedResourceClaimStatus' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta1\\ResourceClaim',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta1\\ResourceClaim',
+        ],
+        'patchResourceV1beta1NamespacedResourceClaimStatus' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta1\\ResourceClaim',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta1\\ResourceClaim',
+        ],
+        'listResourceV1beta1NamespacedResourceClaimTemplate' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta1\\ResourceClaimTemplateList',
+        ],
+        'createResourceV1beta1NamespacedResourceClaimTemplate' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta1\\ResourceClaimTemplate',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta1\\ResourceClaimTemplate',
+            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta1\\ResourceClaimTemplate',
+        ],
+        'deleteResourceV1beta1CollectionNamespacedResourceClaimTemplate' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
+        ],
+        'readResourceV1beta1NamespacedResourceClaimTemplate' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta1\\ResourceClaimTemplate',
+        ],
+        'replaceResourceV1beta1NamespacedResourceClaimTemplate' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta1\\ResourceClaimTemplate',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta1\\ResourceClaimTemplate',
+        ],
+        'deleteResourceV1beta1NamespacedResourceClaimTemplate' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta1\\ResourceClaimTemplate',
+            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta1\\ResourceClaimTemplate',
+        ],
+        'patchResourceV1beta1NamespacedResourceClaimTemplate' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta1\\ResourceClaimTemplate',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta1\\ResourceClaimTemplate',
+        ],
+        'listResourceV1beta1ResourceClaimForAllNamespaces' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta1\\ResourceClaimList',
+        ],
+        'listResourceV1beta1ResourceClaimTemplateForAllNamespaces' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta1\\ResourceClaimTemplateList',
+        ],
+        'listResourceV1beta1ResourceSlice' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta1\\ResourceSliceList',
+        ],
+        'createResourceV1beta1ResourceSlice' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta1\\ResourceSlice',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta1\\ResourceSlice',
+            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta1\\ResourceSlice',
+        ],
+        'deleteResourceV1beta1CollectionResourceSlice' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
+        ],
+        'readResourceV1beta1ResourceSlice' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta1\\ResourceSlice',
+        ],
+        'replaceResourceV1beta1ResourceSlice' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta1\\ResourceSlice',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta1\\ResourceSlice',
+        ],
+        'deleteResourceV1beta1ResourceSlice' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta1\\ResourceSlice',
+            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta1\\ResourceSlice',
+        ],
+        'patchResourceV1beta1ResourceSlice' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta1\\ResourceSlice',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta1\\ResourceSlice',
+        ],
+        'watchResourceV1beta1DeviceClassList' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
+        ],
+        'watchResourceV1beta1DeviceClass' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
+        ],
+        'watchResourceV1beta1NamespacedResourceClaimList' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
+        ],
+        'watchResourceV1beta1NamespacedResourceClaim' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
+        ],
+        'watchResourceV1beta1NamespacedResourceClaimTemplateList' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
+        ],
+        'watchResourceV1beta1NamespacedResourceClaimTemplate' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
+        ],
+        'watchResourceV1beta1ResourceClaimListForAllNamespaces' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
+        ],
+        'watchResourceV1beta1ResourceClaimTemplateListForAllNamespaces' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
+        ],
+        'watchResourceV1beta1ResourceSliceList' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
+        ],
+        'watchResourceV1beta1ResourceSlice' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
+        ],
+        'getResourceV1beta2APIResources' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\APIResourceList',
+        ],
+        'listResourceV1beta2DeviceClass' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta2\\DeviceClassList',
+        ],
+        'createResourceV1beta2DeviceClass' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta2\\DeviceClass',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta2\\DeviceClass',
+            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta2\\DeviceClass',
+        ],
+        'deleteResourceV1beta2CollectionDeviceClass' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
+        ],
+        'readResourceV1beta2DeviceClass' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta2\\DeviceClass',
+        ],
+        'replaceResourceV1beta2DeviceClass' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta2\\DeviceClass',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta2\\DeviceClass',
+        ],
+        'deleteResourceV1beta2DeviceClass' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta2\\DeviceClass',
+            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta2\\DeviceClass',
+        ],
+        'patchResourceV1beta2DeviceClass' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta2\\DeviceClass',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta2\\DeviceClass',
+        ],
+        'listResourceV1beta2NamespacedResourceClaim' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta2\\ResourceClaimList',
+        ],
+        'createResourceV1beta2NamespacedResourceClaim' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta2\\ResourceClaim',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta2\\ResourceClaim',
+            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta2\\ResourceClaim',
+        ],
+        'deleteResourceV1beta2CollectionNamespacedResourceClaim' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
+        ],
+        'readResourceV1beta2NamespacedResourceClaim' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta2\\ResourceClaim',
+        ],
+        'replaceResourceV1beta2NamespacedResourceClaim' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta2\\ResourceClaim',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta2\\ResourceClaim',
+        ],
+        'deleteResourceV1beta2NamespacedResourceClaim' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta2\\ResourceClaim',
+            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta2\\ResourceClaim',
+        ],
+        'patchResourceV1beta2NamespacedResourceClaim' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta2\\ResourceClaim',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta2\\ResourceClaim',
+        ],
+        'readResourceV1beta2NamespacedResourceClaimStatus' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta2\\ResourceClaim',
+        ],
+        'replaceResourceV1beta2NamespacedResourceClaimStatus' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta2\\ResourceClaim',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta2\\ResourceClaim',
+        ],
+        'patchResourceV1beta2NamespacedResourceClaimStatus' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta2\\ResourceClaim',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta2\\ResourceClaim',
+        ],
+        'listResourceV1beta2NamespacedResourceClaimTemplate' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta2\\ResourceClaimTemplateList',
+        ],
+        'createResourceV1beta2NamespacedResourceClaimTemplate' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta2\\ResourceClaimTemplate',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta2\\ResourceClaimTemplate',
+            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta2\\ResourceClaimTemplate',
+        ],
+        'deleteResourceV1beta2CollectionNamespacedResourceClaimTemplate' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
+        ],
+        'readResourceV1beta2NamespacedResourceClaimTemplate' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta2\\ResourceClaimTemplate',
+        ],
+        'replaceResourceV1beta2NamespacedResourceClaimTemplate' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta2\\ResourceClaimTemplate',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta2\\ResourceClaimTemplate',
+        ],
+        'deleteResourceV1beta2NamespacedResourceClaimTemplate' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta2\\ResourceClaimTemplate',
+            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta2\\ResourceClaimTemplate',
+        ],
+        'patchResourceV1beta2NamespacedResourceClaimTemplate' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta2\\ResourceClaimTemplate',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta2\\ResourceClaimTemplate',
+        ],
+        'listResourceV1beta2ResourceClaimForAllNamespaces' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta2\\ResourceClaimList',
+        ],
+        'listResourceV1beta2ResourceClaimTemplateForAllNamespaces' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta2\\ResourceClaimTemplateList',
+        ],
+        'listResourceV1beta2ResourceSlice' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta2\\ResourceSliceList',
+        ],
+        'createResourceV1beta2ResourceSlice' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta2\\ResourceSlice',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta2\\ResourceSlice',
+            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta2\\ResourceSlice',
+        ],
+        'deleteResourceV1beta2CollectionResourceSlice' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
+        ],
+        'readResourceV1beta2ResourceSlice' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta2\\ResourceSlice',
+        ],
+        'replaceResourceV1beta2ResourceSlice' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta2\\ResourceSlice',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta2\\ResourceSlice',
+        ],
+        'deleteResourceV1beta2ResourceSlice' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta2\\ResourceSlice',
+            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta2\\ResourceSlice',
+        ],
+        'patchResourceV1beta2ResourceSlice' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta2\\ResourceSlice',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Resource\\V1beta2\\ResourceSlice',
+        ],
+        'watchResourceV1beta2DeviceClassList' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
+        ],
+        'watchResourceV1beta2DeviceClass' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
+        ],
+        'watchResourceV1beta2NamespacedResourceClaimList' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
+        ],
+        'watchResourceV1beta2NamespacedResourceClaim' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
+        ],
+        'watchResourceV1beta2NamespacedResourceClaimTemplateList' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
+        ],
+        'watchResourceV1beta2NamespacedResourceClaimTemplate' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
+        ],
+        'watchResourceV1beta2ResourceClaimListForAllNamespaces' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
+        ],
+        'watchResourceV1beta2ResourceClaimTemplateListForAllNamespaces' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
+        ],
+        'watchResourceV1beta2ResourceSliceList' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
+        ],
+        'watchResourceV1beta2ResourceSlice' => [
             '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
         ],
         'getSchedulingAPIGroup' => [
@@ -2694,45 +3348,123 @@ class ResponseTypes
         'watchStorageV1VolumeAttachment' => [
             '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
         ],
+        'getStorageV1alpha1APIResources' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\APIResourceList',
+        ],
+        'listStorageV1alpha1VolumeAttributesClass' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Storage\\V1alpha1\\VolumeAttributesClassList',
+        ],
+        'createStorageV1alpha1VolumeAttributesClass' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Storage\\V1alpha1\\VolumeAttributesClass',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Storage\\V1alpha1\\VolumeAttributesClass',
+            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Storage\\V1alpha1\\VolumeAttributesClass',
+        ],
+        'deleteStorageV1alpha1CollectionVolumeAttributesClass' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
+        ],
+        'readStorageV1alpha1VolumeAttributesClass' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Storage\\V1alpha1\\VolumeAttributesClass',
+        ],
+        'replaceStorageV1alpha1VolumeAttributesClass' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Storage\\V1alpha1\\VolumeAttributesClass',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Storage\\V1alpha1\\VolumeAttributesClass',
+        ],
+        'deleteStorageV1alpha1VolumeAttributesClass' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Storage\\V1alpha1\\VolumeAttributesClass',
+            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Storage\\V1alpha1\\VolumeAttributesClass',
+        ],
+        'patchStorageV1alpha1VolumeAttributesClass' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Storage\\V1alpha1\\VolumeAttributesClass',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Storage\\V1alpha1\\VolumeAttributesClass',
+        ],
+        'watchStorageV1alpha1VolumeAttributesClassList' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
+        ],
+        'watchStorageV1alpha1VolumeAttributesClass' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
+        ],
         'getStorageV1beta1APIResources' => [
             '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\APIResourceList',
         ],
-        'listStorageV1beta1CSIStorageCapacityForAllNamespaces' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Storage\\V1beta1\\CSIStorageCapacityList',
+        'listStorageV1beta1VolumeAttributesClass' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Storage\\V1beta1\\VolumeAttributesClassList',
         ],
-        'listStorageV1beta1NamespacedCSIStorageCapacity' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Storage\\V1beta1\\CSIStorageCapacityList',
+        'createStorageV1beta1VolumeAttributesClass' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Storage\\V1beta1\\VolumeAttributesClass',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Storage\\V1beta1\\VolumeAttributesClass',
+            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Storage\\V1beta1\\VolumeAttributesClass',
         ],
-        'createStorageV1beta1NamespacedCSIStorageCapacity' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Storage\\V1beta1\\CSIStorageCapacity',
-            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Storage\\V1beta1\\CSIStorageCapacity',
-            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Storage\\V1beta1\\CSIStorageCapacity',
-        ],
-        'deleteStorageV1beta1CollectionNamespacedCSIStorageCapacity' => [
+        'deleteStorageV1beta1CollectionVolumeAttributesClass' => [
             '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
         ],
-        'readStorageV1beta1NamespacedCSIStorageCapacity' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Storage\\V1beta1\\CSIStorageCapacity',
+        'readStorageV1beta1VolumeAttributesClass' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Storage\\V1beta1\\VolumeAttributesClass',
         ],
-        'replaceStorageV1beta1NamespacedCSIStorageCapacity' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Storage\\V1beta1\\CSIStorageCapacity',
-            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Storage\\V1beta1\\CSIStorageCapacity',
+        'replaceStorageV1beta1VolumeAttributesClass' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Storage\\V1beta1\\VolumeAttributesClass',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Storage\\V1beta1\\VolumeAttributesClass',
         ],
-        'deleteStorageV1beta1NamespacedCSIStorageCapacity' => [
+        'deleteStorageV1beta1VolumeAttributesClass' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Storage\\V1beta1\\VolumeAttributesClass',
+            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Storage\\V1beta1\\VolumeAttributesClass',
+        ],
+        'patchStorageV1beta1VolumeAttributesClass' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Storage\\V1beta1\\VolumeAttributesClass',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Storage\\V1beta1\\VolumeAttributesClass',
+        ],
+        'watchStorageV1beta1VolumeAttributesClassList' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
+        ],
+        'watchStorageV1beta1VolumeAttributesClass' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
+        ],
+        'getStoragemigrationAPIGroup' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\APIGroup',
+        ],
+        'getStoragemigrationV1alpha1APIResources' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\APIResourceList',
+        ],
+        'listStoragemigrationV1alpha1StorageVersionMigration' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Storagemigration\\V1alpha1\\StorageVersionMigrationList',
+        ],
+        'createStoragemigrationV1alpha1StorageVersionMigration' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Storagemigration\\V1alpha1\\StorageVersionMigration',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Storagemigration\\V1alpha1\\StorageVersionMigration',
+            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Storagemigration\\V1alpha1\\StorageVersionMigration',
+        ],
+        'deleteStoragemigrationV1alpha1CollectionStorageVersionMigration' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
+        ],
+        'readStoragemigrationV1alpha1StorageVersionMigration' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Storagemigration\\V1alpha1\\StorageVersionMigration',
+        ],
+        'replaceStoragemigrationV1alpha1StorageVersionMigration' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Storagemigration\\V1alpha1\\StorageVersionMigration',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Storagemigration\\V1alpha1\\StorageVersionMigration',
+        ],
+        'deleteStoragemigrationV1alpha1StorageVersionMigration' => [
             '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
             '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
         ],
-        'patchStorageV1beta1NamespacedCSIStorageCapacity' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Storage\\V1beta1\\CSIStorageCapacity',
-            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Storage\\V1beta1\\CSIStorageCapacity',
+        'patchStoragemigrationV1alpha1StorageVersionMigration' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Storagemigration\\V1alpha1\\StorageVersionMigration',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Storagemigration\\V1alpha1\\StorageVersionMigration',
         ],
-        'watchStorageV1beta1CSIStorageCapacityListForAllNamespaces' => [
+        'readStoragemigrationV1alpha1StorageVersionMigrationStatus' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Storagemigration\\V1alpha1\\StorageVersionMigration',
+        ],
+        'replaceStoragemigrationV1alpha1StorageVersionMigrationStatus' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Storagemigration\\V1alpha1\\StorageVersionMigration',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Storagemigration\\V1alpha1\\StorageVersionMigration',
+        ],
+        'patchStoragemigrationV1alpha1StorageVersionMigrationStatus' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Storagemigration\\V1alpha1\\StorageVersionMigration',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Storagemigration\\V1alpha1\\StorageVersionMigration',
+        ],
+        'watchStoragemigrationV1alpha1StorageVersionMigrationList' => [
             '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
         ],
-        'watchStorageV1beta1NamespacedCSIStorageCapacityList' => [
-            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
-        ],
-        'watchStorageV1beta1NamespacedCSIStorageCapacity' => [
+        'watchStoragemigrationV1alpha1StorageVersionMigration' => [
             '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
         ],
         'getCodeVersion' => [

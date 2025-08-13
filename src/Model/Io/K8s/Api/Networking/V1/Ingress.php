@@ -41,7 +41,7 @@ class Ingress extends AbstractModel
     public $metadata = null;
 
     /**
-     * Spec is the desired state of the Ingress. More info:
+     * spec is the desired state of the Ingress. More info:
      * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
      *
      * @var IngressSpec
@@ -49,7 +49,7 @@ class Ingress extends AbstractModel
     public $spec = null;
 
     /**
-     * Status is the current state of the Ingress. More info:
+     * status is the current state of the Ingress. More info:
      * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
      *
      * @var IngressStatus

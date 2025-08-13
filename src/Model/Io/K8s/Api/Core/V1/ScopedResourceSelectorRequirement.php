@@ -14,16 +14,12 @@ class ScopedResourceSelectorRequirement extends AbstractModel
      * Represents a scope's relationship to a set of values. Valid operators are In,
      * NotIn, Exists, DoesNotExist.
      *
-     *
-     *
      * @var string
      */
     public $operator = null;
 
     /**
      * The name of the scope that the selector applies to.
-     *
-     *
      *
      * @var string
      */

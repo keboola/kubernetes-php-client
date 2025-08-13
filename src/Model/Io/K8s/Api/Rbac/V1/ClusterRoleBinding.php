@@ -40,7 +40,8 @@ class ClusterRoleBinding extends AbstractModel
 
     /**
      * RoleRef can only reference a ClusterRole in the global namespace. If the RoleRef
-     * cannot be resolved, the Authorizer must return an error.
+     * cannot be resolved, the Authorizer must return an error. This field is
+     * immutable.
      *
      * @var RoleRef
      */

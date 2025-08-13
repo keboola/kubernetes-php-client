@@ -24,6 +24,15 @@ class SecurityContext extends AbstractModel
     public $allowPrivilegeEscalation = null;
 
     /**
+     * appArmorProfile is the AppArmor options to use by this container. If set, this
+     * profile overrides the pod's appArmorProfile. Note that this field cannot be set
+     * when spec.os.name is windows.
+     *
+     * @var AppArmorProfile
+     */
+    public $appArmorProfile = null;
+
+    /**
      * The capabilities to add/drop when running containers. Defaults to the default
      * set of capabilities granted by the container runtime. Note that this field
      * cannot be set when spec.os.name is windows.
@@ -43,7 +52,7 @@ class SecurityContext extends AbstractModel
 
     /**
      * procMount denotes the type of proc mount to use for the containers. The default
-     * is DefaultProcMount which uses the container runtime defaults for readonly paths
+     * value is Default which uses the container runtime defaults for readonly paths
      * and masked paths. This requires the ProcMountType feature flag to be enabled.
      * Note that this field cannot be set when spec.os.name is windows.
      *

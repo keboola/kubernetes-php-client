@@ -10,7 +10,7 @@ use \KubernetesRuntime\AbstractModel;
 class ScaleSpec extends AbstractModel
 {
     /**
-     * desired number of instances for the scaled object.
+     * replicas is the desired number of instances for the scaled object.
      *
      * @var integer
      */

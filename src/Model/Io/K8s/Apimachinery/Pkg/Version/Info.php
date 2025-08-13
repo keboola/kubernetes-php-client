@@ -21,6 +21,20 @@ class Info extends AbstractModel
     public $compiler = null;
 
     /**
+     * EmulationMajor is the major version of the emulation version
+     *
+     * @var string
+     */
+    public $emulationMajor = null;
+
+    /**
+     * EmulationMinor is the minor version of the emulation version
+     *
+     * @var string
+     */
+    public $emulationMinor = null;
+
+    /**
      * @var string
      */
     public $gitCommit = null;
@@ -41,11 +55,29 @@ class Info extends AbstractModel
     public $goVersion = null;
 
     /**
+     * Major is the major version of the binary version
+     *
      * @var string
      */
     public $major = null;
 
     /**
+     * MinCompatibilityMajor is the major version of the minimum compatibility version
+     *
+     * @var string
+     */
+    public $minCompatibilityMajor = null;
+
+    /**
+     * MinCompatibilityMinor is the minor version of the minimum compatibility version
+     *
+     * @var string
+     */
+    public $minCompatibilityMinor = null;
+
+    /**
+     * Minor is the minor version of the binary version
+     *
      * @var string
      */
     public $minor = null;

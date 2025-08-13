@@ -5,7 +5,7 @@ namespace Kubernetes\Model\Io\K8s\Api\Core\V1;
 use \KubernetesRuntime\AbstractModel;
 
 /**
- * EnvFromSource represents the source of a set of ConfigMaps
+ * EnvFromSource represents the source of a set of ConfigMaps or Secrets
  */
 class EnvFromSource extends AbstractModel
 {
@@ -17,7 +17,7 @@ class EnvFromSource extends AbstractModel
     public $configMapRef = null;
 
     /**
-     * An optional identifier to prepend to each key in the ConfigMap. Must be a
+     * Optional text to prepend to the name of each environment variable. Must be a
      * C_IDENTIFIER.
      *
      * @var string

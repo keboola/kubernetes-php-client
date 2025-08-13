@@ -20,7 +20,7 @@ class StorageClassList extends AbstractModel
     public $apiVersion = 'storage.k8s.io/v1';
 
     /**
-     * Items is the list of StorageClasses
+     * items is the list of StorageClasses
      *
      * @var StorageClass[]
      */

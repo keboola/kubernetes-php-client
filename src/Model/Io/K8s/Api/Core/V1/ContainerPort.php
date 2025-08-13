@@ -45,8 +45,6 @@ class ContainerPort extends AbstractModel
     /**
      * Protocol for port. Must be UDP, TCP, or SCTP. Defaults to "TCP".
      *
-     *
-     *
      * @var string
      */
     public $protocol = null;

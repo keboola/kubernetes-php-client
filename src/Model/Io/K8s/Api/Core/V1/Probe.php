@@ -11,7 +11,7 @@ use \KubernetesRuntime\AbstractModel;
 class Probe extends AbstractModel
 {
     /**
-     * Exec specifies the action to take.
+     * Exec specifies a command to execute in the container.
      *
      * @var ExecAction
      */
@@ -26,15 +26,14 @@ class Probe extends AbstractModel
     public $failureThreshold = null;
 
     /**
-     * GRPC specifies an action involving a GRPC port. This is a beta field and
-     * requires enabling GRPCContainerProbe feature gate.
+     * GRPC specifies a GRPC HealthCheckRequest.
      *
      * @var GRPCAction
      */
     public $grpc = null;
 
     /**
-     * HTTPGet specifies the http request to perform.
+     * HTTPGet specifies an HTTP GET request to perform.
      *
      * @var HTTPGetAction
      */
@@ -67,7 +66,7 @@ class Probe extends AbstractModel
     public $successThreshold = null;
 
     /**
-     * TCPSocket specifies an action involving a TCP port.
+     * TCPSocket specifies a connection to a TCP port.
      *
      * @var TCPSocketAction
      */

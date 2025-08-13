@@ -11,7 +11,7 @@ use \KubernetesRuntime\AbstractModel;
 class HTTPIngressPath extends AbstractModel
 {
     /**
-     * Backend defines the referenced service endpoint to which the traffic will be
+     * backend defines the referenced service endpoint to which the traffic will be
      * forwarded to.
      *
      * @var IngressBackend
@@ -19,7 +19,7 @@ class HTTPIngressPath extends AbstractModel
     public $backend = null;
 
     /**
-     * Path is matched against the path of an incoming request. Currently it can
+     * path is matched against the path of an incoming request. Currently it can
      * contain characters disallowed from the conventional "path" part of a URL as
      * defined by RFC 3986. Paths must begin with a '/' and must be present when using
      * PathType with value "Exact" or "Prefix".
@@ -29,7 +29,7 @@ class HTTPIngressPath extends AbstractModel
     public $path = null;
 
     /**
-     * PathType determines the interpretation of the Path matching. PathType can be one
+     * pathType determines the interpretation of the path matching. PathType can be one
      * of the following values: * Exact: Matches the URL path exactly. * Prefix:
      * Matches based on a URL path prefix split by '/'. Matching is
      *   done on a path element by element basis. A path element refers is the

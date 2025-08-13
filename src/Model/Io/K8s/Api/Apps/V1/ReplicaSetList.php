@@ -21,7 +21,7 @@ class ReplicaSetList extends AbstractModel
 
     /**
      * List of ReplicaSets. More info:
-     * https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller
+     * https://kubernetes.io/docs/concepts/workloads/controllers/replicaset
      *
      * @var ReplicaSet[]
      */

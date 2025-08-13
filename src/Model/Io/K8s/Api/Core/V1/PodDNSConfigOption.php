@@ -10,13 +10,15 @@ use \KubernetesRuntime\AbstractModel;
 class PodDNSConfigOption extends AbstractModel
 {
     /**
-     * Required.
+     * Name is this DNS resolver option's name. Required.
      *
      * @var string
      */
     public $name = null;
 
     /**
+     * Value is this DNS resolver option's value.
+     *
      * @var string
      */
     public $value = null;

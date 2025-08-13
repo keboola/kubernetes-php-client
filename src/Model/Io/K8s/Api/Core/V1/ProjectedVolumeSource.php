@@ -22,7 +22,8 @@ class ProjectedVolumeSource extends AbstractModel
     public $defaultMode = null;
 
     /**
-     * sources is the list of volume projections
+     * sources is the list of volume projections. Each entry in this list handles one
+     * source.
      *
      * @var VolumeProjection[]
      */

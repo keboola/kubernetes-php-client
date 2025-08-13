@@ -25,7 +25,7 @@ class RuntimeClass extends AbstractModel
     public $apiVersion = 'node.k8s.io/v1';
 
     /**
-     * Handler specifies the underlying runtime and configuration that the CRI
+     * handler specifies the underlying runtime and configuration that the CRI
      * implementation will use to handle pods of this class. The possible values are
      * specific to the node & CRI configuration.  It is assumed that all handlers are
      * available on every node, and handlers of the same name are equivalent on every
@@ -57,7 +57,7 @@ class RuntimeClass extends AbstractModel
     public $metadata = null;
 
     /**
-     * Overhead represents the resource overhead associated with running a pod for a
+     * overhead represents the resource overhead associated with running a pod for a
      * given RuntimeClass. For more details, see
      *  https://kubernetes.io/docs/concepts/scheduling-eviction/pod-overhead/
      *
@@ -66,7 +66,7 @@ class RuntimeClass extends AbstractModel
     public $overhead = null;
 
     /**
-     * Scheduling holds the scheduling constraints to ensure that pods running with
+     * scheduling holds the scheduling constraints to ensure that pods running with
      * this RuntimeClass are scheduled to nodes that support it. If scheduling is nil,
      * this RuntimeClass is assumed to be supported by all nodes.
      *

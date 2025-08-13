@@ -11,7 +11,7 @@ use \KubernetesRuntime\AbstractModel;
 class NetworkPolicyPeer extends AbstractModel
 {
     /**
-     * IPBlock defines policy on a particular IPBlock. If this field is set then
+     * ipBlock defines policy on a particular IPBlock. If this field is set then
      * neither of the other fields can be.
      *
      * @var IPBlock
@@ -19,25 +19,26 @@ class NetworkPolicyPeer extends AbstractModel
     public $ipBlock = null;
 
     /**
-     * Selects Namespaces using cluster-scoped labels. This field follows standard
-     * label selector semantics; if present but empty, it selects all namespaces.
+     * namespaceSelector selects namespaces using cluster-scoped labels. This field
+     * follows standard label selector semantics; if present but empty, it selects all
+     * namespaces.
      *
-     * If PodSelector is also set, then the NetworkPolicyPeer as a whole selects the
-     * Pods matching PodSelector in the Namespaces selected by NamespaceSelector.
-     * Otherwise it selects all Pods in the Namespaces selected by NamespaceSelector.
+     * If podSelector is also set, then the NetworkPolicyPeer as a whole selects the
+     * pods matching podSelector in the namespaces selected by namespaceSelector.
+     * Otherwise it selects all pods in the namespaces selected by namespaceSelector.
      *
      * @var \Kubernetes\Model\Io\K8s\Apimachinery\Pkg\Apis\Meta\V1\LabelSelector
      */
     public $namespaceSelector = null;
 
     /**
-     * This is a label selector which selects Pods. This field follows standard label
-     * selector semantics; if present but empty, it selects all pods.
+     * podSelector is a label selector which selects pods. This field follows standard
+     * label selector semantics; if present but empty, it selects all pods.
      *
-     * If NamespaceSelector is also set, then the NetworkPolicyPeer as a whole selects
-     * the Pods matching PodSelector in the Namespaces selected by NamespaceSelector.
-     * Otherwise it selects the Pods matching PodSelector in the policy's own
-     * Namespace.
+     * If namespaceSelector is also set, then the NetworkPolicyPeer as a whole selects
+     * the pods matching podSelector in the Namespaces selected by NamespaceSelector.
+     * Otherwise it selects the pods matching podSelector in the policy's own
+     * namespace.
      *
      * @var \Kubernetes\Model\Io\K8s\Apimachinery\Pkg\Apis\Meta\V1\LabelSelector
      */

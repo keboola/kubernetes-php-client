@@ -20,7 +20,7 @@ class RuntimeClassList extends AbstractModel
     public $apiVersion = 'node.k8s.io/v1';
 
     /**
-     * Items is a list of schema objects.
+     * items is a list of schema objects.
      *
      * @var RuntimeClass[]
      */

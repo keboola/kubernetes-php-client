@@ -46,7 +46,7 @@ class CSIDriver extends AbstractModel
     public $metadata = null;
 
     /**
-     * Specification of the CSI Driver.
+     * spec represents the specification of the CSI Driver.
      *
      * @var CSIDriverSpec
      */

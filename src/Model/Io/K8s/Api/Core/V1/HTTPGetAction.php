@@ -42,8 +42,6 @@ class HTTPGetAction extends AbstractModel
     /**
      * Scheme to use for connecting to the host. Defaults to HTTP.
      *
-     *
-     *
      * @var string
      */
     public $scheme = null;

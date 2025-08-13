@@ -11,14 +11,14 @@ use \KubernetesRuntime\AbstractModel;
 class UncountedTerminatedPods extends AbstractModel
 {
     /**
-     * Failed holds UIDs of failed Pods.
+     * failed holds UIDs of failed Pods.
      *
      * @var string[]
      */
     public $failed = null;
 
     /**
-     * Succeeded holds UIDs of succeeded Pods.
+     * succeeded holds UIDs of succeeded Pods.
      *
      * @var string[]
      */

@@ -38,7 +38,8 @@ class DaemonSetSpec extends AbstractModel
     /**
      * An object that describes the pod that will be created. The DaemonSet will create
      * exactly one copy of this pod on every node that matches the template's node
-     * selector (or on every node if no node selector is specified). More info:
+     * selector (or on every node if no node selector is specified). The only allowed
+     * template.spec.restartPolicy value is "Always". More info:
      * https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller#pod-template
      *
      * @var \Kubernetes\Model\Io\K8s\Api\Core\V1\PodTemplateSpec

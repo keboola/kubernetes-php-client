@@ -47,7 +47,7 @@ class OwnerReference extends AbstractModel
 
     /**
      * Name of the referent. More info:
-     * http://kubernetes.io/docs/user-guide/identifiers#names
+     * https://kubernetes.io/docs/concepts/overview/working-with-objects/names#names
      *
      * @var string
      */
@@ -55,7 +55,7 @@ class OwnerReference extends AbstractModel
 
     /**
      * UID of the referent. More info:
-     * http://kubernetes.io/docs/user-guide/identifiers#uids
+     * https://kubernetes.io/docs/concepts/overview/working-with-objects/names#uids
      *
      * @var string
      */

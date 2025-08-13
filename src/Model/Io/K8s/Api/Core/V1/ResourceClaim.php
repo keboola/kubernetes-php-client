@@ -16,5 +16,14 @@ class ResourceClaim extends AbstractModel
      * @var string
      */
     public $name = null;
+
+    /**
+     * Request is the name chosen for a request in the referenced claim. If empty,
+     * everything from the claim is made available, otherwise only the result of this
+     * request.
+     *
+     * @var string
+     */
+    public $request = null;
 }
 

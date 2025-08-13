@@ -14,7 +14,7 @@ class ObjectMeta extends AbstractModel
      * Annotations is an unstructured key value map stored with a resource that may be
      * set by external tools to store and retrieve arbitrary metadata. They are not
      * queryable and should be preserved when modifying objects. More info:
-     * http://kubernetes.io/docs/user-guide/annotations
+     * https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations
      *
      * @var object
      */
@@ -115,7 +115,8 @@ class ObjectMeta extends AbstractModel
     /**
      * Map of string keys and values that can be used to organize and categorize (scope
      * and select) objects. May match selectors of replication controllers and
-     * services. More info: http://kubernetes.io/docs/user-guide/labels
+     * services. More info:
+     * https://kubernetes.io/docs/concepts/overview/working-with-objects/labels
      *
      * @var object
      */
@@ -138,7 +139,7 @@ class ObjectMeta extends AbstractModel
      * although some resources may allow a client to request the generation of an
      * appropriate name automatically. Name is primarily intended for creation
      * idempotence and configuration definition. Cannot be updated. More info:
-     * http://kubernetes.io/docs/user-guide/identifiers#names
+     * https://kubernetes.io/docs/concepts/overview/working-with-objects/names#names
      *
      * @var string
      */
@@ -151,7 +152,7 @@ class ObjectMeta extends AbstractModel
      * namespace - the value of this field for those objects will be empty.
      *
      * Must be a DNS_LABEL. Cannot be updated. More info:
-     * http://kubernetes.io/docs/user-guide/namespaces
+     * https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces
      *
      * @var string
      */
@@ -197,7 +198,7 @@ class ObjectMeta extends AbstractModel
      * to change on PUT operations.
      *
      * Populated by the system. Read-only. More info:
-     * http://kubernetes.io/docs/user-guide/identifiers#uids
+     * https://kubernetes.io/docs/concepts/overview/working-with-objects/names#uids
      *
      * @var string
      */

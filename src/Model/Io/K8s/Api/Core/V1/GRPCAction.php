@@ -4,6 +4,9 @@ namespace Kubernetes\Model\Io\K8s\Api\Core\V1;
 
 use \KubernetesRuntime\AbstractModel;
 
+/**
+ * GRPCAction specifies an action involving a GRPC service.
+ */
 class GRPCAction extends AbstractModel
 {
     /**

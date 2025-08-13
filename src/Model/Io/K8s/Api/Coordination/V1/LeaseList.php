@@ -20,7 +20,7 @@ class LeaseList extends AbstractModel
     public $apiVersion = 'coordination.k8s.io/v1';
 
     /**
-     * Items is a list of schema objects.
+     * items is a list of schema objects.
      *
      * @var Lease[]
      */

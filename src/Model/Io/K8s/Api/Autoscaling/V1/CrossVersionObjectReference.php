@@ -11,14 +11,14 @@ use \KubernetesRuntime\AbstractModel;
 class CrossVersionObjectReference extends AbstractModel
 {
     /**
-     * API version of the referent
+     * apiVersion is the API version of the referent
      *
      * @var string
      */
     public $apiVersion = null;
 
     /**
-     * Kind of the referent; More info:
+     * kind is the kind of the referent; More info:
      * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
      *
      * @var string
@@ -26,8 +26,8 @@ class CrossVersionObjectReference extends AbstractModel
     public $kind = null;
 
     /**
-     * Name of the referent; More info:
-     * http://kubernetes.io/docs/user-guide/identifiers#names
+     * name is the name of the referent; More info:
+     * https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
      *
      * @var string
      */

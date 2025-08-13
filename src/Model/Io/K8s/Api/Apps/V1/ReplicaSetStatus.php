@@ -10,8 +10,8 @@ use \KubernetesRuntime\AbstractModel;
 class ReplicaSetStatus extends AbstractModel
 {
     /**
-     * The number of available replicas (ready for at least minReadySeconds) for this
-     * replica set.
+     * The number of available non-terminating pods (ready for at least
+     * minReadySeconds) for this replica set.
      *
      * @var integer
      */
@@ -25,8 +25,8 @@ class ReplicaSetStatus extends AbstractModel
     public $conditions = null;
 
     /**
-     * The number of pods that have labels matching the labels of the pod template of
-     * the replicaset.
+     * The number of non-terminating pods that have labels matching the labels of the
+     * pod template of the replicaset.
      *
      * @var integer
      */
@@ -41,7 +41,7 @@ class ReplicaSetStatus extends AbstractModel
     public $observedGeneration = null;
 
     /**
-     * readyReplicas is the number of pods targeted by this ReplicaSet with a Ready
+     * The number of non-terminating pods targeted by this ReplicaSet with a Ready
      * Condition.
      *
      * @var integer
@@ -49,11 +49,23 @@ class ReplicaSetStatus extends AbstractModel
     public $readyReplicas = null;
 
     /**
-     * Replicas is the most recently observed number of replicas. More info:
-     * https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller/#what-is-a-replicationcontroller
+     * Replicas is the most recently observed number of non-terminating pods. More
+     * info: https://kubernetes.io/docs/concepts/workloads/controllers/replicaset
      *
      * @var integer
      */
     public $replicas = null;
+
+    /**
+     * The number of terminating pods for this replica set. Terminating pods have a
+     * non-null .metadata.deletionTimestamp and have not yet reached the Failed or
+     * Succeeded .status.phase.
+     *
+     * This is an alpha field. Enable DeploymentReplicaSetTerminatingReplicas to be
+     * able to use this field.
+     *
+     * @var integer
+     */
+    public $terminatingReplicas = null;
 }
 

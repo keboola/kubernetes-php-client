@@ -4,6 +4,10 @@ namespace Kubernetes\Model\Io\K8s\Api\Core\V1;
 
 use \KubernetesRuntime\AbstractModel;
 
+/**
+ * TypedObjectReference contains enough information to let you locate the typed
+ * referenced object
+ */
 class TypedObjectReference extends AbstractModel
 {
     /**

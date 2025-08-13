@@ -1,8 +1,8 @@
 version: "3.4"
 
 services:
-  dev: &dev
-    build: &dev-build
+  dev:
+    build:
       context: .
     working_dir: /code
     command: [/bin/bash]

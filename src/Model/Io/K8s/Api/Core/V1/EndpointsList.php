@@ -5,7 +5,10 @@ namespace Kubernetes\Model\Io\K8s\Api\Core\V1;
 use \KubernetesRuntime\AbstractModel;
 
 /**
- * EndpointsList is a list of endpoints.
+ * EndpointsList is a list of endpoints. Deprecated: This API is deprecated in
+ * v1.33+.
+ *
+ * @deprecated
  */
 class EndpointsList extends AbstractModel
 {

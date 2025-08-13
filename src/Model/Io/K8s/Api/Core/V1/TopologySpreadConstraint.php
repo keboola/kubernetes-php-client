@@ -24,8 +24,13 @@ class TopologySpreadConstraint extends AbstractModel
      * spreading will be calculated. The keys are used to lookup values from the
      * incoming pod labels, those key-value labels are ANDed with labelSelector to
      * select the group of existing pods over which spreading will be calculated for
-     * the incoming pod. Keys that don't exist in the incoming pod labels will be
-     * ignored. A null or empty list means only match against labelSelector.
+     * the incoming pod. The same key is forbidden to exist in both MatchLabelKeys and
+     * LabelSelector. MatchLabelKeys cannot be set when LabelSelector isn't set. Keys
+     * that don't exist in the incoming pod labels will be ignored. A null or empty
+     * list means only match against labelSelector.
+     *
+     * This is a beta field and requires the MatchLabelKeysInPodTopologySpread feature
+     * gate to be enabled (enabled by default).
      *
      * @var string[]
      */
@@ -70,9 +75,6 @@ class TopologySpreadConstraint extends AbstractModel
      * labelSelector cannot be scheduled, because computed skew will be 3(3 - 0) if new
      * Pod is scheduled to any of the three zones, it will violate MaxSkew.
      *
-     * This is a beta field and requires the MinDomainsInPodTopologySpread feature gate
-     * to be enabled (enabled by default).
-     *
      * @var integer
      */
     public $minDomains = null;
@@ -84,9 +86,7 @@ class TopologySpreadConstraint extends AbstractModel
      * nodeAffinity/nodeSelector are ignored. All nodes are included in the
      * calculations.
      *
-     * If this value is nil, the behavior is equivalent to the Honor policy. This is a
-     * beta-level feature default enabled by the NodeInclusionPolicyInPodTopologySpread
-     * feature flag.
+     * If this value is nil, the behavior is equivalent to the Honor policy.
      *
      * @var string
      */
@@ -98,9 +98,7 @@ class TopologySpreadConstraint extends AbstractModel
      * tainted nodes for which the incoming pod has a toleration, are included. -
      * Ignore: node taints are ignored. All nodes are included.
      *
-     * If this value is nil, the behavior is equivalent to the Ignore policy. This is a
-     * beta-level feature default enabled by the NodeInclusionPolicyInPodTopologySpread
-     * feature flag.
+     * If this value is nil, the behavior is equivalent to the Ignore policy.
      *
      * @var string
      */
@@ -136,8 +134,6 @@ class TopologySpreadConstraint extends AbstractModel
      * zone2(zone3) satisfies MaxSkew(1). In other words, the cluster can still be
      * imbalanced, but scheduler won't make it *more* imbalanced. It's a required
      * field.
-     *
-     *
      *
      * @var string
      */

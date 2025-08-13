@@ -9,22 +9,15 @@ class PodProxyOptions extends AbstractAPI
     /**
      * connect GET requests to proxy of Pod
      *
-     * @param string $namespace object name and auth scope, such as for teams and
-     * projects
      * @param string $name name of the PodProxyOptions
-     * @param array $queries options:
-     * 'path'	string
-     * Path is the URL path to use for the current proxy request to pod.
-     *
      * @return string|mixed
      */
-    public function connectGetPodProxy(string $namespace, string $name, array $queries = [])
+    public function connectGetPodProxy(string $name)
     {
         return $this->parseResponse(
         	$this->client->request('get',
-        		"/api/v1/namespaces/{$namespace}/pods/{$name}/proxy",
+        		"/api/v1/namespaces/{namespace}/pods/{$name}/proxy",
         		[
-        			'query' => $queries,
         		]
         	),
         	'connectCoreV1GetNamespacedPodProxy'
@@ -34,22 +27,15 @@ class PodProxyOptions extends AbstractAPI
     /**
      * connect PUT requests to proxy of Pod
      *
-     * @param string $namespace object name and auth scope, such as for teams and
-     * projects
      * @param string $name name of the PodProxyOptions
-     * @param array $queries options:
-     * 'path'	string
-     * Path is the URL path to use for the current proxy request to pod.
-     *
      * @return string|mixed
      */
-    public function connectPutPodProxy(string $namespace, string $name, array $queries = [])
+    public function connectPutPodProxy(string $name)
     {
         return $this->parseResponse(
         	$this->client->request('put',
-        		"/api/v1/namespaces/{$namespace}/pods/{$name}/proxy",
+        		"/api/v1/namespaces/{namespace}/pods/{$name}/proxy",
         		[
-        			'query' => $queries,
         		]
         	),
         	'connectCoreV1PutNamespacedPodProxy'
@@ -59,22 +45,15 @@ class PodProxyOptions extends AbstractAPI
     /**
      * connect POST requests to proxy of Pod
      *
-     * @param string $namespace object name and auth scope, such as for teams and
-     * projects
      * @param string $name name of the PodProxyOptions
-     * @param array $queries options:
-     * 'path'	string
-     * Path is the URL path to use for the current proxy request to pod.
-     *
      * @return string|mixed
      */
-    public function connectPostPodProxy(string $namespace, string $name, array $queries = [])
+    public function connectPostPodProxy(string $name)
     {
         return $this->parseResponse(
         	$this->client->request('post',
-        		"/api/v1/namespaces/{$namespace}/pods/{$name}/proxy",
+        		"/api/v1/namespaces/{namespace}/pods/{$name}/proxy",
         		[
-        			'query' => $queries,
         		]
         	),
         	'connectCoreV1PostNamespacedPodProxy'
@@ -84,22 +63,15 @@ class PodProxyOptions extends AbstractAPI
     /**
      * connect DELETE requests to proxy of Pod
      *
-     * @param string $namespace object name and auth scope, such as for teams and
-     * projects
      * @param string $name name of the PodProxyOptions
-     * @param array $queries options:
-     * 'path'	string
-     * Path is the URL path to use for the current proxy request to pod.
-     *
      * @return string|mixed
      */
-    public function connectDeletePodProxy(string $namespace, string $name, array $queries = [])
+    public function connectDeletePodProxy(string $name)
     {
         return $this->parseResponse(
         	$this->client->request('delete',
-        		"/api/v1/namespaces/{$namespace}/pods/{$name}/proxy",
+        		"/api/v1/namespaces/{namespace}/pods/{$name}/proxy",
         		[
-        			'query' => $queries,
         		]
         	),
         	'connectCoreV1DeleteNamespacedPodProxy'
@@ -109,22 +81,15 @@ class PodProxyOptions extends AbstractAPI
     /**
      * connect OPTIONS requests to proxy of Pod
      *
-     * @param string $namespace object name and auth scope, such as for teams and
-     * projects
      * @param string $name name of the PodProxyOptions
-     * @param array $queries options:
-     * 'path'	string
-     * Path is the URL path to use for the current proxy request to pod.
-     *
      * @return string|mixed
      */
-    public function connectOptionsPodProxy(string $namespace, string $name, array $queries = [])
+    public function connectOptionsPodProxy(string $name)
     {
         return $this->parseResponse(
         	$this->client->request('options',
-        		"/api/v1/namespaces/{$namespace}/pods/{$name}/proxy",
+        		"/api/v1/namespaces/{namespace}/pods/{$name}/proxy",
         		[
-        			'query' => $queries,
         		]
         	),
         	'connectCoreV1OptionsNamespacedPodProxy'
@@ -134,22 +99,15 @@ class PodProxyOptions extends AbstractAPI
     /**
      * connect HEAD requests to proxy of Pod
      *
-     * @param string $namespace object name and auth scope, such as for teams and
-     * projects
      * @param string $name name of the PodProxyOptions
-     * @param array $queries options:
-     * 'path'	string
-     * Path is the URL path to use for the current proxy request to pod.
-     *
      * @return string|mixed
      */
-    public function connectHeadPodProxy(string $namespace, string $name, array $queries = [])
+    public function connectHeadPodProxy(string $name)
     {
         return $this->parseResponse(
         	$this->client->request('head',
-        		"/api/v1/namespaces/{$namespace}/pods/{$name}/proxy",
+        		"/api/v1/namespaces/{namespace}/pods/{$name}/proxy",
         		[
-        			'query' => $queries,
         		]
         	),
         	'connectCoreV1HeadNamespacedPodProxy'
@@ -159,22 +117,15 @@ class PodProxyOptions extends AbstractAPI
     /**
      * connect PATCH requests to proxy of Pod
      *
-     * @param string $namespace object name and auth scope, such as for teams and
-     * projects
      * @param string $name name of the PodProxyOptions
-     * @param array $queries options:
-     * 'path'	string
-     * Path is the URL path to use for the current proxy request to pod.
-     *
      * @return string|mixed
      */
-    public function connectPatchPodProxy(string $namespace, string $name, array $queries = [])
+    public function connectPatchPodProxy(string $name)
     {
         return $this->parseResponse(
         	$this->client->request('patch',
-        		"/api/v1/namespaces/{$namespace}/pods/{$name}/proxy",
+        		"/api/v1/namespaces/{namespace}/pods/{$name}/proxy",
         		[
-        			'query' => $queries,
         		]
         	),
         	'connectCoreV1PatchNamespacedPodProxy'
@@ -184,23 +135,15 @@ class PodProxyOptions extends AbstractAPI
     /**
      * connect GET requests to proxy of Pod
      *
-     * @param string $namespace object name and auth scope, such as for teams and
-     * projects
      * @param string $name name of the PodProxyOptions
-     * @param string $path path to the resource
-     * @param array $queries options:
-     * 'path'	string
-     * Path is the URL path to use for the current proxy request to pod.
-     *
      * @return string|mixed
      */
-    public function connectGetPodProxyWithPath(string $namespace, string $name, string $path, array $queries = [])
+    public function connectGetPodProxyWithPath(string $name)
     {
         return $this->parseResponse(
         	$this->client->request('get',
-        		"/api/v1/namespaces/{$namespace}/pods/{$name}/proxy/{$path}",
+        		"/api/v1/namespaces/{namespace}/pods/{$name}/proxy/{path}",
         		[
-        			'query' => $queries,
         		]
         	),
         	'connectCoreV1GetNamespacedPodProxyWithPath'
@@ -210,23 +153,15 @@ class PodProxyOptions extends AbstractAPI
     /**
      * connect PUT requests to proxy of Pod
      *
-     * @param string $namespace object name and auth scope, such as for teams and
-     * projects
      * @param string $name name of the PodProxyOptions
-     * @param string $path path to the resource
-     * @param array $queries options:
-     * 'path'	string
-     * Path is the URL path to use for the current proxy request to pod.
-     *
      * @return string|mixed
      */
-    public function connectPutPodProxyWithPath(string $namespace, string $name, string $path, array $queries = [])
+    public function connectPutPodProxyWithPath(string $name)
     {
         return $this->parseResponse(
         	$this->client->request('put',
-        		"/api/v1/namespaces/{$namespace}/pods/{$name}/proxy/{$path}",
+        		"/api/v1/namespaces/{namespace}/pods/{$name}/proxy/{path}",
         		[
-        			'query' => $queries,
         		]
         	),
         	'connectCoreV1PutNamespacedPodProxyWithPath'
@@ -236,23 +171,15 @@ class PodProxyOptions extends AbstractAPI
     /**
      * connect POST requests to proxy of Pod
      *
-     * @param string $namespace object name and auth scope, such as for teams and
-     * projects
      * @param string $name name of the PodProxyOptions
-     * @param string $path path to the resource
-     * @param array $queries options:
-     * 'path'	string
-     * Path is the URL path to use for the current proxy request to pod.
-     *
      * @return string|mixed
      */
-    public function connectPostPodProxyWithPath(string $namespace, string $name, string $path, array $queries = [])
+    public function connectPostPodProxyWithPath(string $name)
     {
         return $this->parseResponse(
         	$this->client->request('post',
-        		"/api/v1/namespaces/{$namespace}/pods/{$name}/proxy/{$path}",
+        		"/api/v1/namespaces/{namespace}/pods/{$name}/proxy/{path}",
         		[
-        			'query' => $queries,
         		]
         	),
         	'connectCoreV1PostNamespacedPodProxyWithPath'
@@ -262,23 +189,15 @@ class PodProxyOptions extends AbstractAPI
     /**
      * connect DELETE requests to proxy of Pod
      *
-     * @param string $namespace object name and auth scope, such as for teams and
-     * projects
      * @param string $name name of the PodProxyOptions
-     * @param string $path path to the resource
-     * @param array $queries options:
-     * 'path'	string
-     * Path is the URL path to use for the current proxy request to pod.
-     *
      * @return string|mixed
      */
-    public function connectDeletePodProxyWithPath(string $namespace, string $name, string $path, array $queries = [])
+    public function connectDeletePodProxyWithPath(string $name)
     {
         return $this->parseResponse(
         	$this->client->request('delete',
-        		"/api/v1/namespaces/{$namespace}/pods/{$name}/proxy/{$path}",
+        		"/api/v1/namespaces/{namespace}/pods/{$name}/proxy/{path}",
         		[
-        			'query' => $queries,
         		]
         	),
         	'connectCoreV1DeleteNamespacedPodProxyWithPath'
@@ -288,23 +207,15 @@ class PodProxyOptions extends AbstractAPI
     /**
      * connect OPTIONS requests to proxy of Pod
      *
-     * @param string $namespace object name and auth scope, such as for teams and
-     * projects
      * @param string $name name of the PodProxyOptions
-     * @param string $path path to the resource
-     * @param array $queries options:
-     * 'path'	string
-     * Path is the URL path to use for the current proxy request to pod.
-     *
      * @return string|mixed
      */
-    public function connectOptionsPodProxyWithPath(string $namespace, string $name, string $path, array $queries = [])
+    public function connectOptionsPodProxyWithPath(string $name)
     {
         return $this->parseResponse(
         	$this->client->request('options',
-        		"/api/v1/namespaces/{$namespace}/pods/{$name}/proxy/{$path}",
+        		"/api/v1/namespaces/{namespace}/pods/{$name}/proxy/{path}",
         		[
-        			'query' => $queries,
         		]
         	),
         	'connectCoreV1OptionsNamespacedPodProxyWithPath'
@@ -314,23 +225,15 @@ class PodProxyOptions extends AbstractAPI
     /**
      * connect HEAD requests to proxy of Pod
      *
-     * @param string $namespace object name and auth scope, such as for teams and
-     * projects
      * @param string $name name of the PodProxyOptions
-     * @param string $path path to the resource
-     * @param array $queries options:
-     * 'path'	string
-     * Path is the URL path to use for the current proxy request to pod.
-     *
      * @return string|mixed
      */
-    public function connectHeadPodProxyWithPath(string $namespace, string $name, string $path, array $queries = [])
+    public function connectHeadPodProxyWithPath(string $name)
     {
         return $this->parseResponse(
         	$this->client->request('head',
-        		"/api/v1/namespaces/{$namespace}/pods/{$name}/proxy/{$path}",
+        		"/api/v1/namespaces/{namespace}/pods/{$name}/proxy/{path}",
         		[
-        			'query' => $queries,
         		]
         	),
         	'connectCoreV1HeadNamespacedPodProxyWithPath'
@@ -340,23 +243,15 @@ class PodProxyOptions extends AbstractAPI
     /**
      * connect PATCH requests to proxy of Pod
      *
-     * @param string $namespace object name and auth scope, such as for teams and
-     * projects
      * @param string $name name of the PodProxyOptions
-     * @param string $path path to the resource
-     * @param array $queries options:
-     * 'path'	string
-     * Path is the URL path to use for the current proxy request to pod.
-     *
      * @return string|mixed
      */
-    public function connectPatchPodProxyWithPath(string $namespace, string $name, string $path, array $queries = [])
+    public function connectPatchPodProxyWithPath(string $name)
     {
         return $this->parseResponse(
         	$this->client->request('patch',
-        		"/api/v1/namespaces/{$namespace}/pods/{$name}/proxy/{$path}",
+        		"/api/v1/namespaces/{namespace}/pods/{$name}/proxy/{path}",
         		[
-        			'query' => $queries,
         		]
         	),
         	'connectCoreV1PatchNamespacedPodProxyWithPath'

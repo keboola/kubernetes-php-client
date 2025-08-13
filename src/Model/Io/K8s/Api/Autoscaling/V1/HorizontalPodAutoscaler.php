@@ -38,7 +38,7 @@ class HorizontalPodAutoscaler extends AbstractModel
     public $metadata = null;
 
     /**
-     * behaviour of autoscaler. More info:
+     * spec defines the behaviour of autoscaler. More info:
      * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status.
      *
      * @var HorizontalPodAutoscalerSpec
@@ -46,7 +46,7 @@ class HorizontalPodAutoscaler extends AbstractModel
     public $spec = null;
 
     /**
-     * current information about the autoscaler.
+     * status is the current information about the autoscaler.
      *
      * @var HorizontalPodAutoscalerStatus
      */

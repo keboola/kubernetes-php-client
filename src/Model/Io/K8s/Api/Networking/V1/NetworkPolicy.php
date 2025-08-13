@@ -38,18 +38,11 @@ class NetworkPolicy extends AbstractModel
     public $metadata = null;
 
     /**
-     * Specification of the desired behavior for this NetworkPolicy.
+     * spec represents the specification of the desired behavior for this
+     * NetworkPolicy.
      *
      * @var NetworkPolicySpec
      */
     public $spec = null;
-
-    /**
-     * Status is the current state of the NetworkPolicy. More info:
-     * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
-     *
-     * @var NetworkPolicyStatus
-     */
-    public $status = null;
 }
 

@@ -20,7 +20,7 @@ class VolumeAttachmentList extends AbstractModel
     public $apiVersion = 'storage.k8s.io/v1';
 
     /**
-     * Items is the list of VolumeAttachments
+     * items is the list of VolumeAttachments
      *
      * @var VolumeAttachment[]
      */

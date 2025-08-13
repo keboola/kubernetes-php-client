@@ -23,8 +23,6 @@ class StatefulSetUpdateStrategy extends AbstractModel
      * Type indicates the type of the StatefulSetUpdateStrategy. Default is
      * RollingUpdate.
      *
-     *
-     *
      * @var string
      */
     public $type = null;

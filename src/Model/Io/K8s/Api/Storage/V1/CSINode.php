@@ -37,7 +37,7 @@ class CSINode extends AbstractModel
     public $kind = 'CSINode';
 
     /**
-     * metadata.name must be the Kubernetes node name.
+     * Standard object's metadata. metadata.name must be the Kubernetes node name.
      *
      * @var \Kubernetes\Model\Io\K8s\Apimachinery\Pkg\Apis\Meta\V1\ObjectMeta
      */

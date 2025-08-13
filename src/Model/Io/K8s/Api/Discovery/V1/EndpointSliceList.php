@@ -20,7 +20,7 @@ class EndpointSliceList extends AbstractModel
     public $apiVersion = 'discovery.k8s.io/v1';
 
     /**
-     * List of endpoint slices
+     * items is the list of endpoint slices
      *
      * @var EndpointSlice[]
      */

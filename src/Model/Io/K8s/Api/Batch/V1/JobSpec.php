@@ -27,7 +27,18 @@ class JobSpec extends AbstractModel
     public $backoffLimit = null;
 
     /**
-     * CompletionMode specifies how Pod completions are tracked. It can be `NonIndexed`
+     * Specifies the limit for the number of retries within an index before marking
+     * this index as failed. When enabled the number of failures per index is kept in
+     * the pod's batch.kubernetes.io/job-index-failure-count annotation. It can only be
+     * set when Job's completionMode=Indexed, and the Pod's restart policy is Never.
+     * The field is immutable.
+     *
+     * @var integer
+     */
+    public $backoffLimitPerIndex = null;
+
+    /**
+     * completionMode specifies how Pod completions are tracked. It can be `NonIndexed`
      * (default) or `Indexed`.
      *
      * `NonIndexed` means that the Job is considered complete when there have been
@@ -53,7 +64,7 @@ class JobSpec extends AbstractModel
 
     /**
      * Specifies the desired number of successfully finished pods the job should be run
-     * with.  Setting to nil means that the success of any pod signals the success of
+     * with.  Setting to null means that the success of any pod signals the success of
      * all pods, and allows parallelism to have any positive value.  Setting to 1 means
      * that parallelism is limited to 1 and the success of that pod signals the success
      * of the job. More info:
@@ -62,6 +73,23 @@ class JobSpec extends AbstractModel
      * @var integer
      */
     public $completions = null;
+
+    /**
+     * ManagedBy field indicates the controller that manages a Job. The k8s Job
+     * controller reconciles jobs which don't have this field at all or the field value
+     * is the reserved string `kubernetes.io/job-controller`, but skips reconciling
+     * Jobs with a custom value for this field. The value must be a valid
+     * domain-prefixed path (e.g. acme.io/foo) - all characters before the first "/"
+     * must be a valid subdomain as defined by RFC 1123. All characters trailing the
+     * first "/" must be valid HTTP Path characters as defined by RFC 3986. The value
+     * cannot exceed 63 characters. This field is immutable.
+     *
+     * This field is beta-level. The job controller accepts setting the field when the
+     * feature gate JobManagedBy is enabled (enabled by default).
+     *
+     * @var string
+     */
+    public $managedBy = null;
 
     /**
      * manualSelector controls generation of pod labels and pod selectors. Leave
@@ -77,6 +105,19 @@ class JobSpec extends AbstractModel
      * @var boolean
      */
     public $manualSelector = null;
+
+    /**
+     * Specifies the maximal number of failed indexes before marking the Job as failed,
+     * when backoffLimitPerIndex is set. Once the number of failed indexes exceeds this
+     * number the entire Job is marked as Failed and its execution is terminated. When
+     * left as null the job continues execution of all of its indexes and is marked
+     * with the `Complete` Job condition. It can only be specified when
+     * backoffLimitPerIndex is set. It can be null or up to completions. It is required
+     * and must be less than or equal to 10^4 when is completions greater than 10^5.
+     *
+     * @var integer
+     */
+    public $maxFailedIndexes = null;
 
     /**
      * Specifies the maximum desired number of pods the job should run at any given
@@ -97,12 +138,26 @@ class JobSpec extends AbstractModel
      * it is checked against the backoffLimit. This field cannot be used in combination
      * with restartPolicy=OnFailure.
      *
-     * This field is beta-level. It can be used when the `JobPodFailurePolicy` feature
-     * gate is enabled (enabled by default).
-     *
      * @var PodFailurePolicy
      */
     public $podFailurePolicy = null;
+
+    /**
+     * podReplacementPolicy specifies when to create replacement Pods. Possible values
+     * are: - TerminatingOrFailed means that we recreate pods
+     *   when they are terminating (has a metadata.deletionTimestamp) or failed.
+     * - Failed means to wait until a previously created Pod is fully terminated (has
+     * phase
+     *   Failed or Succeeded) before creating a replacement Pod.
+     *
+     * When using podFailurePolicy, Failed is the the only allowed value.
+     * TerminatingOrFailed and Failed are allowed values when podFailurePolicy is not
+     * in use. This is an beta field. To use this, enable the JobPodReplacementPolicy
+     * feature toggle. This is on by default.
+     *
+     * @var string
+     */
+    public $podReplacementPolicy = null;
 
     /**
      * A label query over pods that should match the pod count. Normally, the system
@@ -114,7 +169,18 @@ class JobSpec extends AbstractModel
     public $selector = null;
 
     /**
-     * Suspend specifies whether the Job controller should create Pods or not. If a Job
+     * successPolicy specifies the policy when the Job can be declared as succeeded. If
+     * empty, the default behavior applies - the Job is declared as succeeded only when
+     * the number of succeeded pods equals to the completions. When the field is
+     * specified, it must be immutable and works only for the Indexed Jobs. Once the
+     * Job meets the SuccessPolicy, the lingering pods are terminated.
+     *
+     * @var SuccessPolicy
+     */
+    public $successPolicy = null;
+
+    /**
+     * suspend specifies whether the Job controller should create Pods or not. If a Job
      * is created with suspend set to true, no Pods are created by the Job controller.
      * If a Job is suspended after creation (i.e. the flag goes from false to true),
      * the Job controller will delete all active Pods associated with this Job. Users
@@ -127,7 +193,8 @@ class JobSpec extends AbstractModel
     public $suspend = null;
 
     /**
-     * Describes the pod that will be created when executing a job. More info:
+     * Describes the pod that will be created when executing a job. The only allowed
+     * template.spec.restartPolicy values are "Never" or "OnFailure". More info:
      * https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/
      *
      * @var \Kubernetes\Model\Io\K8s\Api\Core\V1\PodTemplateSpec

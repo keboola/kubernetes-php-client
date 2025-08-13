@@ -31,6 +31,15 @@ class PodCondition extends AbstractModel
     public $message = null;
 
     /**
+     * If set, this represents the .metadata.generation that the pod condition was set
+     * based upon. This is an alpha field. Enable PodObservedGenerationTracking to be
+     * able to use this field.
+     *
+     * @var integer
+     */
+    public $observedGeneration = null;
+
+    /**
      * Unique, one-word, CamelCase reason for the condition's last transition.
      *
      * @var string

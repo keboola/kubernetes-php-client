@@ -21,8 +21,6 @@ class DaemonSetUpdateStrategy extends AbstractModel
      * Type of daemon set update. Can be "RollingUpdate" or "OnDelete". Default is
      * RollingUpdate.
      *
-     *
-     *
      * @var string
      */
     public $type = null;

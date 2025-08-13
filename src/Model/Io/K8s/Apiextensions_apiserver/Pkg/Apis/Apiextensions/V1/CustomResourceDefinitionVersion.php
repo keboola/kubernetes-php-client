@@ -57,6 +57,15 @@ class CustomResourceDefinitionVersion extends AbstractModel
     public $schema = null;
 
     /**
+     * selectableFields specifies paths to fields that may be used as field selectors.
+     * A maximum of 8 selectable fields are allowed. See
+     * https://kubernetes.io/docs/concepts/overview/working-with-objects/field-selectors
+     *
+     * @var SelectableField[]
+     */
+    public $selectableFields = null;
+
+    /**
      * served is a flag enabling/disabling this version from being served via REST APIs
      *
      * @var boolean

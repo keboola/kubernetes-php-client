@@ -20,7 +20,12 @@ class PodStatus extends AbstractModel
     public $conditions = null;
 
     /**
-     * The list has one entry per container in the manifest. More info:
+     * Statuses of containers in this pod. Each container in the pod should have at
+     * most one status in this list, and all statuses should be for containers in the
+     * pod. However this is not enforced. If a status for a non-existent container is
+     * present in the list, or the list has duplicate names, the behavior of various
+     * Kubernetes components is not defined and those statuses might be ignored. More
+     * info:
      * https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-and-container-status
      *
      * @var ContainerStatus[]
@@ -28,24 +33,49 @@ class PodStatus extends AbstractModel
     public $containerStatuses = null;
 
     /**
-     * Status for any ephemeral containers that have run in this pod.
+     * Statuses for any ephemeral containers that have run in this pod. Each ephemeral
+     * container in the pod should have at most one status in this list, and all
+     * statuses should be for containers in the pod. However this is not enforced. If a
+     * status for a non-existent container is present in the list, or the list has
+     * duplicate names, the behavior of various Kubernetes components is not defined
+     * and those statuses might be ignored. More info:
+     * https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-and-container-status
      *
      * @var ContainerStatus[]
      */
     public $ephemeralContainerStatuses = null;
 
     /**
-     * IP address of the host to which the pod is assigned. Empty if not yet scheduled.
+     * hostIP holds the IP address of the host to which the pod is assigned. Empty if
+     * the pod has not started yet. A pod can be assigned to a node that has a problem
+     * in kubelet which in turns mean that HostIP will not be updated even if there is
+     * a node is assigned to pod
      *
      * @var string
      */
     public $hostIP = null;
 
     /**
-     * The list has one entry per init container in the manifest. The most recent
-     * successful init container will have ready = true, the most recently started
-     * container will have startTime set. More info:
-     * https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-and-container-status
+     * hostIPs holds the IP addresses allocated to the host. If this field is
+     * specified, the first entry must match the hostIP field. This list is empty if
+     * the pod has not started yet. A pod can be assigned to a node that has a problem
+     * in kubelet which in turns means that HostIPs will not be updated even if there
+     * is a node is assigned to this pod.
+     *
+     * @var HostIP[]
+     */
+    public $hostIPs = null;
+
+    /**
+     * Statuses of init containers in this pod. The most recent successful
+     * non-restartable init container will have ready = true, the most recently started
+     * container will have startTime set. Each init container in the pod should have at
+     * most one status in this list, and all statuses should be for containers in the
+     * pod. However this is not enforced. If a status for a non-existent container is
+     * present in the list, or the list has duplicate names, the behavior of various
+     * Kubernetes components is not defined and those statuses might be ignored. More
+     * info:
+     * https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#pod-and-container-status
      *
      * @var ContainerStatus[]
      */
@@ -74,6 +104,15 @@ class PodStatus extends AbstractModel
     public $nominatedNodeName = null;
 
     /**
+     * If set, this represents the .metadata.generation that the pod status was set
+     * based upon. This is an alpha field. Enable PodObservedGenerationTracking to be
+     * able to use this field.
+     *
+     * @var integer
+     */
+    public $observedGeneration = null;
+
+    /**
      * The phase of a Pod is a simple, high-level summary of where the Pod is in its
      * lifecycle. The conditions array, the reason and message fields, and the
      * individual container status arrays contain more detail about the pod's status.
@@ -94,15 +133,13 @@ class PodStatus extends AbstractModel
      * More info:
      * https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-phase
      *
-     *
-     *
      * @var string
      */
     public $phase = null;
 
     /**
-     * IP address allocated to the pod. Routable at least within the cluster. Empty if
-     * not yet allocated.
+     * podIP address allocated to the pod. Routable at least within the cluster. Empty
+     * if not yet allocated.
      *
      * @var string
      */
@@ -120,9 +157,7 @@ class PodStatus extends AbstractModel
     /**
      * The Quality of Service (QOS) classification assigned to the pod based on
      * resource requirements See PodQOSClass type for available QOS classes More info:
-     * https://git.k8s.io/community/contributors/design-proposals/node/resource-qos.md
-     *
-     *
+     * https://kubernetes.io/docs/concepts/workloads/pods/pod-qos/#quality-of-service-classes
      *
      * @var string
      */
@@ -135,6 +170,26 @@ class PodStatus extends AbstractModel
      * @var string
      */
     public $reason = null;
+
+    /**
+     * Status of resources resize desired for pod's containers. It is empty if no
+     * resources resize is pending. Any changes to container resources will
+     * automatically set this to "Proposed" Deprecated: Resize status is moved to two
+     * pod conditions PodResizePending and PodResizeInProgress. PodResizePending will
+     * track states where the spec has been resized, but the Kubelet has not yet
+     * allocated the resources. PodResizeInProgress will track in-progress resizes, and
+     * should be present whenever allocated resources != acknowledged resources.
+     *
+     * @var string
+     */
+    public $resize = null;
+
+    /**
+     * Status of resource claims.
+     *
+     * @var PodResourceClaimStatus[]
+     */
+    public $resourceClaimStatuses = null;
 
     /**
      * RFC 3339 date and time at which the object was acknowledged by the Kubelet. This

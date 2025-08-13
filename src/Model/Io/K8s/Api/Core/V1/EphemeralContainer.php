@@ -76,8 +76,6 @@ class EphemeralContainer extends AbstractModel
      * :latest tag is specified, or IfNotPresent otherwise. Cannot be updated. More
      * info: https://kubernetes.io/docs/concepts/containers/images#updating-images
      *
-     *
-     *
      * @var string
      */
     public $imagePullPolicy = null;
@@ -119,12 +117,28 @@ class EphemeralContainer extends AbstractModel
     public $readinessProbe = null;
 
     /**
+     * Resources resize policy for the container.
+     *
+     * @var ContainerResizePolicy[]
+     */
+    public $resizePolicy = null;
+
+    /**
      * Resources are not allowed for ephemeral containers. Ephemeral containers use
      * spare resources already allocated to the pod.
      *
      * @var ResourceRequirements
      */
     public $resources = null;
+
+    /**
+     * Restart policy for the container to manage the restart behavior of each
+     * container within a pod. This may only be set for init containers. You cannot set
+     * this field on ephemeral containers.
+     *
+     * @var string
+     */
+    public $restartPolicy = null;
 
     /**
      * Optional: SecurityContext defines the security options the ephemeral container
@@ -198,8 +212,6 @@ class EphemeralContainer extends AbstractModel
      * container log output if the termination message file is empty and the container
      * exited with an error. The log output is limited to 2048 bytes or 80 lines,
      * whichever is smaller. Defaults to File. Cannot be updated.
-     *
-     *
      *
      * @var string
      */

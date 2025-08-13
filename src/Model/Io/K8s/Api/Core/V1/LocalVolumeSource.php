@@ -5,7 +5,7 @@ namespace Kubernetes\Model\Io\K8s\Api\Core\V1;
 use \KubernetesRuntime\AbstractModel;
 
 /**
- * Local represents directly-attached storage with node affinity (Beta feature)
+ * Local represents directly-attached storage with node affinity
  */
 class LocalVolumeSource extends AbstractModel
 {

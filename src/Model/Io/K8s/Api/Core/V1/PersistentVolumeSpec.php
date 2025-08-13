@@ -19,8 +19,10 @@ class PersistentVolumeSpec extends AbstractModel
 
     /**
      * awsElasticBlockStore represents an AWS Disk resource that is attached to a
-     * kubelet's host machine and then exposed to the pod. More info:
-     * https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
+     * kubelet's host machine and then exposed to the pod. Deprecated:
+     * AWSElasticBlockStore is deprecated. All operations for the in-tree
+     * awsElasticBlockStore type are redirected to the ebs.csi.aws.com CSI driver. More
+     * info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
      *
      * @var AWSElasticBlockStoreVolumeSource
      */
@@ -28,7 +30,8 @@ class PersistentVolumeSpec extends AbstractModel
 
     /**
      * azureDisk represents an Azure Data Disk mount on the host and bind mount to the
-     * pod.
+     * pod. Deprecated: AzureDisk is deprecated. All operations for the in-tree
+     * azureDisk type are redirected to the disk.csi.azure.com CSI driver.
      *
      * @var AzureDiskVolumeSource
      */
@@ -36,7 +39,8 @@ class PersistentVolumeSpec extends AbstractModel
 
     /**
      * azureFile represents an Azure File Service mount on the host and bind mount to
-     * the pod.
+     * the pod. Deprecated: AzureFile is deprecated. All operations for the in-tree
+     * azureFile type are redirected to the file.csi.azure.com CSI driver.
      *
      * @var AzureFilePersistentVolumeSource
      */
@@ -52,7 +56,9 @@ class PersistentVolumeSpec extends AbstractModel
     public $capacity = null;
 
     /**
-     * cephFS represents a Ceph FS mount on the host that shares a pod's lifetime
+     * cephFS represents a Ceph FS mount on the host that shares a pod's lifetime.
+     * Deprecated: CephFS is deprecated and the in-tree cephfs type is no longer
+     * supported.
      *
      * @var CephFSPersistentVolumeSource
      */
@@ -60,7 +66,9 @@ class PersistentVolumeSpec extends AbstractModel
 
     /**
      * cinder represents a cinder volume attached and mounted on kubelets host machine.
-     * More info: https://examples.k8s.io/mysql-cinder-pd/README.md
+     * Deprecated: Cinder is deprecated. All operations for the in-tree cinder type are
+     * redirected to the cinder.csi.openstack.org CSI driver. More info:
+     * https://examples.k8s.io/mysql-cinder-pd/README.md
      *
      * @var CinderPersistentVolumeSource
      */
@@ -77,7 +85,7 @@ class PersistentVolumeSpec extends AbstractModel
     public $claimRef = null;
 
     /**
-     * csi represents storage that is handled by an external CSI driver (Beta feature).
+     * csi represents storage that is handled by an external CSI driver.
      *
      * @var CSIPersistentVolumeSource
      */
@@ -93,7 +101,8 @@ class PersistentVolumeSpec extends AbstractModel
 
     /**
      * flexVolume represents a generic volume resource that is provisioned/attached
-     * using an exec based plugin.
+     * using an exec based plugin. Deprecated: FlexVolume is deprecated. Consider using
+     * a CSIDriver instead.
      *
      * @var FlexPersistentVolumeSource
      */
@@ -102,7 +111,8 @@ class PersistentVolumeSpec extends AbstractModel
     /**
      * flocker represents a Flocker volume attached to a kubelet's host machine and
      * exposed to the pod for its usage. This depends on the Flocker control service
-     * being running
+     * being running. Deprecated: Flocker is deprecated and the in-tree flocker type is
+     * no longer supported.
      *
      * @var FlockerVolumeSource
      */
@@ -110,8 +120,10 @@ class PersistentVolumeSpec extends AbstractModel
 
     /**
      * gcePersistentDisk represents a GCE Disk resource that is attached to a kubelet's
-     * host machine and then exposed to the pod. Provisioned by an admin. More info:
-     * https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk
+     * host machine and then exposed to the pod. Provisioned by an admin. Deprecated:
+     * GCEPersistentDisk is deprecated. All operations for the in-tree
+     * gcePersistentDisk type are redirected to the pd.csi.storage.gke.io CSI driver.
+     * More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk
      *
      * @var GCEPersistentDiskVolumeSource
      */
@@ -119,7 +131,8 @@ class PersistentVolumeSpec extends AbstractModel
 
     /**
      * glusterfs represents a Glusterfs volume that is attached to a host and exposed
-     * to the pod. Provisioned by an admin. More info:
+     * to the pod. Provisioned by an admin. Deprecated: Glusterfs is deprecated and the
+     * in-tree glusterfs type is no longer supported. More info:
      * https://examples.k8s.io/volumes/glusterfs/README.md
      *
      * @var GlusterfsPersistentVolumeSource
@@ -185,15 +198,14 @@ class PersistentVolumeSpec extends AbstractModel
      * volume plugin underlying this PersistentVolume. More info:
      * https://kubernetes.io/docs/concepts/storage/persistent-volumes#reclaiming
      *
-     *
-     *
      * @var string
      */
     public $persistentVolumeReclaimPolicy = null;
 
     /**
      * photonPersistentDisk represents a PhotonController persistent disk attached and
-     * mounted on kubelets host machine
+     * mounted on kubelets host machine. Deprecated: PhotonPersistentDisk is deprecated
+     * and the in-tree photonPersistentDisk type is no longer supported.
      *
      * @var PhotonPersistentDiskVolumeSource
      */
@@ -201,14 +213,18 @@ class PersistentVolumeSpec extends AbstractModel
 
     /**
      * portworxVolume represents a portworx volume attached and mounted on kubelets
-     * host machine
+     * host machine. Deprecated: PortworxVolume is deprecated. All operations for the
+     * in-tree portworxVolume type are redirected to the pxd.portworx.com CSI driver
+     * when the CSIMigrationPortworx feature-gate is on.
      *
      * @var PortworxVolumeSource
      */
     public $portworxVolume = null;
 
     /**
-     * quobyte represents a Quobyte mount on the host that shares a pod's lifetime
+     * quobyte represents a Quobyte mount on the host that shares a pod's lifetime.
+     * Deprecated: Quobyte is deprecated and the in-tree quobyte type is no longer
+     * supported.
      *
      * @var QuobyteVolumeSource
      */
@@ -216,7 +232,8 @@ class PersistentVolumeSpec extends AbstractModel
 
     /**
      * rbd represents a Rados Block Device mount on the host that shares a pod's
-     * lifetime. More info: https://examples.k8s.io/volumes/rbd/README.md
+     * lifetime. Deprecated: RBD is deprecated and the in-tree rbd type is no longer
+     * supported. More info: https://examples.k8s.io/volumes/rbd/README.md
      *
      * @var RBDPersistentVolumeSource
      */
@@ -224,7 +241,8 @@ class PersistentVolumeSpec extends AbstractModel
 
     /**
      * scaleIO represents a ScaleIO persistent volume attached and mounted on
-     * Kubernetes nodes.
+     * Kubernetes nodes. Deprecated: ScaleIO is deprecated and the in-tree scaleIO type
+     * is no longer supported.
      *
      * @var ScaleIOPersistentVolumeSource
      */
@@ -240,12 +258,27 @@ class PersistentVolumeSpec extends AbstractModel
 
     /**
      * storageOS represents a StorageOS volume that is attached to the kubelet's host
-     * machine and mounted into the pod More info:
+     * machine and mounted into the pod. Deprecated: StorageOS is deprecated and the
+     * in-tree storageos type is no longer supported. More info:
      * https://examples.k8s.io/volumes/storageos/README.md
      *
      * @var StorageOSPersistentVolumeSource
      */
     public $storageos = null;
+
+    /**
+     * Name of VolumeAttributesClass to which this persistent volume belongs. Empty
+     * value is not allowed. When this field is not set, it indicates that this volume
+     * does not belong to any VolumeAttributesClass. This field is mutable and can be
+     * changed by the CSI driver after a volume has been updated successfully to a new
+     * class. For an unbound PersistentVolume, the volumeAttributesClassName will be
+     * matched with unbound PersistentVolumeClaims during the binding process. This is
+     * a beta field and requires enabling VolumeAttributesClass feature (off by
+     * default).
+     *
+     * @var string
+     */
+    public $volumeAttributesClassName = null;
 
     /**
      * volumeMode defines if a volume is intended to be used with a formatted
@@ -258,7 +291,8 @@ class PersistentVolumeSpec extends AbstractModel
 
     /**
      * vsphereVolume represents a vSphere volume attached and mounted on kubelets host
-     * machine
+     * machine. Deprecated: VsphereVolume is deprecated. All operations for the in-tree
+     * vsphereVolume type are redirected to the csi.vsphere.vmware.com CSI driver.
      *
      * @var VsphereVirtualDiskVolumeSource
      */

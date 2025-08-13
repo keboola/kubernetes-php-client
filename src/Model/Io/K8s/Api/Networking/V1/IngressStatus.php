@@ -10,7 +10,7 @@ use \KubernetesRuntime\AbstractModel;
 class IngressStatus extends AbstractModel
 {
     /**
-     * LoadBalancer contains the current status of the load-balancer.
+     * loadBalancer contains the current status of the load-balancer.
      *
      * @var IngressLoadBalancerStatus
      */
