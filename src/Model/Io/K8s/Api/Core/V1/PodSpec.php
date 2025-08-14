@@ -56,6 +56,8 @@ class PodSpec extends AbstractModel
      * have DNS options set along with hostNetwork, you have to specify DNS policy
      * explicitly to 'ClusterFirstWithHostNet'.
      *
+     *
+     *
      * @var string
      */
     public $dnsPolicy = null;
@@ -82,7 +84,7 @@ class PodSpec extends AbstractModel
 
     /**
      * HostAliases is an optional list of hosts and IPs that will be injected into the
-     * pod's hosts file if specified.
+     * pod's hosts file if specified. This is only valid for non-hostNetwork pods.
      *
      * @var HostAlias[]
      */
@@ -152,7 +154,7 @@ class PodSpec extends AbstractModel
      * among all containers. Init containers may not have Lifecycle actions, Readiness
      * probes, Liveness probes, or Startup probes. The resourceRequirements of an init
      * container are taken into account during scheduling by finding the highest
-     * request/limit for each resource type, and then using the max of that value or
+     * request/limit for each resource type, and then using the max of of that value or
      * the sum of the normal containers. Limits are applied to init containers in a
      * similar fashion. Init containers cannot currently be added or removed. Cannot be
      * updated. More info:
@@ -163,12 +165,9 @@ class PodSpec extends AbstractModel
     public $initContainers = null;
 
     /**
-     * NodeName indicates in which node this pod is scheduled. If empty, this pod is a
-     * candidate for scheduling by the scheduler defined in schedulerName. Once this
-     * field is set, the kubelet for this node becomes responsible for the lifecycle of
-     * this pod. This field should not be used to express a desire for the pod to be
-     * scheduled on a specific node.
-     * https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#nodename
+     * NodeName is a request to schedule this pod onto a specific node. If it is
+     * non-empty, the scheduler simply schedules this pod onto that node, assuming that
+     * it fits resource requirements.
      *
      * @var string
      */
@@ -193,13 +192,11 @@ class PodSpec extends AbstractModel
      *
      * If the OS field is set to windows, following fields must be unset: -
      * spec.hostPID - spec.hostIPC - spec.hostUsers -
-     * spec.securityContext.appArmorProfile - spec.securityContext.seLinuxOptions -
-     * spec.securityContext.seccompProfile - spec.securityContext.fsGroup -
-     * spec.securityContext.fsGroupChangePolicy - spec.securityContext.sysctls -
-     * spec.shareProcessNamespace - spec.securityContext.runAsUser -
-     * spec.securityContext.runAsGroup - spec.securityContext.supplementalGroups -
-     * spec.securityContext.supplementalGroupsPolicy -
-     * spec.containers[*].securityContext.appArmorProfile -
+     * spec.securityContext.seLinuxOptions - spec.securityContext.seccompProfile -
+     * spec.securityContext.fsGroup - spec.securityContext.fsGroupChangePolicy -
+     * spec.securityContext.sysctls - spec.shareProcessNamespace -
+     * spec.securityContext.runAsUser - spec.securityContext.runAsGroup -
+     * spec.securityContext.supplementalGroups -
      * spec.containers[*].securityContext.seLinuxOptions -
      * spec.containers[*].securityContext.seccompProfile -
      * spec.containers[*].securityContext.capabilities -
@@ -283,24 +280,11 @@ class PodSpec extends AbstractModel
     public $resourceClaims = null;
 
     /**
-     * Resources is the total amount of CPU and Memory resources required by all
-     * containers in the pod. It supports specifying Requests and Limits for "cpu" and
-     * "memory" resource names only. ResourceClaims are not supported.
-     *
-     * This field enables fine-grained control over resource allocation for the entire
-     * pod, allowing resource sharing among containers in a pod.
-     *
-     * This is an alpha field and requires enabling the PodLevelResources feature gate.
-     *
-     * @var ResourceRequirements
-     */
-    public $resources = null;
-
-    /**
      * Restart policy for all containers within the pod. One of Always, OnFailure,
-     * Never. In some contexts, only a subset of those values may be permitted. Default
-     * to Always. More info:
+     * Never. Default to Always. More info:
      * https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#restart-policy
+     *
+     *
      *
      * @var string
      */
@@ -328,11 +312,10 @@ class PodSpec extends AbstractModel
 
     /**
      * SchedulingGates is an opaque list of values that if specified will block
-     * scheduling the pod. If schedulingGates is not empty, the pod will stay in the
-     * SchedulingGated state and the scheduler will not attempt to schedule the pod.
+     * scheduling the pod. More info: 
+     * https://git.k8s.io/enhancements/keps/sig-scheduling/3521-pod-scheduling-readiness.
      *
-     * SchedulingGates can only be set at pod creation time, and be removed only
-     * afterwards.
+     * This is an alpha-level feature enabled by PodSchedulingReadiness feature gate.
      *
      * @var PodSchedulingGate[]
      */
@@ -348,7 +331,7 @@ class PodSpec extends AbstractModel
     public $securityContext = null;
 
     /**
-     * DeprecatedServiceAccount is a deprecated alias for ServiceAccountName.
+     * DeprecatedServiceAccount is a depreciated alias for ServiceAccountName.
      * Deprecated: Use serviceAccountName instead.
      *
      * @var string
@@ -369,8 +352,8 @@ class PodSpec extends AbstractModel
      * leaf name (the default). In Linux containers, this means setting the FQDN in the
      * hostname field of the kernel (the nodename field of struct utsname). In Windows
      * containers, this means setting the registry value of hostname for the registry
-     * key HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\Tcpip\\Parameters
-     * to FQDN. If a pod does not have FQDN, this has no effect. Default to false.
+     * key HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters to
+     * FQDN. If a pod does not have FQDN, this has no effect. Default to false.
      *
      * @var boolean
      */

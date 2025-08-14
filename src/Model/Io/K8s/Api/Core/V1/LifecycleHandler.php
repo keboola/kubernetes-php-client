@@ -11,30 +11,23 @@ use \KubernetesRuntime\AbstractModel;
 class LifecycleHandler extends AbstractModel
 {
     /**
-     * Exec specifies a command to execute in the container.
+     * Exec specifies the action to take.
      *
      * @var ExecAction
      */
     public $exec = null;
 
     /**
-     * HTTPGet specifies an HTTP GET request to perform.
+     * HTTPGet specifies the http request to perform.
      *
      * @var HTTPGetAction
      */
     public $httpGet = null;
 
     /**
-     * Sleep represents a duration that the container should sleep.
-     *
-     * @var SleepAction
-     */
-    public $sleep = null;
-
-    /**
-     * Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept for
-     * backward compatibility. There is no validation of this field and lifecycle hooks
-     * will fail at runtime when it is specified.
+     * Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept for the
+     * backward compatibility. There are no validation of this field and lifecycle
+     * hooks will fail in runtime when tcp handler is specified.
      *
      * @var TCPSocketAction
      */

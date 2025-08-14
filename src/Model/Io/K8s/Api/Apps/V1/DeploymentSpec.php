@@ -69,8 +69,7 @@ class DeploymentSpec extends AbstractModel
     public $strategy = null;
 
     /**
-     * Template describes the pods that will be created. The only allowed
-     * template.spec.restartPolicy value is "Always".
+     * Template describes the pods that will be created.
      *
      * @var \Kubernetes\Model\Io\K8s\Api\Core\V1\PodTemplateSpec
      */

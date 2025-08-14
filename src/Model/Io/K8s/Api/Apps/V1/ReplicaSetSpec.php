@@ -19,9 +19,9 @@ class ReplicaSetSpec extends AbstractModel
     public $minReadySeconds = null;
 
     /**
-     * Replicas is the number of desired pods. This is a pointer to distinguish between
-     * explicit zero and unspecified. Defaults to 1. More info:
-     * https://kubernetes.io/docs/concepts/workloads/controllers/replicaset
+     * Replicas is the number of desired replicas. This is a pointer to distinguish
+     * between explicit zero and unspecified. Defaults to 1. More info:
+     * https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller/#what-is-a-replicationcontroller
      *
      * @var integer
      */
@@ -40,7 +40,7 @@ class ReplicaSetSpec extends AbstractModel
     /**
      * Template is the object that describes the pod that will be created if
      * insufficient replicas are detected. More info:
-     * https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/#pod-template
+     * https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller#pod-template
      *
      * @var \Kubernetes\Model\Io\K8s\Api\Core\V1\PodTemplateSpec
      */

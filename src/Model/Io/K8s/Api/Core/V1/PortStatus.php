@@ -4,9 +4,6 @@ namespace Kubernetes\Model\Io\K8s\Api\Core\V1;
 
 use \KubernetesRuntime\AbstractModel;
 
-/**
- * PortStatus represents the error condition of a service port
- */
 class PortStatus extends AbstractModel
 {
     /**
@@ -31,6 +28,8 @@ class PortStatus extends AbstractModel
     /**
      * Protocol is the protocol of the service port of which status is recorded here
      * The supported values are: "TCP", "UDP", "SCTP"
+     *
+     *
      *
      * @var string
      */

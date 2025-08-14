@@ -14,7 +14,7 @@ use \KubernetesRuntime\AbstractModel;
 class ContainerResourceMetricStatus extends AbstractModel
 {
     /**
-     * container is the name of the container in the pods of the scaling target
+     * Container is the name of the container in the pods of the scaling target
      *
      * @var string
      */
@@ -28,7 +28,7 @@ class ContainerResourceMetricStatus extends AbstractModel
     public $current = null;
 
     /**
-     * name is the name of the resource in question.
+     * Name is the name of the resource in question.
      *
      * @var string
      */

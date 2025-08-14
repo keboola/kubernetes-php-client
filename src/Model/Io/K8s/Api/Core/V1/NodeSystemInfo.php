@@ -39,7 +39,7 @@ class NodeSystemInfo extends AbstractModel
     public $kernelVersion = null;
 
     /**
-     * Deprecated: KubeProxy Version reported by the node.
+     * KubeProxy Version reported by the node.
      *
      * @var string
      */
@@ -75,13 +75,6 @@ class NodeSystemInfo extends AbstractModel
      * @var string
      */
     public $osImage = null;
-
-    /**
-     * Swap Info reported by the node.
-     *
-     * @var NodeSwapStatus
-     */
-    public $swap = null;
 
     /**
      * SystemUUID reported by the node. For unique machine identification MachineID is

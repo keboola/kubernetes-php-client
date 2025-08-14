@@ -11,7 +11,7 @@ use \KubernetesRuntime\AbstractModel;
 class Overhead extends AbstractModel
 {
     /**
-     * podFixed represents the fixed resource overhead associated with running a pod.
+     * PodFixed represents the fixed resource overhead associated with running a pod.
      *
      * @var object
      */

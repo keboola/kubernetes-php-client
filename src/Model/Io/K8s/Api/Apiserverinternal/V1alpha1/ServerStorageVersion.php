@@ -32,13 +32,5 @@ class ServerStorageVersion extends AbstractModel
      * @var string
      */
     public $encodingVersion = null;
-
-    /**
-     * The API server can serve these versions. DecodableVersions must include all
-     * ServedVersions.
-     *
-     * @var string[]
-     */
-    public $servedVersions = null;
 }
 

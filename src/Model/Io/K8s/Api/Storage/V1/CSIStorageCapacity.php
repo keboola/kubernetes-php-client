@@ -41,7 +41,7 @@ class CSIStorageCapacity extends AbstractModel
     public $apiVersion = 'storage.k8s.io/v1';
 
     /**
-     * capacity is the value reported by the CSI driver in its GetCapacityResponse for
+     * Capacity is the value reported by the CSI driver in its GetCapacityResponse for
      * a GetCapacityRequest with topology and parameters that match the previous
      * fields.
      *
@@ -64,7 +64,7 @@ class CSIStorageCapacity extends AbstractModel
     public $kind = 'CSIStorageCapacity';
 
     /**
-     * maximumVolumeSize is the value reported by the CSI driver in its
+     * MaximumVolumeSize is the value reported by the CSI driver in its
      * GetCapacityResponse for a GetCapacityRequest with topology and parameters that
      * match the previous fields.
      *
@@ -78,9 +78,9 @@ class CSIStorageCapacity extends AbstractModel
     public $maximumVolumeSize = null;
 
     /**
-     * Standard object's metadata. The name has no particular meaning. It must be a DNS
-     * subdomain (dots allowed, 253 characters). To ensure that there are no conflicts
-     * with other CSI drivers on the cluster, the recommendation is to use
+     * Standard object's metadata. The name has no particular meaning. It must be be a
+     * DNS subdomain (dots allowed, 253 characters). To ensure that there are no
+     * conflicts with other CSI drivers on the cluster, the recommendation is to use
      * csisc-<uuid>, a generated name, or a reverse-domain name which ends with the
      * unique CSI driver name.
      *
@@ -94,7 +94,7 @@ class CSIStorageCapacity extends AbstractModel
     public $metadata = null;
 
     /**
-     * nodeTopology defines which nodes have access to the storage for which capacity
+     * NodeTopology defines which nodes have access to the storage for which capacity
      * was reported. If not set, the storage is not accessible from any node in the
      * cluster. If empty, the storage is accessible from all nodes. This field is
      * immutable.
@@ -104,11 +104,10 @@ class CSIStorageCapacity extends AbstractModel
     public $nodeTopology = null;
 
     /**
-     * storageClassName represents the name of the StorageClass that the reported
-     * capacity applies to. It must meet the same requirements as the name of a
-     * StorageClass object (non-empty, DNS subdomain). If that object no longer exists,
-     * the CSIStorageCapacity object is obsolete and should be removed by its creator.
-     * This field is immutable.
+     * The name of the StorageClass that the reported capacity applies to. It must meet
+     * the same requirements as the name of a StorageClass object (non-empty, DNS
+     * subdomain). If that object no longer exists, the CSIStorageCapacity object is
+     * obsolete and should be removed by its creator. This field is immutable.
      *
      * @var string
      */

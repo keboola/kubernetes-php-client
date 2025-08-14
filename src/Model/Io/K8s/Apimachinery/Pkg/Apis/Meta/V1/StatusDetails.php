@@ -56,8 +56,7 @@ class StatusDetails extends AbstractModel
 
     /**
      * UID of the resource. (when there is a single resource which can be described).
-     * More info:
-     * https://kubernetes.io/docs/concepts/overview/working-with-objects/names#uids
+     * More info: http://kubernetes.io/docs/user-guide/identifiers#uids
      *
      * @var string
      */

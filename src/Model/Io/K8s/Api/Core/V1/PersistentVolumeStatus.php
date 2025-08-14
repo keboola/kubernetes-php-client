@@ -10,14 +10,6 @@ use \KubernetesRuntime\AbstractModel;
 class PersistentVolumeStatus extends AbstractModel
 {
     /**
-     * lastPhaseTransitionTime is the time the phase transitioned from one to another
-     * and automatically resets to current time everytime a volume phase transitions.
-     *
-     * @var \Kubernetes\Model\Io\K8s\Apimachinery\Pkg\Apis\Meta\V1\Time
-     */
-    public $lastPhaseTransitionTime = null;
-
-    /**
      * message is a human-readable message indicating details about why the volume is
      * in this state.
      *
@@ -29,6 +21,8 @@ class PersistentVolumeStatus extends AbstractModel
      * phase indicates if a volume is available, bound to a claim, or released by a
      * claim. More info:
      * https://kubernetes.io/docs/concepts/storage/persistent-volumes#phase
+     *
+     *
      *
      * @var string
      */

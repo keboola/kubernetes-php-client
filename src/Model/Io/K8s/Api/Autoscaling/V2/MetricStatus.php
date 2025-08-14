@@ -61,7 +61,8 @@ class MetricStatus extends AbstractModel
     /**
      * type is the type of metric source.  It will be one of "ContainerResource",
      * "External", "Object", "Pods" or "Resource", each corresponds to a matching field
-     * in the object.
+     * in the object. Note: "ContainerResource" type is available on when the
+     * feature-gate HPAContainerMetrics is enabled
      *
      * @var string
      */

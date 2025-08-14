@@ -20,7 +20,7 @@ class NetworkPolicyList extends AbstractModel
     public $apiVersion = 'networking.k8s.io/v1';
 
     /**
-     * items is a list of schema objects.
+     * Items is a list of schema objects.
      *
      * @var NetworkPolicy[]
      */

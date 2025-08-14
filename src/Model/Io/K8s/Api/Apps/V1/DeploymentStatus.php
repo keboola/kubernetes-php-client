@@ -10,8 +10,8 @@ use \KubernetesRuntime\AbstractModel;
 class DeploymentStatus extends AbstractModel
 {
     /**
-     * Total number of available non-terminating pods (ready for at least
-     * minReadySeconds) targeted by this deployment.
+     * Total number of available pods (ready for at least minReadySeconds) targeted by
+     * this deployment.
      *
      * @var integer
      */
@@ -41,7 +41,7 @@ class DeploymentStatus extends AbstractModel
     public $observedGeneration = null;
 
     /**
-     * Total number of non-terminating pods targeted by this Deployment with a Ready
+     * readyReplicas is the number of pods targeted by this Deployment with a Ready
      * Condition.
      *
      * @var integer
@@ -49,24 +49,12 @@ class DeploymentStatus extends AbstractModel
     public $readyReplicas = null;
 
     /**
-     * Total number of non-terminating pods targeted by this deployment (their labels
+     * Total number of non-terminated pods targeted by this deployment (their labels
      * match the selector).
      *
      * @var integer
      */
     public $replicas = null;
-
-    /**
-     * Total number of terminating pods targeted by this deployment. Terminating pods
-     * have a non-null .metadata.deletionTimestamp and have not yet reached the Failed
-     * or Succeeded .status.phase.
-     *
-     * This is an alpha field. Enable DeploymentReplicaSetTerminatingReplicas to be
-     * able to use this field.
-     *
-     * @var integer
-     */
-    public $terminatingReplicas = null;
 
     /**
      * Total number of unavailable pods targeted by this deployment. This is the total
@@ -79,7 +67,7 @@ class DeploymentStatus extends AbstractModel
     public $unavailableReplicas = null;
 
     /**
-     * Total number of non-terminating pods targeted by this deployment that have the
+     * Total number of non-terminated pods targeted by this deployment that have the
      * desired template spec.
      *
      * @var integer

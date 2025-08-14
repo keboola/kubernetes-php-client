@@ -11,7 +11,7 @@ use \KubernetesRuntime\AbstractModel;
 class HPAScalingPolicy extends AbstractModel
 {
     /**
-     * periodSeconds specifies the window of time for which the policy should hold
+     * PeriodSeconds specifies the window of time for which the policy should hold
      * true. PeriodSeconds must be greater than zero and less than or equal to 1800 (30
      * min).
      *
@@ -20,14 +20,14 @@ class HPAScalingPolicy extends AbstractModel
     public $periodSeconds = null;
 
     /**
-     * type is used to specify the scaling policy.
+     * Type is used to specify the scaling policy.
      *
      * @var string
      */
     public $type = null;
 
     /**
-     * value contains the amount of change which is permitted by the policy. It must be
+     * Value contains the amount of change which is permitted by the policy. It must be
      * greater than zero
      *
      * @var integer

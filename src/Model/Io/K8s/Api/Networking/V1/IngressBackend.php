@@ -10,7 +10,7 @@ use \KubernetesRuntime\AbstractModel;
 class IngressBackend extends AbstractModel
 {
     /**
-     * resource is an ObjectRef to another Kubernetes resource in the namespace of the
+     * Resource is an ObjectRef to another Kubernetes resource in the namespace of the
      * Ingress object. If resource is specified, a service.Name and service.Port must
      * not be specified. This is a mutually exclusive setting with "Service".
      *
@@ -19,7 +19,7 @@ class IngressBackend extends AbstractModel
     public $resource = null;
 
     /**
-     * service references a service as a backend. This is a mutually exclusive setting
+     * Service references a Service as a Backend. This is a mutually exclusive setting
      * with "Resource".
      *
      * @var IngressServiceBackend

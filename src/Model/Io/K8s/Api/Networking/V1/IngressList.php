@@ -20,7 +20,7 @@ class IngressList extends AbstractModel
     public $apiVersion = 'networking.k8s.io/v1';
 
     /**
-     * items is the list of Ingress.
+     * Items is the list of Ingress.
      *
      * @var Ingress[]
      */

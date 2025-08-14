@@ -10,8 +10,8 @@ use \KubernetesRuntime\AbstractModel;
 class HorizontalPodAutoscalerSpec extends AbstractModel
 {
     /**
-     * maxReplicas is the upper limit for the number of pods that can be set by the
-     * autoscaler; cannot be smaller than MinReplicas.
+     * upper limit for the number of pods that can be set by the autoscaler; cannot be
+     * smaller than MinReplicas.
      *
      * @var integer
      */
@@ -38,9 +38,8 @@ class HorizontalPodAutoscalerSpec extends AbstractModel
     public $scaleTargetRef = null;
 
     /**
-     * targetCPUUtilizationPercentage is the target average CPU utilization
-     * (represented as a percentage of requested CPU) over all the pods; if not
-     * specified the default autoscaling policy will be used.
+     * target average CPU utilization (represented as a percentage of requested CPU)
+     * over all the pods; if not specified the default autoscaling policy will be used.
      *
      * @var integer
      */

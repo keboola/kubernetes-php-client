@@ -11,33 +11,11 @@ use \KubernetesRuntime\AbstractModel;
 class ResourceAttributes extends AbstractModel
 {
     /**
-     * fieldSelector describes the limitation on access based on field.  It can only
-     * limit access, not broaden it.
-     *
-     * This field  is alpha-level. To use this field, you must enable the
-     * `AuthorizeWithSelectors` feature gate (disabled by default).
-     *
-     * @var FieldSelectorAttributes
-     */
-    public $fieldSelector = null;
-
-    /**
      * Group is the API Group of the Resource.  "*" means all.
      *
      * @var string
      */
     public $group = null;
-
-    /**
-     * labelSelector describes the limitation on access based on labels.  It can only
-     * limit access, not broaden it.
-     *
-     * This field  is alpha-level. To use this field, you must enable the
-     * `AuthorizeWithSelectors` feature gate (disabled by default).
-     *
-     * @var LabelSelectorAttributes
-     */
-    public $labelSelector = null;
 
     /**
      * Name is the name of the resource being requested for a "get" or deleted for a

@@ -62,6 +62,9 @@ class PodDisruptionBudgetSpec extends AbstractModel
      * decisions should disallow eviction of unhealthy pods if they encounter an
      * unrecognized policy in this field.
      *
+     * This field is alpha-level. The eviction API uses this field when the feature
+     * gate PDBUnhealthyPodEvictionPolicy is enabled (disabled by default).
+     *
      * @var string
      */
     public $unhealthyPodEvictionPolicy = null;

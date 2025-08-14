@@ -5,12 +5,15 @@ namespace Kubernetes\Model\Io\K8s\Api\Core\V1;
 use \KubernetesRuntime\AbstractModel;
 
 /**
- * PodIP represents a single IP address allocated to the pod.
+ * IP address information for entries in the (plural) PodIPs field. Each entry
+ * includes:
+ *
+ * 	IP: An IP address allocated to the pod. Routable at least within the cluster.
  */
 class PodIP extends AbstractModel
 {
     /**
-     * IP is the IP address assigned to the pod
+     * ip is an IP address (IPv4 or IPv6) assigned to the pod
      *
      * @var string
      */

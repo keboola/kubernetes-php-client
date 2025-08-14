@@ -14,6 +14,8 @@ class Toleration extends AbstractModel
      * Effect indicates the taint effect to match. Empty means match all taint effects.
      * When specified, allowed values are NoSchedule, PreferNoSchedule and NoExecute.
      *
+     *
+     *
      * @var string
      */
     public $effect = null;
@@ -31,6 +33,8 @@ class Toleration extends AbstractModel
      * Operator represents a key's relationship to the value. Valid operators are
      * Exists and Equal. Defaults to Equal. Exists is equivalent to wildcard for value,
      * so that a pod can tolerate all taints of a particular category.
+     *
+     *
      *
      * @var string
      */

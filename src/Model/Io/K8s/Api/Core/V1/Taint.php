@@ -14,6 +14,8 @@ class Taint extends AbstractModel
      * Required. The effect of the taint on pods that do not tolerate the taint. Valid
      * effects are NoSchedule, PreferNoSchedule and NoExecute.
      *
+     *
+     *
      * @var string
      */
     public $effect = null;

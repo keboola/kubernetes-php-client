@@ -21,6 +21,8 @@ class NodeSelectorRequirement extends AbstractModel
      * Represents a key's relationship to a set of values. Valid operators are In,
      * NotIn, Exists, DoesNotExist. Gt, and Lt.
      *
+     *
+     *
      * @var string
      */
     public $operator = null;

@@ -77,10 +77,10 @@ class ValidatingAdmissionPolicyBindingSpec extends AbstractModel
      * ValidatingAdmissionPolicyBinding - expressionIndex: The index of the failed
      * validations in the ValidatingAdmissionPolicy - validationActions: The
      * enforcement actions enacted for the validation failure Example audit annotation:
-     * `"validation.policy.admission.k8s.io/validation_failure": "[{\"message\":
-     * \"Invalid value\", {\"policy\": \"policy.example.com\", {\"binding\":
-     * \"policybinding.example.com\", {\"expressionIndex\": \"1\",
-     * {\"validationActions\": [\"Audit\"]}]"`
+     * `"validation.policy.admission.k8s.io/validation_failure": "[{"message": "Invalid
+     * value", {"policy": "policy.example.com", {"binding":
+     * "policybinding.example.com", {"expressionIndex": "1", {"validationActions":
+     * ["Audit"]}]"`
      *
      * Clients should expect to handle additional values by ignoring any values not
      * recognized.

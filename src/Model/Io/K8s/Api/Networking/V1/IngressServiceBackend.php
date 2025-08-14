@@ -10,7 +10,7 @@ use \KubernetesRuntime\AbstractModel;
 class IngressServiceBackend extends AbstractModel
 {
     /**
-     * name is the referenced service. The service must exist in the same namespace as
+     * Name is the referenced service. The service must exist in the same namespace as
      * the Ingress object.
      *
      * @var string
@@ -18,7 +18,7 @@ class IngressServiceBackend extends AbstractModel
     public $name = null;
 
     /**
-     * port of the referenced service. A port name or port number is required for a
+     * Port of the referenced service. A port name or port number is required for a
      * IngressServiceBackend.
      *
      * @var ServiceBackendPort

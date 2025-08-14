@@ -10,7 +10,7 @@ use \KubernetesRuntime\AbstractModel;
 class ServiceBackendPort extends AbstractModel
 {
     /**
-     * name is the name of the port on the Service. This is a mutually exclusive
+     * Name is the name of the port on the Service. This is a mutually exclusive
      * setting with "Number".
      *
      * @var string
@@ -18,7 +18,7 @@ class ServiceBackendPort extends AbstractModel
     public $name = null;
 
     /**
-     * number is the numerical port number (e.g. 80) on the Service. This is a mutually
+     * Number is the numerical port number (e.g. 80) on the Service. This is a mutually
      * exclusive setting with "Name".
      *
      * @var integer

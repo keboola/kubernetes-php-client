@@ -21,7 +21,7 @@ class ResourceMetricStatus extends AbstractModel
     public $current = null;
 
     /**
-     * name is the name of the resource in question.
+     * Name is the name of the resource in question.
      *
      * @var string
      */

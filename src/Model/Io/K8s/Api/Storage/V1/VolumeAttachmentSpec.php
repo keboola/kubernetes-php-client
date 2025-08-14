@@ -10,7 +10,7 @@ use \KubernetesRuntime\AbstractModel;
 class VolumeAttachmentSpec extends AbstractModel
 {
     /**
-     * attacher indicates the name of the volume driver that MUST handle this request.
+     * Attacher indicates the name of the volume driver that MUST handle this request.
      * This is the name returned by GetPluginName().
      *
      * @var string
@@ -18,14 +18,14 @@ class VolumeAttachmentSpec extends AbstractModel
     public $attacher = null;
 
     /**
-     * nodeName represents the node that the volume should be attached to.
+     * The node that the volume should be attached to.
      *
      * @var string
      */
     public $nodeName = null;
 
     /**
-     * source represents the volume that should be attached.
+     * Source represents the volume that should be attached.
      *
      * @var VolumeAttachmentSource
      */

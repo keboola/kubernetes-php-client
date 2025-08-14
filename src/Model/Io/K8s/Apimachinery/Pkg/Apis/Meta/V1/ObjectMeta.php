@@ -14,7 +14,7 @@ class ObjectMeta extends AbstractModel
      * Annotations is an unstructured key value map stored with a resource that may be
      * set by external tools to store and retrieve arbitrary metadata. They are not
      * queryable and should be preserved when modifying objects. More info:
-     * https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations
+     * http://kubernetes.io/docs/user-guide/annotations
      *
      * @var object
      */
@@ -115,8 +115,7 @@ class ObjectMeta extends AbstractModel
     /**
      * Map of string keys and values that can be used to organize and categorize (scope
      * and select) objects. May match selectors of replication controllers and
-     * services. More info:
-     * https://kubernetes.io/docs/concepts/overview/working-with-objects/labels
+     * services. More info: http://kubernetes.io/docs/user-guide/labels
      *
      * @var object
      */
@@ -139,7 +138,7 @@ class ObjectMeta extends AbstractModel
      * although some resources may allow a client to request the generation of an
      * appropriate name automatically. Name is primarily intended for creation
      * idempotence and configuration definition. Cannot be updated. More info:
-     * https://kubernetes.io/docs/concepts/overview/working-with-objects/names#names
+     * http://kubernetes.io/docs/user-guide/identifiers#names
      *
      * @var string
      */
@@ -152,7 +151,7 @@ class ObjectMeta extends AbstractModel
      * namespace - the value of this field for those objects will be empty.
      *
      * Must be a DNS_LABEL. Cannot be updated. More info:
-     * https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces
+     * http://kubernetes.io/docs/user-guide/namespaces
      *
      * @var string
      */
@@ -198,7 +197,7 @@ class ObjectMeta extends AbstractModel
      * to change on PUT operations.
      *
      * Populated by the system. Read-only. More info:
-     * https://kubernetes.io/docs/concepts/overview/working-with-objects/names#uids
+     * http://kubernetes.io/docs/user-guide/identifiers#uids
      *
      * @var string
      */

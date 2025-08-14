@@ -11,15 +11,11 @@ class NodeStatus extends AbstractModel
 {
     /**
      * List of addresses reachable to the node. Queried from cloud provider, if
-     * available. More info:
-     * https://kubernetes.io/docs/reference/node/node-status/#addresses Note: This
-     * field is declared as mergeable, but the merge key is not sufficiently unique,
-     * which can cause data corruption when it is merged. Callers should instead use a
-     * full-replacement patch. See https://pr.k8s.io/79391 for an example. Consumers
-     * should assume that addresses can change during the lifetime of a Node. However,
-     * there are some exceptions where this may not be possible, such as Pods that
-     * inherit a Node's address in its own status or consumers of the downward API
-     * (status.hostIP).
+     * available. More info: https://kubernetes.io/docs/concepts/nodes/node/#addresses
+     * Note: This field is declared as mergeable, but the merge key is not sufficiently
+     * unique, which can cause data corruption when it is merged. Callers should
+     * instead use a full-replacement patch. See https://pr.k8s.io/79391 for an
+     * example.
      *
      * @var NodeAddress[]
      */
@@ -35,7 +31,7 @@ class NodeStatus extends AbstractModel
 
     /**
      * Capacity represents the total resources of a node. More info:
-     * https://kubernetes.io/docs/reference/node/node-status/#capacity
+     * https://kubernetes.io/docs/concepts/storage/persistent-volumes#capacity
      *
      * @var object
      */
@@ -43,7 +39,7 @@ class NodeStatus extends AbstractModel
 
     /**
      * Conditions is an array of current observed node conditions. More info:
-     * https://kubernetes.io/docs/reference/node/node-status/#condition
+     * https://kubernetes.io/docs/concepts/nodes/node/#condition
      *
      * @var NodeCondition[]
      */
@@ -65,13 +61,6 @@ class NodeStatus extends AbstractModel
     public $daemonEndpoints = null;
 
     /**
-     * Features describes the set of features implemented by the CRI implementation.
-     *
-     * @var NodeFeatures
-     */
-    public $features = null;
-
-    /**
      * List of container images on this node
      *
      * @var ContainerImage[]
@@ -80,7 +69,7 @@ class NodeStatus extends AbstractModel
 
     /**
      * Set of ids/uuids to uniquely identify the node. More info:
-     * https://kubernetes.io/docs/reference/node/node-status/#info
+     * https://kubernetes.io/docs/concepts/nodes/node/#info
      *
      * @var NodeSystemInfo
      */
@@ -91,16 +80,11 @@ class NodeStatus extends AbstractModel
      * https://kubernetes.io/docs/concepts/nodes/node/#phase The field is never
      * populated, and now is deprecated.
      *
+     *
+     *
      * @var string
      */
     public $phase = null;
-
-    /**
-     * The available runtime handlers.
-     *
-     * @var NodeRuntimeHandler[]
-     */
-    public $runtimeHandlers = null;
 
     /**
      * List of volumes that are attached to the node.

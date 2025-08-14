@@ -38,7 +38,7 @@ class Lease extends AbstractModel
     public $metadata = null;
 
     /**
-     * spec contains the specification of the Lease. More info:
+     * Specification of the Lease. More info:
      * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
      *
      * @var LeaseSpec

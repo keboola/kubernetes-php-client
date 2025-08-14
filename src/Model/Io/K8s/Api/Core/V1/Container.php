@@ -72,6 +72,8 @@ class Container extends AbstractModel
      * :latest tag is specified, or IfNotPresent otherwise. Cannot be updated. More
      * info: https://kubernetes.io/docs/concepts/containers/images#updating-images
      *
+     *
+     *
      * @var string
      */
     public $imagePullPolicy = null;
@@ -123,39 +125,12 @@ class Container extends AbstractModel
     public $readinessProbe = null;
 
     /**
-     * Resources resize policy for the container.
-     *
-     * @var ContainerResizePolicy[]
-     */
-    public $resizePolicy = null;
-
-    /**
      * Compute Resources required by this container. Cannot be updated. More info:
      * https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
      *
      * @var ResourceRequirements
      */
     public $resources = null;
-
-    /**
-     * RestartPolicy defines the restart behavior of individual containers in a pod.
-     * This field may only be set for init containers, and the only allowed value is
-     * "Always". For non-init containers or when this field is not specified, the
-     * restart behavior is defined by the Pod's restart policy and the container type.
-     * Setting the RestartPolicy as "Always" for the init container will have the
-     * following effect: this init container will be continually restarted on exit
-     * until all regular containers have terminated. Once all regular containers have
-     * completed, all init containers with restartPolicy "Always" will be shut down.
-     * This lifecycle differs from normal init containers and is often referred to as a
-     * "sidecar" container. Although this init container still starts in the init
-     * container sequence, it does not wait for the container to complete before
-     * proceeding to the next init container. Instead, the next init container starts
-     * immediately after this init container is started, or after any startupProbe has
-     * successfully completed.
-     *
-     * @var string
-     */
-    public $restartPolicy = null;
 
     /**
      * SecurityContext defines the security options the container should be run with.
@@ -222,6 +197,8 @@ class Container extends AbstractModel
      * container log output if the termination message file is empty and the container
      * exited with an error. The log output is limited to 2048 bytes or 80 lines,
      * whichever is smaller. Defaults to File. Cannot be updated.
+     *
+     *
      *
      * @var string
      */

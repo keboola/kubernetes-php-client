@@ -21,6 +21,8 @@ class DeploymentStrategy extends AbstractModel
      * Type of deployment. Can be "Recreate" or "RollingUpdate". Default is
      * RollingUpdate.
      *
+     *
+     *
      * @var string
      */
     public $type = null;

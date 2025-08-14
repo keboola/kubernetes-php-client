@@ -9,15 +9,26 @@ class ServiceProxyOptions extends AbstractAPI
     /**
      * connect GET requests to proxy of Service
      *
+     * @param string $namespace object name and auth scope, such as for teams and
+     * projects
      * @param string $name name of the ServiceProxyOptions
+     * @param array $queries options:
+     * 'path'	string
+     * Path is the part of URLs that include service endpoints, suffixes, and
+     * parameters to use for the current proxy request to service. For example, the
+     * whole request URL is
+     * http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy.
+     * Path is _search?q=user:kimchy.
+     *
      * @return string|mixed
      */
-    public function connectGetServiceProxy(string $name)
+    public function connectGetServiceProxy(string $namespace, string $name, array $queries = [])
     {
         return $this->parseResponse(
         	$this->client->request('get',
-        		"/api/v1/namespaces/{namespace}/services/{$name}/proxy",
+        		"/api/v1/namespaces/{$namespace}/services/{$name}/proxy",
         		[
+        			'query' => $queries,
         		]
         	),
         	'connectCoreV1GetNamespacedServiceProxy'
@@ -27,15 +38,26 @@ class ServiceProxyOptions extends AbstractAPI
     /**
      * connect PUT requests to proxy of Service
      *
+     * @param string $namespace object name and auth scope, such as for teams and
+     * projects
      * @param string $name name of the ServiceProxyOptions
+     * @param array $queries options:
+     * 'path'	string
+     * Path is the part of URLs that include service endpoints, suffixes, and
+     * parameters to use for the current proxy request to service. For example, the
+     * whole request URL is
+     * http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy.
+     * Path is _search?q=user:kimchy.
+     *
      * @return string|mixed
      */
-    public function connectPutServiceProxy(string $name)
+    public function connectPutServiceProxy(string $namespace, string $name, array $queries = [])
     {
         return $this->parseResponse(
         	$this->client->request('put',
-        		"/api/v1/namespaces/{namespace}/services/{$name}/proxy",
+        		"/api/v1/namespaces/{$namespace}/services/{$name}/proxy",
         		[
+        			'query' => $queries,
         		]
         	),
         	'connectCoreV1PutNamespacedServiceProxy'
@@ -45,15 +67,26 @@ class ServiceProxyOptions extends AbstractAPI
     /**
      * connect POST requests to proxy of Service
      *
+     * @param string $namespace object name and auth scope, such as for teams and
+     * projects
      * @param string $name name of the ServiceProxyOptions
+     * @param array $queries options:
+     * 'path'	string
+     * Path is the part of URLs that include service endpoints, suffixes, and
+     * parameters to use for the current proxy request to service. For example, the
+     * whole request URL is
+     * http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy.
+     * Path is _search?q=user:kimchy.
+     *
      * @return string|mixed
      */
-    public function connectPostServiceProxy(string $name)
+    public function connectPostServiceProxy(string $namespace, string $name, array $queries = [])
     {
         return $this->parseResponse(
         	$this->client->request('post',
-        		"/api/v1/namespaces/{namespace}/services/{$name}/proxy",
+        		"/api/v1/namespaces/{$namespace}/services/{$name}/proxy",
         		[
+        			'query' => $queries,
         		]
         	),
         	'connectCoreV1PostNamespacedServiceProxy'
@@ -63,15 +96,26 @@ class ServiceProxyOptions extends AbstractAPI
     /**
      * connect DELETE requests to proxy of Service
      *
+     * @param string $namespace object name and auth scope, such as for teams and
+     * projects
      * @param string $name name of the ServiceProxyOptions
+     * @param array $queries options:
+     * 'path'	string
+     * Path is the part of URLs that include service endpoints, suffixes, and
+     * parameters to use for the current proxy request to service. For example, the
+     * whole request URL is
+     * http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy.
+     * Path is _search?q=user:kimchy.
+     *
      * @return string|mixed
      */
-    public function connectDeleteServiceProxy(string $name)
+    public function connectDeleteServiceProxy(string $namespace, string $name, array $queries = [])
     {
         return $this->parseResponse(
         	$this->client->request('delete',
-        		"/api/v1/namespaces/{namespace}/services/{$name}/proxy",
+        		"/api/v1/namespaces/{$namespace}/services/{$name}/proxy",
         		[
+        			'query' => $queries,
         		]
         	),
         	'connectCoreV1DeleteNamespacedServiceProxy'
@@ -81,15 +125,26 @@ class ServiceProxyOptions extends AbstractAPI
     /**
      * connect OPTIONS requests to proxy of Service
      *
+     * @param string $namespace object name and auth scope, such as for teams and
+     * projects
      * @param string $name name of the ServiceProxyOptions
+     * @param array $queries options:
+     * 'path'	string
+     * Path is the part of URLs that include service endpoints, suffixes, and
+     * parameters to use for the current proxy request to service. For example, the
+     * whole request URL is
+     * http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy.
+     * Path is _search?q=user:kimchy.
+     *
      * @return string|mixed
      */
-    public function connectOptionsServiceProxy(string $name)
+    public function connectOptionsServiceProxy(string $namespace, string $name, array $queries = [])
     {
         return $this->parseResponse(
         	$this->client->request('options',
-        		"/api/v1/namespaces/{namespace}/services/{$name}/proxy",
+        		"/api/v1/namespaces/{$namespace}/services/{$name}/proxy",
         		[
+        			'query' => $queries,
         		]
         	),
         	'connectCoreV1OptionsNamespacedServiceProxy'
@@ -99,15 +154,26 @@ class ServiceProxyOptions extends AbstractAPI
     /**
      * connect HEAD requests to proxy of Service
      *
+     * @param string $namespace object name and auth scope, such as for teams and
+     * projects
      * @param string $name name of the ServiceProxyOptions
+     * @param array $queries options:
+     * 'path'	string
+     * Path is the part of URLs that include service endpoints, suffixes, and
+     * parameters to use for the current proxy request to service. For example, the
+     * whole request URL is
+     * http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy.
+     * Path is _search?q=user:kimchy.
+     *
      * @return string|mixed
      */
-    public function connectHeadServiceProxy(string $name)
+    public function connectHeadServiceProxy(string $namespace, string $name, array $queries = [])
     {
         return $this->parseResponse(
         	$this->client->request('head',
-        		"/api/v1/namespaces/{namespace}/services/{$name}/proxy",
+        		"/api/v1/namespaces/{$namespace}/services/{$name}/proxy",
         		[
+        			'query' => $queries,
         		]
         	),
         	'connectCoreV1HeadNamespacedServiceProxy'
@@ -117,15 +183,26 @@ class ServiceProxyOptions extends AbstractAPI
     /**
      * connect PATCH requests to proxy of Service
      *
+     * @param string $namespace object name and auth scope, such as for teams and
+     * projects
      * @param string $name name of the ServiceProxyOptions
+     * @param array $queries options:
+     * 'path'	string
+     * Path is the part of URLs that include service endpoints, suffixes, and
+     * parameters to use for the current proxy request to service. For example, the
+     * whole request URL is
+     * http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy.
+     * Path is _search?q=user:kimchy.
+     *
      * @return string|mixed
      */
-    public function connectPatchServiceProxy(string $name)
+    public function connectPatchServiceProxy(string $namespace, string $name, array $queries = [])
     {
         return $this->parseResponse(
         	$this->client->request('patch',
-        		"/api/v1/namespaces/{namespace}/services/{$name}/proxy",
+        		"/api/v1/namespaces/{$namespace}/services/{$name}/proxy",
         		[
+        			'query' => $queries,
         		]
         	),
         	'connectCoreV1PatchNamespacedServiceProxy'
@@ -135,15 +212,27 @@ class ServiceProxyOptions extends AbstractAPI
     /**
      * connect GET requests to proxy of Service
      *
+     * @param string $namespace object name and auth scope, such as for teams and
+     * projects
      * @param string $name name of the ServiceProxyOptions
+     * @param string $path path to the resource
+     * @param array $queries options:
+     * 'path'	string
+     * Path is the part of URLs that include service endpoints, suffixes, and
+     * parameters to use for the current proxy request to service. For example, the
+     * whole request URL is
+     * http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy.
+     * Path is _search?q=user:kimchy.
+     *
      * @return string|mixed
      */
-    public function connectGetServiceProxyWithPath(string $name)
+    public function connectGetServiceProxyWithPath(string $namespace, string $name, string $path, array $queries = [])
     {
         return $this->parseResponse(
         	$this->client->request('get',
-        		"/api/v1/namespaces/{namespace}/services/{$name}/proxy/{path}",
+        		"/api/v1/namespaces/{$namespace}/services/{$name}/proxy/{$path}",
         		[
+        			'query' => $queries,
         		]
         	),
         	'connectCoreV1GetNamespacedServiceProxyWithPath'
@@ -153,15 +242,27 @@ class ServiceProxyOptions extends AbstractAPI
     /**
      * connect PUT requests to proxy of Service
      *
+     * @param string $namespace object name and auth scope, such as for teams and
+     * projects
      * @param string $name name of the ServiceProxyOptions
+     * @param string $path path to the resource
+     * @param array $queries options:
+     * 'path'	string
+     * Path is the part of URLs that include service endpoints, suffixes, and
+     * parameters to use for the current proxy request to service. For example, the
+     * whole request URL is
+     * http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy.
+     * Path is _search?q=user:kimchy.
+     *
      * @return string|mixed
      */
-    public function connectPutServiceProxyWithPath(string $name)
+    public function connectPutServiceProxyWithPath(string $namespace, string $name, string $path, array $queries = [])
     {
         return $this->parseResponse(
         	$this->client->request('put',
-        		"/api/v1/namespaces/{namespace}/services/{$name}/proxy/{path}",
+        		"/api/v1/namespaces/{$namespace}/services/{$name}/proxy/{$path}",
         		[
+        			'query' => $queries,
         		]
         	),
         	'connectCoreV1PutNamespacedServiceProxyWithPath'
@@ -171,15 +272,27 @@ class ServiceProxyOptions extends AbstractAPI
     /**
      * connect POST requests to proxy of Service
      *
+     * @param string $namespace object name and auth scope, such as for teams and
+     * projects
      * @param string $name name of the ServiceProxyOptions
+     * @param string $path path to the resource
+     * @param array $queries options:
+     * 'path'	string
+     * Path is the part of URLs that include service endpoints, suffixes, and
+     * parameters to use for the current proxy request to service. For example, the
+     * whole request URL is
+     * http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy.
+     * Path is _search?q=user:kimchy.
+     *
      * @return string|mixed
      */
-    public function connectPostServiceProxyWithPath(string $name)
+    public function connectPostServiceProxyWithPath(string $namespace, string $name, string $path, array $queries = [])
     {
         return $this->parseResponse(
         	$this->client->request('post',
-        		"/api/v1/namespaces/{namespace}/services/{$name}/proxy/{path}",
+        		"/api/v1/namespaces/{$namespace}/services/{$name}/proxy/{$path}",
         		[
+        			'query' => $queries,
         		]
         	),
         	'connectCoreV1PostNamespacedServiceProxyWithPath'
@@ -189,15 +302,27 @@ class ServiceProxyOptions extends AbstractAPI
     /**
      * connect DELETE requests to proxy of Service
      *
+     * @param string $namespace object name and auth scope, such as for teams and
+     * projects
      * @param string $name name of the ServiceProxyOptions
+     * @param string $path path to the resource
+     * @param array $queries options:
+     * 'path'	string
+     * Path is the part of URLs that include service endpoints, suffixes, and
+     * parameters to use for the current proxy request to service. For example, the
+     * whole request URL is
+     * http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy.
+     * Path is _search?q=user:kimchy.
+     *
      * @return string|mixed
      */
-    public function connectDeleteServiceProxyWithPath(string $name)
+    public function connectDeleteServiceProxyWithPath(string $namespace, string $name, string $path, array $queries = [])
     {
         return $this->parseResponse(
         	$this->client->request('delete',
-        		"/api/v1/namespaces/{namespace}/services/{$name}/proxy/{path}",
+        		"/api/v1/namespaces/{$namespace}/services/{$name}/proxy/{$path}",
         		[
+        			'query' => $queries,
         		]
         	),
         	'connectCoreV1DeleteNamespacedServiceProxyWithPath'
@@ -207,15 +332,27 @@ class ServiceProxyOptions extends AbstractAPI
     /**
      * connect OPTIONS requests to proxy of Service
      *
+     * @param string $namespace object name and auth scope, such as for teams and
+     * projects
      * @param string $name name of the ServiceProxyOptions
+     * @param string $path path to the resource
+     * @param array $queries options:
+     * 'path'	string
+     * Path is the part of URLs that include service endpoints, suffixes, and
+     * parameters to use for the current proxy request to service. For example, the
+     * whole request URL is
+     * http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy.
+     * Path is _search?q=user:kimchy.
+     *
      * @return string|mixed
      */
-    public function connectOptionsServiceProxyWithPath(string $name)
+    public function connectOptionsServiceProxyWithPath(string $namespace, string $name, string $path, array $queries = [])
     {
         return $this->parseResponse(
         	$this->client->request('options',
-        		"/api/v1/namespaces/{namespace}/services/{$name}/proxy/{path}",
+        		"/api/v1/namespaces/{$namespace}/services/{$name}/proxy/{$path}",
         		[
+        			'query' => $queries,
         		]
         	),
         	'connectCoreV1OptionsNamespacedServiceProxyWithPath'
@@ -225,15 +362,27 @@ class ServiceProxyOptions extends AbstractAPI
     /**
      * connect HEAD requests to proxy of Service
      *
+     * @param string $namespace object name and auth scope, such as for teams and
+     * projects
      * @param string $name name of the ServiceProxyOptions
+     * @param string $path path to the resource
+     * @param array $queries options:
+     * 'path'	string
+     * Path is the part of URLs that include service endpoints, suffixes, and
+     * parameters to use for the current proxy request to service. For example, the
+     * whole request URL is
+     * http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy.
+     * Path is _search?q=user:kimchy.
+     *
      * @return string|mixed
      */
-    public function connectHeadServiceProxyWithPath(string $name)
+    public function connectHeadServiceProxyWithPath(string $namespace, string $name, string $path, array $queries = [])
     {
         return $this->parseResponse(
         	$this->client->request('head',
-        		"/api/v1/namespaces/{namespace}/services/{$name}/proxy/{path}",
+        		"/api/v1/namespaces/{$namespace}/services/{$name}/proxy/{$path}",
         		[
+        			'query' => $queries,
         		]
         	),
         	'connectCoreV1HeadNamespacedServiceProxyWithPath'
@@ -243,15 +392,27 @@ class ServiceProxyOptions extends AbstractAPI
     /**
      * connect PATCH requests to proxy of Service
      *
+     * @param string $namespace object name and auth scope, such as for teams and
+     * projects
      * @param string $name name of the ServiceProxyOptions
+     * @param string $path path to the resource
+     * @param array $queries options:
+     * 'path'	string
+     * Path is the part of URLs that include service endpoints, suffixes, and
+     * parameters to use for the current proxy request to service. For example, the
+     * whole request URL is
+     * http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy.
+     * Path is _search?q=user:kimchy.
+     *
      * @return string|mixed
      */
-    public function connectPatchServiceProxyWithPath(string $name)
+    public function connectPatchServiceProxyWithPath(string $namespace, string $name, string $path, array $queries = [])
     {
         return $this->parseResponse(
         	$this->client->request('patch',
-        		"/api/v1/namespaces/{namespace}/services/{$name}/proxy/{path}",
+        		"/api/v1/namespaces/{$namespace}/services/{$name}/proxy/{$path}",
         		[
+        			'query' => $queries,
         		]
         	),
         	'connectCoreV1PatchNamespacedServiceProxyWithPath'

@@ -11,8 +11,8 @@ use \KubernetesRuntime\AbstractModel;
 class DownwardAPIVolumeFile extends AbstractModel
 {
     /**
-     * Required: Selects a field of the pod: only annotations, labels, name, namespace
-     * and uid are supported.
+     * Required: Selects a field of the pod: only annotations, labels, name and
+     * namespace are supported.
      *
      * @var ObjectFieldSelector
      */

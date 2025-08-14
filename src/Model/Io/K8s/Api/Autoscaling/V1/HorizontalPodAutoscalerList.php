@@ -20,7 +20,7 @@ class HorizontalPodAutoscalerList extends AbstractModel
     public $apiVersion = 'autoscaling/v1';
 
     /**
-     * items is the list of horizontal pod autoscaler objects.
+     * list of horizontal pod autoscaler objects.
      *
      * @var HorizontalPodAutoscaler[]
      */

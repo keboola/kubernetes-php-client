@@ -10,7 +10,7 @@ use \KubernetesRuntime\AbstractModel;
 class TokenRequest extends AbstractModel
 {
     /**
-     * audience is the intended audience of the token in "TokenRequestSpec". It will
+     * Audience is the intended audience of the token in "TokenRequestSpec". It will
      * default to the audiences of kube apiserver.
      *
      * @var string
@@ -18,7 +18,7 @@ class TokenRequest extends AbstractModel
     public $audience = null;
 
     /**
-     * expirationSeconds is the duration of validity of the token in
+     * ExpirationSeconds is the duration of validity of the token in
      * "TokenRequestSpec". It has the same default value of "ExpirationSeconds" in
      * "TokenRequestSpec".
      *

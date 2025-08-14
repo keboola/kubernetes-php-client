@@ -10,36 +10,36 @@ use \KubernetesRuntime\AbstractModel;
 class VolumeAttachmentStatus extends AbstractModel
 {
     /**
-     * attachError represents the last error encountered during attach operation, if
-     * any. This field must only be set by the entity completing the attach operation,
-     * i.e. the external-attacher.
+     * The last error encountered during attach operation, if any. This field must only
+     * be set by the entity completing the attach operation, i.e. the
+     * external-attacher.
      *
      * @var VolumeError
      */
     public $attachError = null;
 
     /**
-     * attached indicates the volume is successfully attached. This field must only be
-     * set by the entity completing the attach operation, i.e. the external-attacher.
+     * Indicates the volume is successfully attached. This field must only be set by
+     * the entity completing the attach operation, i.e. the external-attacher.
      *
      * @var boolean
      */
     public $attached = null;
 
     /**
-     * attachmentMetadata is populated with any information returned by the attach
-     * operation, upon successful attach, that must be passed into subsequent
-     * WaitForAttach or Mount calls. This field must only be set by the entity
-     * completing the attach operation, i.e. the external-attacher.
+     * Upon successful attach, this field is populated with any information returned by
+     * the attach operation that must be passed into subsequent WaitForAttach or Mount
+     * calls. This field must only be set by the entity completing the attach
+     * operation, i.e. the external-attacher.
      *
      * @var object
      */
     public $attachmentMetadata = null;
 
     /**
-     * detachError represents the last error encountered during detach operation, if
-     * any. This field must only be set by the entity completing the detach operation,
-     * i.e. the external-attacher.
+     * The last error encountered during detach operation, if any. This field must only
+     * be set by the entity completing the detach operation, i.e. the
+     * external-attacher.
      *
      * @var VolumeError
      */

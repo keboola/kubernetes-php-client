@@ -20,6 +20,8 @@ class NamespaceStatus extends AbstractModel
      * Phase is the current lifecycle phase of the namespace. More info:
      * https://kubernetes.io/docs/tasks/administer-cluster/namespaces/
      *
+     *
+     *
      * @var string
      */
     public $phase = null;

@@ -14,18 +14,17 @@ use \KubernetesRuntime\AbstractModel;
 class StorageClass extends AbstractModel
 {
     /**
-     * allowVolumeExpansion shows whether the storage class allow volume expand.
+     * AllowVolumeExpansion shows whether the storage class allow volume expand
      *
      * @var boolean
      */
     public $allowVolumeExpansion = null;
 
     /**
-     * allowedTopologies restrict the node topologies where volumes can be dynamically
-     * provisioned. Each volume plugin defines its own supported topology
-     * specifications. An empty TopologySelectorTerm list means there is no topology
-     * restriction. This field is only honored by servers that enable the
-     * VolumeScheduling feature.
+     * Restrict the node topologies where volumes can be dynamically provisioned. Each
+     * volume plugin defines its own supported topology specifications. An empty
+     * TopologySelectorTerm list means there is no topology restriction. This field is
+     * only honored by servers that enable the VolumeScheduling feature.
      *
      * @var \Kubernetes\Model\Io\K8s\Api\Core\V1\TopologySelectorTerm[]
      */
@@ -60,16 +59,16 @@ class StorageClass extends AbstractModel
     public $metadata = null;
 
     /**
-     * mountOptions controls the mountOptions for dynamically provisioned
-     * PersistentVolumes of this storage class. e.g. ["ro", "soft"]. Not validated -
-     * mount of the PVs will simply fail if one is invalid.
+     * Dynamically provisioned PersistentVolumes of this storage class are created with
+     * these mountOptions, e.g. ["ro", "soft"]. Not validated - mount of the PVs will
+     * simply fail if one is invalid.
      *
      * @var string[]
      */
     public $mountOptions = null;
 
     /**
-     * parameters holds the parameters for the provisioner that should create volumes
+     * Parameters holds the parameters for the provisioner that should create volumes
      * of this storage class.
      *
      * @var object
@@ -77,22 +76,22 @@ class StorageClass extends AbstractModel
     public $parameters = null;
 
     /**
-     * provisioner indicates the type of the provisioner.
+     * Provisioner indicates the type of the provisioner.
      *
      * @var string
      */
     public $provisioner = null;
 
     /**
-     * reclaimPolicy controls the reclaimPolicy for dynamically provisioned
-     * PersistentVolumes of this storage class. Defaults to Delete.
+     * Dynamically provisioned PersistentVolumes of this storage class are created with
+     * this reclaimPolicy. Defaults to Delete.
      *
      * @var string
      */
     public $reclaimPolicy = null;
 
     /**
-     * volumeBindingMode indicates how PersistentVolumeClaims should be provisioned and
+     * VolumeBindingMode indicates how PersistentVolumeClaims should be provisioned and
      * bound.  When unset, VolumeBindingImmediate is used. This field is only honored
      * by servers that enable the VolumeScheduling feature.
      *

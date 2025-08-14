@@ -10,14 +10,19 @@ class NodeProxyOptions extends AbstractAPI
      * connect GET requests to proxy of Node
      *
      * @param string $name name of the NodeProxyOptions
+     * @param array $queries options:
+     * 'path'	string
+     * Path is the URL path to use for the current proxy request to node.
+     *
      * @return string|mixed
      */
-    public function connectGetNodeProxy(string $name)
+    public function connectGetNodeProxy(string $name, array $queries = [])
     {
         return $this->parseResponse(
         	$this->client->request('get',
         		"/api/v1/nodes/{$name}/proxy",
         		[
+        			'query' => $queries,
         		]
         	),
         	'connectCoreV1GetNodeProxy'
@@ -28,14 +33,19 @@ class NodeProxyOptions extends AbstractAPI
      * connect PUT requests to proxy of Node
      *
      * @param string $name name of the NodeProxyOptions
+     * @param array $queries options:
+     * 'path'	string
+     * Path is the URL path to use for the current proxy request to node.
+     *
      * @return string|mixed
      */
-    public function connectPutNodeProxy(string $name)
+    public function connectPutNodeProxy(string $name, array $queries = [])
     {
         return $this->parseResponse(
         	$this->client->request('put',
         		"/api/v1/nodes/{$name}/proxy",
         		[
+        			'query' => $queries,
         		]
         	),
         	'connectCoreV1PutNodeProxy'
@@ -46,14 +56,19 @@ class NodeProxyOptions extends AbstractAPI
      * connect POST requests to proxy of Node
      *
      * @param string $name name of the NodeProxyOptions
+     * @param array $queries options:
+     * 'path'	string
+     * Path is the URL path to use for the current proxy request to node.
+     *
      * @return string|mixed
      */
-    public function connectPostNodeProxy(string $name)
+    public function connectPostNodeProxy(string $name, array $queries = [])
     {
         return $this->parseResponse(
         	$this->client->request('post',
         		"/api/v1/nodes/{$name}/proxy",
         		[
+        			'query' => $queries,
         		]
         	),
         	'connectCoreV1PostNodeProxy'
@@ -64,14 +79,19 @@ class NodeProxyOptions extends AbstractAPI
      * connect DELETE requests to proxy of Node
      *
      * @param string $name name of the NodeProxyOptions
+     * @param array $queries options:
+     * 'path'	string
+     * Path is the URL path to use for the current proxy request to node.
+     *
      * @return string|mixed
      */
-    public function connectDeleteNodeProxy(string $name)
+    public function connectDeleteNodeProxy(string $name, array $queries = [])
     {
         return $this->parseResponse(
         	$this->client->request('delete',
         		"/api/v1/nodes/{$name}/proxy",
         		[
+        			'query' => $queries,
         		]
         	),
         	'connectCoreV1DeleteNodeProxy'
@@ -82,14 +102,19 @@ class NodeProxyOptions extends AbstractAPI
      * connect OPTIONS requests to proxy of Node
      *
      * @param string $name name of the NodeProxyOptions
+     * @param array $queries options:
+     * 'path'	string
+     * Path is the URL path to use for the current proxy request to node.
+     *
      * @return string|mixed
      */
-    public function connectOptionsNodeProxy(string $name)
+    public function connectOptionsNodeProxy(string $name, array $queries = [])
     {
         return $this->parseResponse(
         	$this->client->request('options',
         		"/api/v1/nodes/{$name}/proxy",
         		[
+        			'query' => $queries,
         		]
         	),
         	'connectCoreV1OptionsNodeProxy'
@@ -100,14 +125,19 @@ class NodeProxyOptions extends AbstractAPI
      * connect HEAD requests to proxy of Node
      *
      * @param string $name name of the NodeProxyOptions
+     * @param array $queries options:
+     * 'path'	string
+     * Path is the URL path to use for the current proxy request to node.
+     *
      * @return string|mixed
      */
-    public function connectHeadNodeProxy(string $name)
+    public function connectHeadNodeProxy(string $name, array $queries = [])
     {
         return $this->parseResponse(
         	$this->client->request('head',
         		"/api/v1/nodes/{$name}/proxy",
         		[
+        			'query' => $queries,
         		]
         	),
         	'connectCoreV1HeadNodeProxy'
@@ -118,14 +148,19 @@ class NodeProxyOptions extends AbstractAPI
      * connect PATCH requests to proxy of Node
      *
      * @param string $name name of the NodeProxyOptions
+     * @param array $queries options:
+     * 'path'	string
+     * Path is the URL path to use for the current proxy request to node.
+     *
      * @return string|mixed
      */
-    public function connectPatchNodeProxy(string $name)
+    public function connectPatchNodeProxy(string $name, array $queries = [])
     {
         return $this->parseResponse(
         	$this->client->request('patch',
         		"/api/v1/nodes/{$name}/proxy",
         		[
+        			'query' => $queries,
         		]
         	),
         	'connectCoreV1PatchNodeProxy'
@@ -136,14 +171,20 @@ class NodeProxyOptions extends AbstractAPI
      * connect GET requests to proxy of Node
      *
      * @param string $name name of the NodeProxyOptions
+     * @param string $path path to the resource
+     * @param array $queries options:
+     * 'path'	string
+     * Path is the URL path to use for the current proxy request to node.
+     *
      * @return string|mixed
      */
-    public function connectGetNodeProxyWithPath(string $name)
+    public function connectGetNodeProxyWithPath(string $name, string $path, array $queries = [])
     {
         return $this->parseResponse(
         	$this->client->request('get',
-        		"/api/v1/nodes/{$name}/proxy/{path}",
+        		"/api/v1/nodes/{$name}/proxy/{$path}",
         		[
+        			'query' => $queries,
         		]
         	),
         	'connectCoreV1GetNodeProxyWithPath'
@@ -154,14 +195,20 @@ class NodeProxyOptions extends AbstractAPI
      * connect PUT requests to proxy of Node
      *
      * @param string $name name of the NodeProxyOptions
+     * @param string $path path to the resource
+     * @param array $queries options:
+     * 'path'	string
+     * Path is the URL path to use for the current proxy request to node.
+     *
      * @return string|mixed
      */
-    public function connectPutNodeProxyWithPath(string $name)
+    public function connectPutNodeProxyWithPath(string $name, string $path, array $queries = [])
     {
         return $this->parseResponse(
         	$this->client->request('put',
-        		"/api/v1/nodes/{$name}/proxy/{path}",
+        		"/api/v1/nodes/{$name}/proxy/{$path}",
         		[
+        			'query' => $queries,
         		]
         	),
         	'connectCoreV1PutNodeProxyWithPath'
@@ -172,14 +219,20 @@ class NodeProxyOptions extends AbstractAPI
      * connect POST requests to proxy of Node
      *
      * @param string $name name of the NodeProxyOptions
+     * @param string $path path to the resource
+     * @param array $queries options:
+     * 'path'	string
+     * Path is the URL path to use for the current proxy request to node.
+     *
      * @return string|mixed
      */
-    public function connectPostNodeProxyWithPath(string $name)
+    public function connectPostNodeProxyWithPath(string $name, string $path, array $queries = [])
     {
         return $this->parseResponse(
         	$this->client->request('post',
-        		"/api/v1/nodes/{$name}/proxy/{path}",
+        		"/api/v1/nodes/{$name}/proxy/{$path}",
         		[
+        			'query' => $queries,
         		]
         	),
         	'connectCoreV1PostNodeProxyWithPath'
@@ -190,14 +243,20 @@ class NodeProxyOptions extends AbstractAPI
      * connect DELETE requests to proxy of Node
      *
      * @param string $name name of the NodeProxyOptions
+     * @param string $path path to the resource
+     * @param array $queries options:
+     * 'path'	string
+     * Path is the URL path to use for the current proxy request to node.
+     *
      * @return string|mixed
      */
-    public function connectDeleteNodeProxyWithPath(string $name)
+    public function connectDeleteNodeProxyWithPath(string $name, string $path, array $queries = [])
     {
         return $this->parseResponse(
         	$this->client->request('delete',
-        		"/api/v1/nodes/{$name}/proxy/{path}",
+        		"/api/v1/nodes/{$name}/proxy/{$path}",
         		[
+        			'query' => $queries,
         		]
         	),
         	'connectCoreV1DeleteNodeProxyWithPath'
@@ -208,14 +267,20 @@ class NodeProxyOptions extends AbstractAPI
      * connect OPTIONS requests to proxy of Node
      *
      * @param string $name name of the NodeProxyOptions
+     * @param string $path path to the resource
+     * @param array $queries options:
+     * 'path'	string
+     * Path is the URL path to use for the current proxy request to node.
+     *
      * @return string|mixed
      */
-    public function connectOptionsNodeProxyWithPath(string $name)
+    public function connectOptionsNodeProxyWithPath(string $name, string $path, array $queries = [])
     {
         return $this->parseResponse(
         	$this->client->request('options',
-        		"/api/v1/nodes/{$name}/proxy/{path}",
+        		"/api/v1/nodes/{$name}/proxy/{$path}",
         		[
+        			'query' => $queries,
         		]
         	),
         	'connectCoreV1OptionsNodeProxyWithPath'
@@ -226,14 +291,20 @@ class NodeProxyOptions extends AbstractAPI
      * connect HEAD requests to proxy of Node
      *
      * @param string $name name of the NodeProxyOptions
+     * @param string $path path to the resource
+     * @param array $queries options:
+     * 'path'	string
+     * Path is the URL path to use for the current proxy request to node.
+     *
      * @return string|mixed
      */
-    public function connectHeadNodeProxyWithPath(string $name)
+    public function connectHeadNodeProxyWithPath(string $name, string $path, array $queries = [])
     {
         return $this->parseResponse(
         	$this->client->request('head',
-        		"/api/v1/nodes/{$name}/proxy/{path}",
+        		"/api/v1/nodes/{$name}/proxy/{$path}",
         		[
+        			'query' => $queries,
         		]
         	),
         	'connectCoreV1HeadNodeProxyWithPath'
@@ -244,14 +315,20 @@ class NodeProxyOptions extends AbstractAPI
      * connect PATCH requests to proxy of Node
      *
      * @param string $name name of the NodeProxyOptions
+     * @param string $path path to the resource
+     * @param array $queries options:
+     * 'path'	string
+     * Path is the URL path to use for the current proxy request to node.
+     *
      * @return string|mixed
      */
-    public function connectPatchNodeProxyWithPath(string $name)
+    public function connectPatchNodeProxyWithPath(string $name, string $path, array $queries = [])
     {
         return $this->parseResponse(
         	$this->client->request('patch',
-        		"/api/v1/nodes/{$name}/proxy/{path}",
+        		"/api/v1/nodes/{$name}/proxy/{$path}",
         		[
+        			'query' => $queries,
         		]
         	),
         	'connectCoreV1PatchNodeProxyWithPath'

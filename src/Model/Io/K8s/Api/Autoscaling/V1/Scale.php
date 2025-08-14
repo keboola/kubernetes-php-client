@@ -38,7 +38,7 @@ class Scale extends AbstractModel
     public $metadata = null;
 
     /**
-     * spec defines the behavior of the scale. More info:
+     * defines the behavior of the scale. More info:
      * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status.
      *
      * @var ScaleSpec
@@ -46,7 +46,7 @@ class Scale extends AbstractModel
     public $spec = null;
 
     /**
-     * status is the current status of the scale. More info:
+     * current status of the scale. More info:
      * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status.
      * Read-only.
      *

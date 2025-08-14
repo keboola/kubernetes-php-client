@@ -14,40 +14,11 @@ use \KubernetesRuntime\AbstractModel;
 class PodAffinityTerm extends AbstractModel
 {
     /**
-     * A label query over a set of resources, in this case pods. If it's null, this
-     * PodAffinityTerm matches with no Pods.
+     * A label query over a set of resources, in this case pods.
      *
      * @var \Kubernetes\Model\Io\K8s\Apimachinery\Pkg\Apis\Meta\V1\LabelSelector
      */
     public $labelSelector = null;
-
-    /**
-     * MatchLabelKeys is a set of pod label keys to select which pods will be taken
-     * into consideration. The keys are used to lookup values from the incoming pod
-     * labels, those key-value labels are merged with `labelSelector` as `key in
-     * (value)` to select the group of existing pods which pods will be taken into
-     * consideration for the incoming pod's pod (anti) affinity. Keys that don't exist
-     * in the incoming pod labels will be ignored. The default value is empty. The same
-     * key is forbidden to exist in both matchLabelKeys and labelSelector. Also,
-     * matchLabelKeys cannot be set when labelSelector isn't set.
-     *
-     * @var string[]
-     */
-    public $matchLabelKeys = null;
-
-    /**
-     * MismatchLabelKeys is a set of pod label keys to select which pods will be taken
-     * into consideration. The keys are used to lookup values from the incoming pod
-     * labels, those key-value labels are merged with `labelSelector` as `key notin
-     * (value)` to select the group of existing pods which pods will be taken into
-     * consideration for the incoming pod's pod (anti) affinity. Keys that don't exist
-     * in the incoming pod labels will be ignored. The default value is empty. The same
-     * key is forbidden to exist in both mismatchLabelKeys and labelSelector. Also,
-     * mismatchLabelKeys cannot be set when labelSelector isn't set.
-     *
-     * @var string[]
-     */
-    public $mismatchLabelKeys = null;
 
     /**
      * A label query over the set of namespaces that the term applies to. The term is

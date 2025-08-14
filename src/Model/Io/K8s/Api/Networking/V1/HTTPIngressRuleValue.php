@@ -13,7 +13,7 @@ use \KubernetesRuntime\AbstractModel;
 class HTTPIngressRuleValue extends AbstractModel
 {
     /**
-     * paths is a collection of paths that map requests to backends.
+     * A collection of paths that map requests to backends.
      *
      * @var HTTPIngressPath[]
      */

@@ -59,7 +59,7 @@ class PriorityClass extends AbstractModel
     public $metadata = null;
 
     /**
-     * preemptionPolicy is the Policy for preempting pods with lower priority. One of
+     * PreemptionPolicy is the Policy for preempting pods with lower priority. One of
      * Never, PreemptLowerPriority. Defaults to PreemptLowerPriority if unset.
      *
      * @var string
@@ -67,9 +67,8 @@ class PriorityClass extends AbstractModel
     public $preemptionPolicy = null;
 
     /**
-     * value represents the integer value of this priority class. This is the actual
-     * priority that pods receive when they have the name of this class in their pod
-     * spec.
+     * The value of this priority class. This is the actual priority that pods receive
+     * when they have the name of this class in their pod spec.
      *
      * @var integer
      */

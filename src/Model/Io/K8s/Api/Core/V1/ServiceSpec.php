@@ -105,6 +105,8 @@ class ServiceSpec extends AbstractModel
      * within the cluster may need to take traffic policy into account when picking a
      * node.
      *
+     *
+     *
      * @var string
      */
     public $externalTrafficPolicy = null;
@@ -195,9 +197,9 @@ class ServiceSpec extends AbstractModel
      * underlying cloud-provider supports specifying the loadBalancerIP when a load
      * balancer is created. This field will be ignored if the cloud-provider does not
      * support the feature. Deprecated: This field was under-specified and its meaning
-     * varies across implementations. Using it is non-portable and it may not support
-     * dual-stack. Users are encouraged to use implementation-specific annotations when
-     * available.
+     * varies across implementations, and it cannot support dual-stack. As of
+     * Kubernetes v1.24, users are encouraged to use implementation-specific
+     * annotations when available. This field may be removed in a future API version.
      *
      * @var string
      */
@@ -254,6 +256,8 @@ class ServiceSpec extends AbstractModel
      * info:
      * https://kubernetes.io/docs/concepts/services-networking/service/#virtual-ips-and-service-proxies
      *
+     *
+     *
      * @var string
      */
     public $sessionAffinity = null;
@@ -264,17 +268,6 @@ class ServiceSpec extends AbstractModel
      * @var SessionAffinityConfig
      */
     public $sessionAffinityConfig = null;
-
-    /**
-     * TrafficDistribution offers a way to express preferences for how traffic is
-     * distributed to Service endpoints. Implementations can use this field as a hint,
-     * but are not required to guarantee strict adherence. If the field is not set, the
-     * implementation will apply its default routing strategy. If set to "PreferClose",
-     * implementations should prioritize endpoints that are in the same zone.
-     *
-     * @var string
-     */
-    public $trafficDistribution = null;
 
     /**
      * type determines how the Service is exposed. Defaults to ClusterIP. Valid options
@@ -290,6 +283,8 @@ class ServiceSpec extends AbstractModel
      * "ExternalName" aliases this service to the specified externalName. Several other
      * fields do not apply to ExternalName services. More info:
      * https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services-service-types
+     *
+     *
      *
      * @var string
      */
