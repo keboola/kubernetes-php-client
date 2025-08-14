@@ -112,6 +112,17 @@ class EphemeralContainer extends AbstractModel
     public $ports = null;
 
     /**
+     * Restart policy for the container. This field is only supported for init containers
+     * and the only valid value is "Always". When set to "Always", the init container
+     * becomes a sidecar container that runs for the entire pod lifecycle. This field
+     * cannot be updated and is available from Kubernetes v1.28+ with SidecarContainers
+     * feature gate enabled (stable in v1.33). Not typically used for ephemeral containers.
+     *
+     * @var string
+     */
+    public $restartPolicy = null;
+
+    /**
      * Probes are not allowed for ephemeral containers.
      *
      * @var Probe
