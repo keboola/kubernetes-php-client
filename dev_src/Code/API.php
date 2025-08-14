@@ -15,6 +15,7 @@ use Laminas\Code\Generator\ParameterGenerator;
 use OpenAPI\Schema\V2\Operation;
 use OpenAPI\Schema\V2\Parameter;
 use OpenAPI\Schema\V2\Response;
+use OpenAPI\Schema\V2\Swagger;
 
 class API extends AbstractClassFile
 {
@@ -22,9 +23,12 @@ class API extends AbstractClassFile
     private const PARAMETER_IN_QUERY = 'query';
     private const PARAMETER_IN_BODY = 'body';
     protected $kubernetesNamespace = 'Kubernetes\\API';
+    
+    private Swagger $swagger;
 
-    public function __construct(string $classname)
+    public function __construct(string $classname, Swagger $swagger = null)
     {
+        $this->swagger = $swagger;
         parent::__construct([]);
 
         $this->setNamespace($this->kubernetesNamespace);
@@ -199,19 +203,73 @@ class API extends AbstractClassFile
 
     private function parseParameter(&$parameters, $Parameter)
     {
-        switch ($Parameter->in) {
-            case self::PARAMETER_IN_QUERY:
-                $parameters[self::PARAMETER_IN_QUERY][] = $Parameter;
-                break;
+        // Resolve parameter reference if it's a reference object
+        $resolvedParameter = $this->resolveParameterReference($Parameter);
+        
+        if ($resolvedParameter && isset($resolvedParameter->in)) {
+            switch ($resolvedParameter->in) {
+                case self::PARAMETER_IN_QUERY:
+                    $parameters[self::PARAMETER_IN_QUERY][] = $resolvedParameter;
+                    break;
 
-            case self::PARAMETER_IN_BODY:
-                $parameters[self::PARAMETER_IN_BODY][] = $Parameter;
-                break;
+                case self::PARAMETER_IN_BODY:
+                    $parameters[self::PARAMETER_IN_BODY][] = $resolvedParameter;
+                    break;
 
-            case self::PARAMETER_IN_PATH:
-                $parameters[self::PARAMETER_IN_PATH][] = $Parameter;
-                break;
+                case self::PARAMETER_IN_PATH:
+                    $parameters[self::PARAMETER_IN_PATH][] = $resolvedParameter;
+                    break;
+            }
         }
+    }
+    
+    /**
+     * Resolve parameter reference if parameter is a reference object
+     * 
+     * @param mixed $Parameter Parameter object or reference object
+     * @return Parameter|null
+     */
+    private function resolveParameterReference($Parameter): ?Parameter
+    {
+        // If parameter is already a Parameter object, return it
+        if ($Parameter instanceof Parameter) {
+            return $Parameter;
+        }
+        
+        // If parameter is an object/array with $ref property, resolve the reference
+        if (is_object($Parameter) && property_exists($Parameter, '_ref') && $Parameter->_ref) {
+            return $this->getParameterFromReference($Parameter->_ref);
+        } elseif (is_array($Parameter) && isset($Parameter['$ref'])) {
+            return $this->getParameterFromReference($Parameter['$ref']);
+        }
+        
+        return null;
+    }
+    
+    /**
+     * Get parameter definition from swagger parameters by reference
+     * 
+     * @param string $ref Reference string like "#/parameters/parameterName"
+     * @return Parameter|null
+     */
+    private function getParameterFromReference(string $ref): ?Parameter
+    {
+        if (!$this->swagger || !$this->swagger->parameters) {
+            return null;
+        }
+        
+        // Extract parameter name from reference (e.g., "#/parameters/parameterName" -> "parameterName")
+        if (preg_match('#^#/parameters/(.+)$#', $ref, $matches)) {
+            $parameterName = $matches[1];
+            
+            // Get parameter from swagger parameters collection
+            $parameters = $this->swagger->parameters->getPatternedFields();
+            if (isset($parameters[$parameterName])) {
+                return $parameters[$parameterName];
+            }
+        }
+        
+        return null;
     }
 
     protected function generateMethodBody(

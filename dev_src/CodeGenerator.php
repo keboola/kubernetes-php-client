@@ -62,7 +62,7 @@ class CodeGenerator
                         if (array_key_exists($apiKind, $apiClassGenerators)) {
                             $API = $apiClassGenerators[$apiKind];
                         } else {
-                            $API                          = new API($apiKind);
+                            $API                          = new API($apiKind, $this->Swagger);
                             $apiClassGenerators[$apiKind] = $API;
                         }
 
